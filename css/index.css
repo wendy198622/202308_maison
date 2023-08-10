@@ -618,10 +618,31 @@ footer {
   position: relative;
 }
 
+footer .warningBox {
+  font-size: 42px;
+  line-height: 1.4;
+  font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background: #B3AA8D;
+  vertical-align: middle;
+  padding: 20px 0;
+  letter-spacing: 2px;
+}
+
+footer .warningBox img {
+  width: 76px;
+  height: 76px;
+  display: inline-block;
+  margin: 0 10px 0 20px;
+  vertical-align: middle;
+}
+
 footer #footerMenu {
   width: 100%;
-  background-color: #c9a063;
-  padding: 175px 0 100px;
+  background-color: #00313B;
+  padding: 60px 0;
 }
 
 @media (max-width: 1280px) {
@@ -659,7 +680,7 @@ footer #footerMenu .menuBox {
 }
 
 footer #footerMenu .menuBox .menu_item {
-  text-align: right;
+  text-align: left;
   padding: 0 40px;
 }
 
@@ -669,16 +690,11 @@ footer #footerMenu .menuBox .menu_item {
   }
 }
 
-@media (max-width: 1280px) {
-  footer #footerMenu .menuBox .menu_item:last-child {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
+footer #footerMenu .menuBox .menu_item:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
 }
 
 footer #footerMenu .menuBox .menu_item .menu_item_title, footer #footerMenu .menuBox .menu_item .menu_item_info {
@@ -707,19 +723,14 @@ footer #footerMenu .menuBox .menu_item .menu_item_title a, footer #footerMenu .m
   font-family: 'Noto Serif TC', serif;
   font-weight: 400;
   letter-spacing: 1px;
-}
-
-footer #footerMenu .menuBox .menu_item .menu_item_title a span, footer #footerMenu .menuBox .menu_item .menu_item_info a span {
-  display: block;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-family: 'Playfair Display', serif;
+  color: #fff;
+  white-space: nowrap;
 }
 
 footer #footerMenu .menuBox .menu_item .menu_item_content {
   font-size: 16px;
   letter-spacing: 2px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 @media (max-width: 968px) {
@@ -745,71 +756,39 @@ footer #footerMenu .menuBox .menu_item .menu_item_content ul li {
 
 footer #footerMenu .menuBox .menu_item .menu_item_content ul li a {
   padding: 0;
-  color: #fff;
   font-weight: 300;
   white-space: nowrap;
-}
-
-@media (max-width: 1280px) {
-  footer #footerMenu .menuBox .menu_item .menu_item_info {
-    width: 100%;
-  }
-}
-
-@media (max-width: 968px) {
-  footer #footerMenu .menuBox .menu_item .menu_item_info {
-    margin-top: 20px;
-  }
-}
-
-footer #footerMenu .menuBox .menu_item .menu_item_info p, footer #footerMenu .menuBox .menu_item .menu_item_info a, footer #footerMenu .menuBox .menu_item .menu_item_info span {
-  display: inline-block;
-  font-size: 20px;
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-
-@media (max-width: 1280px) {
-  footer #footerMenu .menuBox .menu_item .menu_item_info p, footer #footerMenu .menuBox .menu_item .menu_item_info a, footer #footerMenu .menuBox .menu_item .menu_item_info span {
-    text-align: center;
-  }
-}
-
-@media (max-width: 968px) {
-  footer #footerMenu .menuBox .menu_item .menu_item_info p, footer #footerMenu .menuBox .menu_item .menu_item_info a, footer #footerMenu .menuBox .menu_item .menu_item_info span {
-    font-size: 16px;
-  }
-}
-
-footer #footerMenu .menuBox .menu_item .menu_item_info p {
-  width: 100%;
-  margin-bottom: 5px;
-}
-
-footer #footerMenu .menuBox .menu_item .menu_item_info .social a {
-  width: 30px;
-}
-
-footer #footerMenu .menuBox .menu_item .menu_item_info span {
-  width: 20px;
-  text-align: center;
-  background: #000;
   color: #fff;
-  margin-right: 5px;
-  font-size: 23px;
-  font-weight: 600;
-  line-height: 1;
+}
+
+footer #footerMenu .menuBox .menu_item .menu_item_content ul li a span {
+  font-size: 16px;
+  color: #fff;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+footer #footerMenu .menuBox .menu_item .menu_item_info .logoBox {
+  width: 200px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+footer #footerMenu .menuBox .menu_item .menu_item_info .logoBox img {
+  width: 100%;
 }
 
 footer #footerMenu .menuBox .menu_item .menu_item_info .copyright {
   font-size: 12px;
   font-weight: 300;
+  color: #fff;
+  margin-top: 10px;
 }
 
 @media (max-width: 1280px) {
   footer #footerMenu .menuBox .menu_item .menu_item_info .copyright {
-    text-align: center;
     margin-top: 20px;
   }
 }
