@@ -1,0 +1,169 @@
+header{
+    position: sticky;
+    top: 0;
+    z-index: 98;
+    background-color: #874C00;
+
+    .topbar{
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        // outline: 1px solid red;
+        // overflow: hidden;
+
+        &:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .logoBox{
+            width: 200px;
+            padding: 24px;
+            background: #fff;
+            border-radius: 0 0 20px 20px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -720px;
+
+            img{
+                width: 100%;
+            }
+        }
+    
+        .menuBox, .memberBox{
+            float: left;
+            margin-left: 260px;
+
+            .menu_item{
+                float: left;
+                padding: 20px 0;
+                position: relative;
+
+                .menu_item_title{
+                    position: relative;
+
+                    &:before{
+                        content: "";
+                        width: 0%;
+                        height: 1px;
+                        // background: #363537;
+                        background: #fff;
+                        position: absolute;
+                        z-index: 0;
+                        bottom: 0;
+                        left: 0;
+                        transition: all .3s;
+                    }
+
+                    a{
+                        color: #fff;
+                        padding: 12px 20px;
+                        font-size: 18px;
+                        line-height: 2;
+                        position: relative;
+                        z-index: 2;
+
+                        span{
+                            margin-right: 6px;
+                            color: #fff;
+                            vertical-align: middle;
+                            transition: all .3s;
+                        }
+
+                        .number{
+                            color: #FFC908;
+                            display: inline-block;
+                        }
+                    }
+
+                    &.signup{
+                        background: #fff;
+                        border-radius: 6px;
+
+                        a{
+                            color: #874C00;
+
+                            span{
+                                color: #874C00;
+                                transition: all .3s;
+
+                            }
+                        }
+                    }
+                }
+
+                .menu_item_content{
+                    display: none;
+                    min-width: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 79px;
+                    z-index: 10;
+                    // opacity: .6;
+
+                    ul{
+
+                        li{
+                            // border-bottom: 1px solid #363537;
+                            background-color: #fff;
+
+                            a{
+                                line-height: 1.2;
+                                padding: 14px 20px;
+                                white-space:nowrap;
+                                color: #363537;
+                                // border-top: 1px solid #eee;
+                            }
+
+                            &:first-child{
+
+                                a{
+                                    // border-top: none;
+
+                                }
+                            }
+
+                            &:hover{
+                                background-color: #FFC908;
+                            }
+                        }
+                    }
+                }
+
+                &:hover{
+
+                    .menu_item_title{
+
+                        &:before{
+                            width: 100%;
+
+                        }
+    
+                        a{
+                            color: #fff;
+
+                            span{
+                                color: #fff;
+
+                                &.icon_more{
+                                    transform: rotate(-180deg);
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+    
+        }
+
+        .memberBox{
+            float: right;
+            margin-left: 0px;
+    
+        }
+    }
+    
+}

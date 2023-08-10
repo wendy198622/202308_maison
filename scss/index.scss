@@ -1,0 +1,261 @@
+@import '_setting';
+@import '_header';
+@import '_footer';
+
+
+
+.theme{
+    h4{
+        font-size: 28px;
+        font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 40px;
+        color: #000000;
+        letter-spacing: 2px;
+    }
+
+    .theme_image{}
+
+    .theme_signin{
+        background: url(../img/signin-bg.jpg) center top no-repeat;
+        background-size: cover;
+        padding: 80px 0;
+
+        .theme_signin_box{
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(16,16,16,.6);
+            border-radius: 20px;
+            padding: 60px;
+            overflow: hidden;
+
+            .theme_signin_info{
+                width: 36%;
+                float: left;
+                padding-right: 60px;
+
+                h4{
+                    color: #fff;
+                }
+
+                .theme_signin_form{
+
+                    .item{
+                        margin-bottom: 20px;
+
+                        label{
+                            font-size: 14px;
+                            line-height: 1.2;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                            color: #c9a063;
+                            letter-spacing: 1px;
+                            display: block;
+    
+                            span{
+                                width: 48px;
+                                font-size: 18px;
+                                color: #fff;
+                                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                                margin: 0 10px;
+                                display: inline-block;
+                                text-align: justify;
+                                text-justify: distribute-all-lines;
+                                text-align-last: justify;
+                                @media (max-width:1280px){
+                                    font-size: 16px;
+                                }             
+                                @media (max-width:600px){
+                                    width: 80px;
+                                }   
+    
+                                &.nowidth{
+                                    width: 300px;
+                                    @media (max-width:1020px) and (min-width:960px){
+                                        width: 280px;
+                                    }
+                                    @media (max-width:540px){
+                                        width: auto;
+                                    }
+                                }      
+                            }
+                        }
+    
+                        input[type="text"]{
+                            width: 100%;
+                            font-size: 20px;
+                            line-height: 2;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                            background: transparent;
+                            padding: 6px 16px;
+                            color: #000;
+                            background: #D9D9D9;
+                            border-radius: 6px;
+                            margin-top: 10px;
+                            letter-spacing: 2px;
+                            // border-bottom: 1px solid #c9a063;
+    
+                            &:focus{
+                                outline: 0;
+                            }
+                        }
+
+                        ::placeholder {
+                            color: #999;
+                            letter-spacing: 2px;
+                        }
+    
+                        select{
+                            width: calc(100% - 18px);
+                            height: 40px;
+                            padding: 0;
+                            border: 0;
+                            background: transparent;
+                            outline: 0;
+                            font-size: 20px;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                            color: #9f8268;
+                            margin-left: 18px;
+                            border-bottom: 1px solid #c9a063;
+                            @media (max-width:1280px){
+                                font-size: 16px;
+                            }             
+                            
+                            option{
+                                font-size: 20px;
+                                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                                @media (max-width:1280px){
+                                    font-size: 16px;
+                                }             
+    
+                            }
+                        }
+    
+                        textarea{
+                            width: calc(100% - 18px);
+                            background-color: transparent;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                            padding: 0;
+                            border: 0;
+                            font-size: 20px;
+                            height: 76px;
+                            resize: none;
+                            color: #9f8268;
+                            margin-left: 18px;
+                            border-bottom: 1px solid #c9a063;
+                            @media (max-width:1280px){
+                                font-size: 16px;
+                            }             
+    
+                            &:checked, 
+                            &:focus{
+                                outline: 0;
+                            }
+                        }
+
+                    }
+
+                    .item + .item{
+                        margin-top: 32px;
+                    }
+
+                    .account_service{
+                        text-align: center;
+                        margin-top: 60px;
+                        a{
+                            display: inline-block;
+                            padding: 0 20px;
+                            line-height: 1.2;
+                            color: #fff;
+                        }
+                        a + a{
+                            border-left: 1px solid #c9a063;
+                        }
+                    }
+                }
+            }
+
+            .theme_signin_notice{
+                width: calc(64% - 1px);
+                float: right;
+                border-left: 1px solid #C0A975;
+                padding-left: 60px;
+
+                ul{
+
+                    li{
+                        list-style: disc;
+                        color: #fff;
+                        line-height: 2;
+                    }
+                }
+                    
+                button{
+                    margin-top: 36px;
+                }
+            }
+        }
+
+    }
+
+    .theme_category{
+        padding: 60px 0 100px;
+
+        .theme_category_box{
+            max-width: 1440px;
+            margin: 0 auto;
+            overflow: hidden;
+
+            .theme_category_item{
+                width: calc((100% - 60px) / 4);
+                float: left;
+                position: relative;
+
+                
+                .category_text{
+                    color: #fff;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: auto;
+                    font-size: 36px;
+                    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                    font-weight: 600;
+                    text-align: center;
+                    line-height: 1;
+                    height: 36px;
+                    letter-spacing: 5px;
+                    text-shadow: 0 0 10px rgba(0,0,0,.8);
+                }
+            }
+
+            .theme_category_item + .theme_category_item{
+                margin-left: 20px;
+            }
+        }
+        
+    }
+
+    .theme_event{
+        padding: 60px 0 100px;
+        background: #F4F5F6;
+
+        .theme_event_box{
+            max-width: 1440px;
+            margin: 0 auto;
+            overflow: hidden;
+
+            .theme_event_item{
+                width: calc((100% - 20px) / 2);
+                float: left;
+            }
+
+            .theme_event_item + .theme_event_item{
+                margin-left: 20px;
+            }
+        }
+    }
+
+}
