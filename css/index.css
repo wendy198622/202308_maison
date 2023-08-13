@@ -840,7 +840,7 @@ footer #goTop:hover {
 .theme .theme_signin .theme_signin_box {
   max-width: 1200px;
   margin: 0 auto;
-  background: rgba(16, 16, 16, 0.6);
+  background: rgba(16, 16, 16, 0.7);
   border-radius: 20px;
   padding: 60px;
   overflow: hidden;
@@ -1095,5 +1095,89 @@ footer #goTop:hover {
 
 .theme .theme_event .theme_event_box .theme_event_item + .theme_event_item {
   margin-left: 20px;
+}
+
+.theme.theme_rules {
+  background: #F2F1ED;
+  padding: 60px 0 100px;
+}
+
+.theme.theme_rules .theme_rules_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.theme.theme_rules .theme_rules_inner h3 {
+  font-size: 32px;
+  line-height: 4;
+  text-align: justify;
+  position: relative;
+  padding-left: 32px;
+  color: #000;
+  font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+  font-weight: 600;
+}
+
+.theme.theme_rules .theme_rules_inner h3:before {
+  content: "";
+  width: 8px;
+  height: 32px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -16px;
+  background: #000;
+}
+
+.theme.theme_rules .theme_rules_inner p {
+  font-size: 18px;
+  line-height: 2;
+  text-align: justify;
+}
+
+.theme.theme_rules .theme_rules_inner ul {
+  font-size: 18px;
+  line-height: 2;
+  text-align: justify;
+}
+
+.theme.theme_rules .theme_rules_inner ul.decimal {
+  list-style: decimal;
+}
+
+.theme.theme_rules .theme_rules_inner ul.decimal li {
+  margin-left: 24px;
+}
+
+.theme.theme_rules .theme_rules_inner ul.cjk-ideographic {
+  list-style: cjk-ideographic;
+}
+
+.theme.theme_rules .theme_rules_inner ul.cjk-ideographic li {
+  margin-left: 38px;
+}
+
+.theme.theme_rules .theme_rules_inner ul.disc {
+  list-style: disc;
+}
+
+.theme.theme_rules .theme_rules_inner ul.disc li {
+  margin-left: 24px;
+}
+
+.theme.theme_rules .theme_rules_inner ul.lower-alpha {
+  list-style: lower-alpha;
+}
+
+.theme.theme_rules .theme_rules_inner ul.lower-alpha li {
+  margin-left: 24px;
+}
+
+.theme.theme_rules .theme_rules_inner ul h5 {
+  font-size: 22px;
+  line-height: 2;
+  text-align: justify;
+  color: #000;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=index.css.map */

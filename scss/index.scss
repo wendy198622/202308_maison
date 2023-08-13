@@ -25,7 +25,7 @@
         .theme_signin_box{
             max-width: 1200px;
             margin: 0 auto;
-            background: rgba(16,16,16,.6);
+            background: rgba(16,16,16,.7);
             border-radius: 20px;
             padding: 60px;
             overflow: hidden;
@@ -256,6 +256,90 @@
                 margin-left: 20px;
             }
         }
+    }
+    &.theme_rules{
+        background: #F2F1ED;
+        padding: 60px 0 100px;
+
+        .theme_rules_inner{
+            max-width: 1200px;
+            margin: 0 auto;
+            
+            h3{
+                font-size: 32px;
+                line-height: 4;
+                text-align: justify;
+                position: relative;
+                padding-left: 32px;
+                color: #000;
+                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                font-weight: 600;
+    
+                &:before{
+                    content: "";
+                    width: 8px;
+                    height: 32px;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    margin-top: -16px;
+                    background: #000;
+                }
+            }
+    
+            p{
+                font-size: 18px;
+                line-height: 2;
+                text-align: justify;
+            }
+    
+            ul{
+                font-size: 18px;
+                line-height: 2;
+                text-align: justify;
+    
+                &.decimal{
+                    list-style: decimal;
+    
+                    li{
+                        margin-left: 24px;
+                    }
+                }
+    
+                &.cjk-ideographic{
+                    list-style: cjk-ideographic;
+    
+                    li{
+                        margin-left: 38px;
+                    }
+                }
+    
+                &.disc{
+                    list-style: disc;
+    
+                    li{
+                        margin-left: 24px;
+                    }
+                }
+                &.lower-alpha{
+                    list-style: lower-alpha;
+    
+                    li{
+                        margin-left: 24px;
+                    }
+                }
+    
+                h5{
+                    font-size: 22px;
+                    line-height: 2;
+                    text-align: justify;
+                    color: #000;
+                    margin-top: 20px;
+                }
+            }
+    
+        }
+
     }
 
 }
