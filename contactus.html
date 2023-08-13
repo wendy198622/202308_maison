@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>Maison Alan Collection</title>
+	<meta name="author" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="Resource-type" content="" />
+	<!-- <link rel="icon" href="img/logo.ico"> -->
+	<!-- <meta property="og:image" content="../img/index/1200x628.jpg"> -->
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<!-- js -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/slick.js"></script>
+	<script src="js/wow.min.js"></script>
+</head>
+
+<body>
+	<header id="header"></header>
+
+	<section>
+		<div class="theme">
+			<div class="theme_contactus">
+                <div class="theme_contactus_title">
+                    <h4>會員註冊</h4>
+                </div>
+				<div class="theme_contactus_box">
+                    <div class="theme_contactus_form">
+                        <div class="item full">
+                            <label for="account">*<span>帳號</span></label>
+                            <input type="text" v-model="account" name="account" placeholder="0912345678" maxlength="10" required />
+                        </div>
+                        <div class="item">
+                            <label for="password">*<span>密碼設定</span></label>
+                            <input type="text" v-model="password" name="password" placeholder="********" required />
+                        </div>
+                        <div class="item">
+                            <label for="password_confirm">*<span>密碼確認</span></label>
+                            <input type="text" v-model="password" name="password" placeholder="********" required />
+                        </div>
+                        <div class="item">
+                            <label for="name">*<span>姓名</span></label>
+                            <input type="text" v-model="name" name="name" placeholder="王小明" required />
+                        </div>
+                        <div class="item">
+                            <label for="birthday">*<span>生日</span></label>
+                            <input type="text" v-model="birthday" name="birthday" placeholder="2000/01/01" required />
+                        </div>
+                        <div class="item">
+                            <label for="email">*<span>Email</span></label>
+                            <input type="text" v-model="email" name="email" placeholder="mingming@xxx.com" required />
+                        </div>
+                        <div class="item">
+                            <label for="LINE ID">*<span>LINE ID</span></label>
+                            <input type="text" v-model="LINE ID" name="LINE ID" placeholder="＠abc123" required />
+                        </div>
+                        <div class="item full">
+                            <label for="address">*<span>地址</span></label>
+                            <input type="text" v-model="address" name="address" placeholder="台北市松山區XXXXXXXXXXXXXX" required />
+                        </div>
+                        <div class="clear"></div>
+                        <button>會員登入</button>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer id="footer"></footer>
+
+</body>
+<script>
+	$(document).ready(function () {
+		new WOW().init();
+
+		$('#header').load('page/header.html');
+		$('#footer').load('page/footer.html');
+
+		$('.theme_image_slider').slick({
+			dots: true,
+			arrows: false,
+			infinite: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+		});
+
+	})
+
+</script>
+</html>
