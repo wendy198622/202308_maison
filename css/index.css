@@ -556,6 +556,12 @@ header .topbar .menuBox .menu_item .menu_item_title a .number, header .topbar .m
 header .topbar .menuBox .menu_item .menu_item_title.signup, header .topbar .memberBox .menu_item .menu_item_title.signup {
   background: #fff;
   border-radius: 6px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+header .topbar .menuBox .menu_item .menu_item_title.signup:before, header .topbar .memberBox .menu_item .menu_item_title.signup:before {
+  display: none;
 }
 
 header .topbar .menuBox .menu_item .menu_item_title.signup a, header .topbar .memberBox .menu_item .menu_item_title.signup a {
@@ -563,6 +569,20 @@ header .topbar .menuBox .menu_item .menu_item_title.signup a, header .topbar .me
 }
 
 header .topbar .menuBox .menu_item .menu_item_title.signup a span, header .topbar .memberBox .menu_item .menu_item_title.signup a span {
+  color: #874C00;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+header .topbar .menuBox .menu_item .menu_item_title.signup:hover, header .topbar .memberBox .menu_item .menu_item_title.signup:hover {
+  background: #FFC908;
+}
+
+header .topbar .menuBox .menu_item .menu_item_title.signup:hover a, header .topbar .memberBox .menu_item .menu_item_title.signup:hover a {
+  color: #874C00;
+}
+
+header .topbar .menuBox .menu_item .menu_item_title.signup:hover a span, header .topbar .memberBox .menu_item .menu_item_title.signup:hover a span {
   color: #874C00;
   -webkit-transition: all .3s;
   transition: all .3s;

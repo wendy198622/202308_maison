@@ -81,7 +81,12 @@ header{
                     &.signup{
                         background: #fff;
                         border-radius: 6px;
+                        transition: all .3s;
 
+                        &:before{
+                            display: none;
+                        }
+                        
                         a{
                             color: #874C00;
 
@@ -89,6 +94,20 @@ header{
                                 color: #874C00;
                                 transition: all .3s;
 
+                            }
+                        }
+
+                        &:hover{
+                            background: #FFC908;
+
+                            a{
+                                color: #874C00;
+    
+                                span{
+                                    color: #874C00;
+                                    transition: all .3s;
+    
+                                }
                             }
                         }
                     }
