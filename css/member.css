@@ -98,7 +98,7 @@ button.outline:hover a {
   z-index: 100;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all .5s;
@@ -109,6 +109,7 @@ button.outline:hover a {
   text-align: center;
   background-color: #fff;
   color: #000000;
+  border-radius: 6px;
   position: absolute;
   top: 0;
   right: 0;
@@ -131,52 +132,10 @@ button.outline:hover a {
   }
 }
 
-.popup .popup_content.popup_mov, .popup .popup_content iframe {
-  width: 1080px;
-  height: 608px;
-  outline: 10px solid #fff;
-  overflow: hidden;
-}
-
-@media (max-width: 1200px) {
-  .popup .popup_content.popup_mov, .popup .popup_content iframe {
-    width: 800px;
-    height: 450px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .popup .popup_content.popup_mov, .popup .popup_content iframe {
-    width: 640px;
-    height: 362px;
-  }
-}
-
-@media (max-width: 660px) {
-  .popup .popup_content.popup_mov, .popup .popup_content iframe {
-    width: 400px;
-    height: 226px;
-  }
-}
-
-@media (max-width: 420px) {
-  .popup .popup_content.popup_mov, .popup .popup_content iframe {
-    width: 320px;
-    height: 180px;
-  }
-}
-
-@media (max-width: 400px) {
-  .popup .popup_content.popup_mov, .popup .popup_content iframe {
-    width: 280px;
-    height: 157px;
-  }
-}
-
 .popup .popup_content.popup_code {
-  width: 500px;
-  height: 500px;
-  padding: 20px;
+  width: 720px;
+  height: 300px;
+  padding: 60px 40px;
 }
 
 @media (max-width: 600px) {
@@ -187,10 +146,103 @@ button.outline:hover a {
   }
 }
 
-.popup .popup_content.popup_message {
-  width: 320px;
-  height: 60px;
-  line-height: 60px;
+.popup .popup_content.popup_code p {
+  font-size: 20px;
+  font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.popup .popup_content.popup_code .popup_code_form .item {
+  margin: 10px auto 40px;
+}
+
+.popup .popup_content.popup_code .popup_code_form .item label {
+  font-size: 14px;
+  line-height: 1.2;
+  font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+  color: #c9a063;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.popup .popup_content.popup_code .popup_code_form .item label span {
+  width: 48px;
+  font-size: 18px;
+  color: #fff;
+  font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+  margin: 0 10px;
+  display: inline-block;
+  text-align: justify;
+  text-justify: distribute-all-lines;
+  text-align-last: justify;
+}
+
+@media (max-width: 1280px) {
+  .popup .popup_content.popup_code .popup_code_form .item label span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .popup .popup_content.popup_code .popup_code_form .item label span {
+    width: 80px;
+  }
+}
+
+.popup .popup_content.popup_code .popup_code_form .item label span.nowidth {
+  width: 300px;
+}
+
+@media (max-width: 1020px) and (min-width: 960px) {
+  .popup .popup_content.popup_code .popup_code_form .item label span.nowidth {
+    width: 280px;
+  }
+}
+
+@media (max-width: 540px) {
+  .popup .popup_content.popup_code .popup_code_form .item label span.nowidth {
+    width: auto;
+  }
+}
+
+.popup .popup_content.popup_code .popup_code_form .item input[type="text"] {
+  width: 100%;
+  font-size: 20px;
+  line-height: 2;
+  font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+  background: transparent;
+  padding: 6px 16px;
+  color: #874C00;
+  background: #ebecec;
+  border-radius: 6px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.popup .popup_content.popup_code .popup_code_form .item input[type="text"]:focus {
+  outline: 0;
+}
+
+.popup .popup_content.popup_code .popup_code_form .item ::-webkit-input-placeholder {
+  color: #999;
+  letter-spacing: 2px;
+}
+
+.popup .popup_content.popup_code .popup_code_form .item :-ms-input-placeholder {
+  color: #999;
+  letter-spacing: 2px;
+}
+
+.popup .popup_content.popup_code .popup_code_form .item ::-ms-input-placeholder {
+  color: #999;
+  letter-spacing: 2px;
+}
+
+.popup .popup_content.popup_code .popup_code_form .item ::placeholder {
+  color: #999;
+  letter-spacing: 2px;
 }
 
 .popup .popup_content .close {
@@ -199,7 +251,7 @@ button.outline:hover a {
   position: absolute;
   z-index: 10;
   right: 6px;
-  top: 6px;
+  top: 12px;
   text-align: center;
 }
 

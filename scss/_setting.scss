@@ -82,7 +82,7 @@ button{
   z-index: 100;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,.9);
+  background-color: rgba(0,0,0,.8);
   opacity: 0;
   visibility: hidden;
   transition: all .5s;
@@ -90,6 +90,7 @@ button{
       text-align: center;
       background-color: #fff;
       color: #000000;
+      border-radius: 6px;
       position: absolute;
       top: 0;
       right: 0;
@@ -106,62 +107,101 @@ button{
               padding: 10vw;
           }
       }
-      &.popup_mov, iframe{
-          width: 1080px;
-          height: 608px;
-          // padding: 50px;
-          outline: 10px solid #fff;
-          overflow: hidden;
-          @media (max-width:1200px){
-              width: 800px;
-              height: 450px;
-              // padding: 40px;
-          }
-          @media (max-width:1000px){
-              width: 640px;
-              height: 362px;
-              // padding: 30px;
-          }
-          @media (max-width:660px){
-              width: 400px;
-              height: 226px;
-          }
-          @media (max-width:420px){
-              width: 320px;
-              height: 180px;
-          }
-          @media (max-width:400px){
-              width: 280px;
-              height: 157px;
-          }
-          // .content{
-          //   width: auto;
-          //   height: 100%;
-          //   overflow: hidden;
-          // }
-      }
       &.popup_code{
-          width: 500px;
-          height: 500px;
-          padding: 20px;
+          width: 720px;
+          height: 300px;
+          padding: 60px 40px;
           @media (max-width:600px){
               width: 100vw;
               height: 100vw;
               padding: 10vw;
           }
+
+          p{
+            font-size: 20px;
+            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 2px;
+          }
+
+          .popup_code_form{
+
+            .item{
+                margin: 10px auto 40px;
+
+                label{
+                    font-size: 14px;
+                    line-height: 1.2;
+                    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                    color: #c9a063;
+                    letter-spacing: 1px;
+                    display: block;
+
+                    span{
+                        width: 48px;
+                        font-size: 18px;
+                        color: #fff;
+                        font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                        margin: 0 10px;
+                        display: inline-block;
+                        text-align: justify;
+                        text-justify: distribute-all-lines;
+                        text-align-last: justify;
+                        @media (max-width:1280px){
+                            font-size: 16px;
+                        }             
+                        @media (max-width:600px){
+                            width: 80px;
+                        }   
+
+                        &.nowidth{
+                            width: 300px;
+                            @media (max-width:1020px) and (min-width:960px){
+                                width: 280px;
+                            }
+                            @media (max-width:540px){
+                                width: auto;
+                            }
+                        }      
+                    }
+                }
+
+                input[type="text"]{
+                    width: 100%;
+                    font-size: 20px;
+                    line-height: 2;
+                    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                    background: transparent;
+                    padding: 6px 16px;
+                    color: #874C00;
+                    background: #ebecec;
+                    border-radius: 6px;
+                    margin-top: 10px;
+                    letter-spacing: 2px;
+                    // border-bottom: 1px solid #c9a063;
+
+                    &:focus{
+                        outline: 0;
+                    }
+                }
+
+                ::placeholder {
+                    color: #999;
+                    letter-spacing: 2px;
+                }
+            }
+
+          }
       }
-      &.popup_message{
-          width: 320px;
-          height: 60px;
-          line-height: 60px;
-      }
+
       .close{
           width: 40px;
           height: 40px;
           position: absolute;
           z-index: 10;
           right: 6px;
-          top: 6px;
+          top: 12px;
           text-align: center;
           i{
               font-size: 32px;

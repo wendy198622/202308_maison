@@ -55,8 +55,8 @@
 								<input type="text" v-model="password" name="password" placeholder="********" required />
 							</div>
 							<div class="item account_service">
-								<a href="register.html">VIP 會員申請</a>
-								<a href="#">忘記密碼</a>
+								<a href="register.html">加入會員</a>
+								<a href="javascript:;" class="findpassword">忘記密碼</a>
 							</div>
 							<button>會員登入</button>
 						</div>
@@ -73,7 +73,7 @@
 							<li>名酒獵手，以比市面更具優勢的價格尋找購買極具送禮或者收藏的名酒，比如法國五大酒莊的拉菲酒莊、瑪歌酒莊、木桐酒莊、拉圖、Opus one等等。</li>
 						</ul>
 						<button class="outline">
-							<a href="#">加入會員</a>
+							<a href="register.html">加入會員</a>
 						</button>
 					</div>
 				</div>
@@ -129,6 +129,24 @@
 			</div>
 		</div>
 	</section>
+
+	<div class="popup popup_findpassword">
+		<div class="popup_content popup_code">
+			<p>請輸入您註冊時填寫的Email，我們將寄出重設密碼的信件給您</p>
+			<div class="popup_code_form">
+				<div class="item full">
+					<!-- <label for="email">*<span>Email</span></label> -->
+					<input type="text" v-model="email" name="email" placeholder="mingming@xxx.com" required />
+				</div>
+				<button>送出</button>
+			</div>
+			<div class="icon close">
+				<span class="material-icons">
+					close
+				</span>
+			</div>
+		</div>
+	</div>
 	
 	<footer id="footer"></footer>
 
@@ -146,6 +164,14 @@
 			infinite: false,
 			slidesToShow: 1,
 			slidesToScroll: 1,
+		});
+
+		$(".findpassword").click(function() {
+			$(".popup_findpassword").addClass("is_acted");
+		});
+
+		$(".popup_findpassword .close").click(function() {
+			$(".popup_findpassword").removeClass("is_acted");
 		});
 
 	})
