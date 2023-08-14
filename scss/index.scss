@@ -380,15 +380,16 @@
     }
 
     .theme_newspage{
+        background: #F4F5F6;
 
         .theme_newspage_box{
             width: 1200px;
             margin: 0 auto;
+            padding: 60px;
 
             .theme_newspage_item{
-                margin: 60px;
                 padding: 40px;
-                background: #F2F1ED;
+                background: #fff;
 
                 .newspage_text{
                     margin-top: 10px;

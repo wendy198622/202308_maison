@@ -553,41 +553,6 @@ header .topbar .menuBox .menu_item .menu_item_title a .number, header .topbar .m
   display: inline-block;
 }
 
-header .topbar .menuBox .menu_item .menu_item_title.signup, header .topbar .memberBox .menu_item .menu_item_title.signup {
-  background: #fff;
-  border-radius: 6px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-header .topbar .menuBox .menu_item .menu_item_title.signup:before, header .topbar .memberBox .menu_item .menu_item_title.signup:before {
-  display: none;
-}
-
-header .topbar .menuBox .menu_item .menu_item_title.signup a, header .topbar .memberBox .menu_item .menu_item_title.signup a {
-  color: #874C00;
-}
-
-header .topbar .menuBox .menu_item .menu_item_title.signup a span, header .topbar .memberBox .menu_item .menu_item_title.signup a span {
-  color: #874C00;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-header .topbar .menuBox .menu_item .menu_item_title.signup:hover, header .topbar .memberBox .menu_item .menu_item_title.signup:hover {
-  background: #FFC908;
-}
-
-header .topbar .menuBox .menu_item .menu_item_title.signup:hover a, header .topbar .memberBox .menu_item .menu_item_title.signup:hover a {
-  color: #874C00;
-}
-
-header .topbar .menuBox .menu_item .menu_item_title.signup:hover a span, header .topbar .memberBox .menu_item .menu_item_title.signup:hover a span {
-  color: #874C00;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
 header .topbar .menuBox .menu_item .menu_item_content, header .topbar .memberBox .menu_item .menu_item_content {
   display: none;
   min-width: 100%;
@@ -612,6 +577,27 @@ header .topbar .menuBox .menu_item .menu_item_content ul li:hover, header .topba
   background-color: #FFC908;
 }
 
+header .topbar .menuBox .menu_item.signup .menu_item_title, header .topbar .memberBox .menu_item.signup .menu_item_title {
+  background: #fff;
+  border-radius: 6px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+header .topbar .menuBox .menu_item.signup .menu_item_title:before, header .topbar .memberBox .menu_item.signup .menu_item_title:before {
+  display: none;
+}
+
+header .topbar .menuBox .menu_item.signup .menu_item_title a, header .topbar .memberBox .menu_item.signup .menu_item_title a {
+  color: #874C00;
+}
+
+header .topbar .menuBox .menu_item.signup .menu_item_title a span, header .topbar .memberBox .menu_item.signup .menu_item_title a span {
+  color: #874C00;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
 header .topbar .menuBox .menu_item:hover .menu_item_title:before, header .topbar .memberBox .menu_item:hover .menu_item_title:before {
   width: 100%;
 }
@@ -627,6 +613,20 @@ header .topbar .menuBox .menu_item:hover .menu_item_title a span, header .topbar
 header .topbar .menuBox .menu_item:hover .menu_item_title a span.icon_more, header .topbar .memberBox .menu_item:hover .menu_item_title a span.icon_more {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
+}
+
+header .topbar .menuBox .menu_item:hover.signup .menu_item_title, header .topbar .memberBox .menu_item:hover.signup .menu_item_title {
+  background: #FFC908;
+}
+
+header .topbar .menuBox .menu_item:hover.signup .menu_item_title a, header .topbar .memberBox .menu_item:hover.signup .menu_item_title a {
+  color: #874C00;
+}
+
+header .topbar .menuBox .menu_item:hover.signup .menu_item_title a span, header .topbar .memberBox .menu_item:hover.signup .menu_item_title a span {
+  color: #874C00;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 header .topbar .memberBox {
@@ -1266,15 +1266,19 @@ footer #goTop:hover {
   color: #fff;
 }
 
+.theme .theme_newspage {
+  background: #F4F5F6;
+}
+
 .theme .theme_newspage .theme_newspage_box {
   width: 1200px;
   margin: 0 auto;
+  padding: 60px;
 }
 
 .theme .theme_newspage .theme_newspage_box .theme_newspage_item {
-  margin: 60px;
   padding: 40px;
-  background: #F2F1ED;
+  background: #fff;
 }
 
 .theme .theme_newspage .theme_newspage_box .theme_newspage_item .newspage_text {
