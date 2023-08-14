@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>Maison Alan Collection</title>
+	<meta name="author" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="Resource-type" content="" />
+	<!-- <link rel="icon" href="img/logo.ico"> -->
+	<!-- <meta property="og:image" content="../img/index/1200x628.jpg"> -->
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<!-- js -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/slick.js"></script>
+	<script src="js/wow.min.js"></script>
+</head>
+
+<body>
+	<header id="header"></header>
+
+	<section>
+		<div class="theme">
+			<div class="theme_aboutus">
+                <div class="theme_aboutus_title">
+                    <h4>關於我們</h4>
+                </div>
+				<div class="theme_aboutus_box">
+                    <div class="theme_aboutus_item">                         
+                        <div class="aboutus_photo">
+                            <img src="img/aboutus_image01.png" alt="">
+                        </div>
+                        <div class="aboutus_text">
+                            <h4>h4 梅納斯 精選紅酒*2+羅波蘿</h4>
+                            <!-- <h5>h5 梅納斯 精選紅酒*2+羅波蘿</h5> -->
+                            <!-- <h6>h6 梅納斯 精選紅酒*2+羅波蘿</h6> -->
+                            <p>p[] La Bollina 酒莊位於 皮德蒙區中東南角的 GAVI DOCG. 酒莊是以前熱內亞貴族，Figari伯爵的避暑莊園。該地除了是酒莊與葡萄園外，還有附設的高級酒店與高爾夫渡假村。</p>
+                            <p>p[] 在過去一些年，由於新的合作夥伴加入，La Bollina逐漸轉型成為一個集團型的公司，除了在皮德蒙的基地外，還在義大利各地收購了許多品牌，包含了Tuscany,Veneto, Apulia, Sicily, Campania, Umbria, Lazio 與 Marche 等區都有品牌。</p>
+                        </div>  
+                    </div>
+                    <div class="theme_aboutus_item">                         
+                        <div class="aboutus_photo">
+                            <img src="img/aboutus_image01.png" alt="">
+                        </div>
+                        <div class="aboutus_text">
+                            <!-- <h4>h4 梅納斯 精選紅酒*2+羅波蘿</h4> -->
+                            <h5>h5 梅納斯 精選紅酒*2+羅波蘿</h5>
+                            <!-- <h6>h6 梅納斯 精選紅酒*2+羅波蘿</h6> -->
+                            <p>p[] La Bollina 酒莊位於 皮德蒙區中東南角的 GAVI DOCG. 酒莊是以前熱內亞貴族，Figari伯爵的避暑莊園。該地除了是酒莊與葡萄園外，還有附設的高級酒店與高爾夫渡假村。</p>
+                            <p>p[] 在過去一些年，由於新的合作夥伴加入，La Bollina逐漸轉型成為一個集團型的公司，除了在皮德蒙的基地外，還在義大利各地收購了許多品牌，包含了Tuscany,Veneto, Apulia, Sicily, Campania, Umbria, Lazio 與 Marche 等區都有品牌。</p>
+                        </div>  
+                    </div>
+                    <div class="theme_aboutus_item">                         
+                        <div class="aboutus_photo">
+                            <img src="img/aboutus_image01.png" alt="">
+                        </div>
+                        <div class="aboutus_text">
+                            <!-- <h4>h4 梅納斯 精選紅酒*2+羅波蘿</h4> -->
+                            <!-- <h5>h5 梅納斯 精選紅酒*2+羅波蘿</h5> -->
+                            <h6>h6 梅納斯 精選紅酒*2+羅波蘿</h6>
+                            <p>p[] La Bollina 酒莊位於 皮德蒙區中東南角的 GAVI DOCG. 酒莊是以前熱內亞貴族，Figari伯爵的避暑莊園。該地除了是酒莊與葡萄園外，還有附設的高級酒店與高爾夫渡假村。</p>
+                            <p>p[] 在過去一些年，由於新的合作夥伴加入，La Bollina逐漸轉型成為一個集團型的公司，除了在皮德蒙的基地外，還在義大利各地收購了許多品牌，包含了Tuscany,Veneto, Apulia, Sicily, Campania, Umbria, Lazio 與 Marche 等區都有品牌。</p>
+                        </div>  
+                    </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer id="footer"></footer>
+
+</body>
+<script>
+	$(document).ready(function () {
+		new WOW().init();
+
+		$('#header').load('page/header.html');
+		$('#footer').load('page/footer.html');
+
+		$('.theme_image_slider').slick({
+			dots: true,
+			arrows: false,
+			infinite: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+		});
+
+	})
+
+</script>
+</html>

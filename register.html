@@ -28,28 +28,44 @@
 
 	<section>
 		<div class="theme">
-			<div class="theme_contactus">
-                <div class="theme_contactus_title">
-                    <h4>聯絡我們</h4>
+			<div class="theme_register">
+                <div class="theme_register_title">
+                    <h4>會員註冊</h4>
                 </div>
-				<div class="theme_contactus_box">
-                    <div class="theme_contactus_form">
+				<div class="theme_register_box">
+                    <div class="theme_register_form">
                         <div class="item full">
                             <label for="account">*<span>帳號</span></label>
                             <input type="text" v-model="account" name="account" placeholder="0912345678" maxlength="10" required />
+                        </div>
+                        <div class="item">
+                            <label for="password">*<span>密碼設定</span></label>
+                            <input type="text" v-model="password" name="password" placeholder="********" required />
+                        </div>
+                        <div class="item">
+                            <label for="password_confirm">*<span>密碼確認</span></label>
+                            <input type="text" v-model="password" name="password" placeholder="********" required />
                         </div>
                         <div class="item">
                             <label for="name">*<span>姓名</span></label>
                             <input type="text" v-model="name" name="name" placeholder="王小明" required />
                         </div>
                         <div class="item">
+                            <label for="birthday">*<span>生日</span></label>
+                            <input type="text" v-model="birthday" name="birthday" placeholder="2000/01/01" required />
+                        </div>
+                        <div class="item">
                             <label for="email">*<span>Email</span></label>
                             <input type="text" v-model="email" name="email" placeholder="mingming@xxx.com" required />
                         </div>
-						<div class="item full">
-							<label for="message">*<span>留言內容</span>MESSAGE</label>
-							<textarea id="message" v-model="message" name="message" required></textarea>
-						</div>
+                        <div class="item">
+                            <label for="LINE ID">*<span>LINE ID</span></label>
+                            <input type="text" v-model="LINE ID" name="LINE ID" placeholder="＠abc123" required />
+                        </div>
+                        <div class="item full">
+                            <label for="address">*<span>地址</span></label>
+                            <input type="text" v-model="address" name="address" placeholder="台北市松山區XXXXXXXXXXXXXX" required />
+                        </div>
                         <div class="clear"></div>
                         <button>確認送出</button>
                     </div>
