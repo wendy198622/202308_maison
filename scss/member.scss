@@ -1,0 +1,207 @@
+@import '_setting';
+@import '_header';
+@import '_footer';
+
+
+
+.theme{
+
+    .theme_register, .theme_login{
+        overflow: hidden;
+        position: relative;
+
+        &:before{
+            content: "";
+            width: 50%;
+            height: 100%;
+            background: #363537;
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            top: 0;
+        }
+
+        .theme_register_box, .theme_login_box{
+            max-width: 1440px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            padding: 60px 0;
+        
+            .theme_register_title, .theme_login_title{
+                width: 50%;
+                text-align: center;
+    
+                h4{
+                    font-size: 36px;
+                    color: #fff;
+                }
+            }
+            
+            .theme_register_form, .theme_login_form{
+                width: 50%;
+                padding: 0 40px;
+                overflow: hidden;
+                
+                .item{
+                    width: calc((100% - 40px) / 2);
+                    margin: 10px;
+                    float: left;
+
+                    &.full{
+                        width: calc(100% - 20px);
+                    }
+
+                    label{
+                        font-size: 14px;
+                        line-height: 1.2;
+                        font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                        color: #FFC908;
+                        letter-spacing: 1px;
+                        display: block;
+
+                        span{
+                            width: 80px;
+                            font-size: 18px;
+                            color: #fff;;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                            margin: 0 10px;
+                            display: inline-block;
+                            text-align: justify;
+                            text-justify: distribute-all-lines;
+                            text-align-last: justify;
+                            @media (max-width:1280px){
+                                font-size: 16px;
+                            }             
+                            @media (max-width:600px){
+                                width: 80px;
+                            }   
+
+                            &.nowidth{
+                                width: 300px;
+                                @media (max-width:1020px) and (min-width:960px){
+                                    width: 280px;
+                                }
+                                @media (max-width:540px){
+                                    width: auto;
+                                }
+                            }      
+                        }
+                    }
+
+                    input[type="text"]{
+                        width: 100%;
+                        font-size: 20px;
+                        line-height: 2;
+                        font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                        background: transparent;
+                        padding: 6px 16px;
+                        color: #874C00;
+                        background: #ebecec;
+                        border-radius: 6px;
+                        margin-top: 10px;
+                        letter-spacing: 2px;
+                        // border-bottom: 1px solid #c9a063;
+
+                        &:focus{
+                            outline: 0;
+                        }
+                    }
+
+                    ::placeholder {
+                        color: #999;
+                        letter-spacing: 2px;
+                    }
+
+                    &.account_service{
+                        float: unset;
+                        margin: 40px auto 0;
+
+                        a{
+                            color: #fff;
+                            font-size: 14px;
+                            line-height: 3.2;
+                            text-align: center;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .clear{
+                    clear: both;
+                }
+                    
+                button{
+                    margin-top: 48px;
+                }
+            }
+
+            .theme_register_login, .theme_login_register{
+                width: 50%;
+                padding: 0 40px;
+                overflow: hidden;
+
+                hr{
+                    width: 60%;
+                    margin: 60px auto 40px;
+                    border-color: #D9D9D9;
+                }
+
+                p{
+                    color: #fff;
+                    font-size: 14px;
+                    line-height: 2.6;
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+
+    .theme_register{
+        background: url(../img/register_bg.jpg) center top no-repeat;
+        background-size: cover;
+        position: relative;
+
+        .theme_register_feature{
+            position: absolute;
+            width: 32%;
+            left: 58%;
+
+            ul{
+                list-style: disc;
+                margin-top: 40%;
+
+                li{
+                    color: #fff;
+                    line-height: 2;
+                }
+            }
+        }
+    }
+
+    .theme_login{
+        background: url(../img/signin_bg.jpg) center top no-repeat;
+        background-size: cover;
+
+        .theme_login_box{
+            
+            .theme_login_form{
+                width: 50%;
+                padding: 0 40px;
+                overflow: hidden;
+                
+                .item{
+                    max-width:360px;
+                    margin: 10px auto;
+                    float: unset;
+                }
+                    
+                button{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+}

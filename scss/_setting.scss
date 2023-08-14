@@ -55,12 +55,21 @@ button{
     &.outline{
         background: transparent;
         border: 1px solid #C0A975;
-        color: #C0A975;
+
+        a{
+            color: #C0A975;
+            transition: all .3s;
+            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+            font-weight: 600;
+        }
 
         &:hover{
             background: #A99567;
-            color: #fff;
             border: 1px solid #A99567;
+
+            a{
+                color: #fff;
+            }
         }
 
     }

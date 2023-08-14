@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
 	<link rel="stylesheet" type="text/css" href="css/animate.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/member.css" />
 	<!-- js -->
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<script src="js/slick.js"></script>
@@ -29,10 +30,22 @@
 	<section>
 		<div class="theme">
 			<div class="theme_register">
-                <div class="theme_page_title theme_register_title">
-                    <h4><span>Member</span>會員註冊</h4>
-                </div>
+				<div class="theme_register_feature">
+					<ul>
+						<li>極低的透明價格</li>
+						<li>專屬於您的選品小管家</li>
+						<li>新品預購權(預購的價格更低)</li>
+						<li>會員可享受 WINESWEE 定期舉辦的主題社交活動，比如品酒、親子、單身、商業、烹飪等不同特定主題活動。</li>
+						<li>優先使用門市活動空間場地權。</li>
+						<li>親友副卡一張 *副卡需收100元工本費。</li>
+						<li>免費寄存酒款。</li>
+						<li>名酒獵手，以比市面更具優勢的價格尋找購買極具送禮或者收藏的名酒，比如法國五大酒莊的拉菲酒莊、瑪歌酒莊、木桐酒莊、拉圖、Opus one等等。</li>
+					</ul>
+				</div>
 				<div class="theme_register_box">
+					<div class="theme_register_title">
+						<h4>Hello, 歡迎加入</h4>
+					</div>
                     <div class="theme_register_form">
                         <div class="item full">
                             <label for="account">*<span>帳號</span></label>
@@ -46,19 +59,19 @@
                             <label for="password_confirm">*<span>密碼確認</span></label>
                             <input type="text" v-model="password" name="password" placeholder="********" required />
                         </div>
-                        <div class="item">
+                        <div class="item full">
                             <label for="name">*<span>姓名</span></label>
                             <input type="text" v-model="name" name="name" placeholder="王小明" required />
                         </div>
-                        <div class="item">
+                        <div class="item full">
                             <label for="birthday">*<span>生日</span></label>
                             <input type="text" v-model="birthday" name="birthday" placeholder="2000/01/01" required />
                         </div>
-                        <div class="item">
+                        <div class="item full">
                             <label for="email">*<span>Email</span></label>
                             <input type="text" v-model="email" name="email" placeholder="mingming@xxx.com" required />
                         </div>
-                        <div class="item">
+                        <div class="item full">
                             <label for="LINE ID">*<span>LINE ID</span></label>
                             <input type="text" v-model="LINE ID" name="LINE ID" placeholder="＠abc123" required />
                         </div>
@@ -67,8 +80,15 @@
                             <input type="text" v-model="address" name="address" placeholder="台北市松山區XXXXXXXXXXXXXX" required />
                         </div>
                         <div class="clear"></div>
-                        <button>確認送出</button>
-                    </div>
+                        <button>加入會員</button>
+					</div>
+					<div class="theme_register_login">
+						<hr>
+						<p>若您已是會員，請由此</p>
+						<button class="outline">
+							<a href="login.html">登入會員</a>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -83,14 +103,6 @@
 
 		$('#header').load('page/header.html');
 		$('#footer').load('page/footer.html');
-
-		$('.theme_image_slider').slick({
-			dots: true,
-			arrows: false,
-			infinite: false,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-		});
 
 	})
 

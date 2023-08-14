@@ -43,7 +43,7 @@
                 font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
                 text-transform:uppercase;
                 display: block;
-                color: rgba(255,255,255,.15);
+                color: rgba(255,255,255,.2);
                 letter-spacing: 4px;
             }
         }
@@ -450,7 +450,7 @@
             .newspage_back{
                 width: 100%;
                 max-width: 360px;
-                margin: 40px auto 80px;
+                margin: 40px auto;
                 background: #C0A975;
                 border-radius: 6px;
                 transition: all .3s;
@@ -471,122 +471,6 @@
                     a{
                         color: #fff;
                     }
-                }
-            }
-        }
-
-    }
-
-    .theme_register{
-        background: #f4f5f6;
-        padding-bottom: 80px;
-        
-        .theme_register_title{
-            height: 360px;
-            background: url(../img/register_bg.jpg) center top no-repeat;
-            background-size: cover;
-            position: relative;
-
-            h4{
-                height: 40px;
-                position: absolute;
-                z-index: 5;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                margin: auto;
-                color: #fff;
-            }
-        }
-
-        .theme_register_box{
-            max-width: 1200px;
-            margin: 60px auto 0;
-            overflow: hidden;
-            background: #fff;
-            
-            .theme_register_form{
-                padding: 60px 40px;
-                overflow: hidden;
-                
-                .item{
-                    width: calc((100% - 40px) / 2);
-                    margin: 10px;
-                    float: left;
-
-                    &.full{
-                        width: calc(100% - 20px);
-                    }
-
-                    label{
-                        font-size: 14px;
-                        line-height: 1.2;
-                        font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-                        color: #c9a063;
-                        letter-spacing: 1px;
-                        display: block;
-
-                        span{
-                            width: 80px;
-                            font-size: 18px;
-                            color: #363537;;
-                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-                            margin: 0 10px;
-                            display: inline-block;
-                            text-align: justify;
-                            text-justify: distribute-all-lines;
-                            text-align-last: justify;
-                            @media (max-width:1280px){
-                                font-size: 16px;
-                            }             
-                            @media (max-width:600px){
-                                width: 80px;
-                            }   
-
-                            &.nowidth{
-                                width: 300px;
-                                @media (max-width:1020px) and (min-width:960px){
-                                    width: 280px;
-                                }
-                                @media (max-width:540px){
-                                    width: auto;
-                                }
-                            }      
-                        }
-                    }
-
-                    input[type="text"]{
-                        width: 100%;
-                        font-size: 20px;
-                        line-height: 2;
-                        font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-                        background: transparent;
-                        padding: 6px 16px;
-                        color: #874C00;
-                        background: #ebecec;
-                        border-radius: 6px;
-                        margin-top: 10px;
-                        letter-spacing: 2px;
-                        // border-bottom: 1px solid #c9a063;
-
-                        &:focus{
-                            outline: 0;
-                        }
-                    }
-
-                    ::placeholder {
-                        color: #999;
-                        letter-spacing: 2px;
-                    }
-                }
-
-                .clear{
-                    clear: both;
-                }
-                    
-                button{
-                    margin-top: 36px;
                 }
             }
         }
