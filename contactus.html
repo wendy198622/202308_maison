@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<title>Maison Alan Collection</title>
+	<title>聯絡我們</title>
 	<meta name="author" content="" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -28,31 +28,65 @@
 
 	<section>
 		<div class="theme">
+			<div class="theme_breadcrumbs">
+				<div class="container">
+					<ol>
+						<li><a href="index.html">首頁</a></li>
+						<li>聯絡我們</li>
+					</ol>
+				</div>
+			</div>
 			<div class="theme_contactus">
                 <div class="theme_page_title theme_contactus_title">
-                    <h4><span>Contact Us</span>聯絡我們</h4>
-                </div>
+                    <h3><span>Contact Us</span>聯絡我們</h3>
+				</div>
 				<div class="theme_contactus_box">
-                    <div class="theme_contactus_form">
-                        <div class="item full">
-                            <label for="account">*<span>帳號</span></label>
-                            <input type="text" v-model="account" name="account" placeholder="0912345678" maxlength="10" required />
-                        </div>
-                        <div class="item">
-                            <label for="name">*<span>姓名</span></label>
-                            <input type="text" v-model="name" name="name" placeholder="王小明" required />
-                        </div>
-                        <div class="item">
-                            <label for="email">*<span>Email</span></label>
-                            <input type="text" v-model="email" name="email" placeholder="mingming@xxx.com" required />
-                        </div>
-						<div class="item full">
-							<label for="message">*<span>留言內容</span>MESSAGE</label>
-							<textarea id="message" v-model="message" name="message" required></textarea>
+					<div class="container">
+						<p>我們歡迎您透過此表單提出需求諮詢，也歡迎您寫下購買心得與建議<br>
+							所有的問題，我們都會盡快回覆給您</p>
+						<div class="theme_contactus_form">
+							<div class="item full">
+								<label for="question">*<span>問題分類</span></label>
+								<select name="question">
+									<option value="">--請選擇問題--</option>
+									<option value="wine">酒品諮詢</option>
+									<option value="restaurant">餐廳諮詢</option>
+									<option value="cooperate">異業合作</option>
+									<option value="order">大量訂購</option>
+									<option value="suggest">建議回饋</option>
+									<option value="other">其他</option>
+								</select>
+							</div>
+							<div class="item">
+								<label for="name">*<span>姓名</span></label>
+								<div class="sex">
+									<div>
+										<input type="radio" name="sex" id="male" value="male" checked />
+										<label for="male">先生</label>
+									</div>
+									<div>
+										<input type="radio" name="sex" id="female" value="female" />
+										<label for="female">小姐</label>
+									</div>
+								</div>
+								<input type="text" name="name" placeholder="王小明" required />
+							</div>
+							<div class="item">
+								<label for="phone">*<span>聯絡電話</span></label>
+								<input type="text" v-model="phone" name="phone" placeholder="02-12345678" required />
+							</div>
+							<div class="item full">
+								<label for="email">*<span>Email</span></label>
+								<input type="text" name="email" placeholder="mingming@xxx.com" required />
+							</div>
+							<div class="item full">
+								<label for="message">*<span>需求説明</span></label>
+								<textarea id="message" name="message" required></textarea>
+							</div>
+							<div class="clear"></div>
+							<button>確認送出</button>
 						</div>
-                        <div class="clear"></div>
-                        <button>確認送出</button>
-                    </div>
+					</div>
 				</div>
 			</div>
 		</div>

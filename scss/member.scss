@@ -6,202 +6,916 @@
 
 .theme{
 
-    .theme_register, .theme_login{
-        overflow: hidden;
-        position: relative;
+    .theme_members{
 
-        &:before{
-            content: "";
-            width: 50%;
-            height: 100%;
-            background: #363537;
-            position: absolute;
-            z-index: 0;
-            left: 0;
-            top: 0;
-        }
-
-        .theme_register_box, .theme_login_box{
-            max-width: 1440px;
-            margin: 0 auto;
+        .theme_members_title{
+            height: 360px;
+            background: url(../img/vip-members_bg.jpg) center top no-repeat;
+            background-size: cover;
             position: relative;
-            z-index: 2;
-            padding: 60px 0;
-        
-            .theme_register_title, .theme_login_title{
-                width: 50%;
-                text-align: center;
+        }
+
+        .theme_favorite_title{
+            height: 360px;
+            background: url(../img/vip-favorite_bg.jpg) center top no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .theme_record_title{
+            height: 360px;
+            background: url(../img/vip-record_bg.jpg) center top no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .theme_members_box{
+            overflow: hidden;
     
-                h4{
-                    font-size: 36px;
-                    color: #fff;
-                }
-            }
-            
-            .theme_register_form, .theme_login_form{
-                width: 50%;
-                padding: 0 40px;
-                overflow: hidden;
-                
-                .item{
-                    width: calc((100% - 40px) / 2);
-                    margin: 10px;
-                    float: left;
-
-                    &.full{
-                        width: calc(100% - 20px);
-                    }
-
-                    label{
-                        font-size: 14px;
-                        line-height: 1.2;
-                        font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-                        color: #FFC908;
-                        letter-spacing: 1px;
-                        display: block;
-
-                        span{
-                            width: 80px;
-                            font-size: 18px;
-                            color: #fff;;
-                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-                            margin: 0 10px;
-                            display: inline-block;
-                            text-align: justify;
-                            text-justify: distribute-all-lines;
-                            text-align-last: justify;
-                            @media (max-width:1280px){
-                                font-size: 16px;
-                            }             
-                            @media (max-width:600px){
-                                width: 80px;
-                            }   
-
-                            &.nowidth{
-                                width: 300px;
-                                @media (max-width:1020px) and (min-width:960px){
-                                    width: 280px;
-                                }
-                                @media (max-width:540px){
-                                    width: auto;
-                                }
-                            }      
-                        }
-                    }
-
-                    input[type="text"]{
-                        width: 100%;
-                        font-size: 20px;
-                        line-height: 2;
-                        font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-                        background: transparent;
-                        padding: 6px 16px;
-                        color: #874C00;
-                        background: #ebecec;
-                        border-radius: 6px;
-                        margin-top: 10px;
-                        letter-spacing: 2px;
-                        // border-bottom: 1px solid #c9a063;
-
-                        &:focus{
-                            outline: 0;
-                        }
-                    }
-
-                    ::placeholder {
-                        color: #999;
-                        letter-spacing: 2px;
-                    }
-
-                    &.account_service{
-                        float: unset;
-                        margin: 40px auto 0;
-
+            .theme_members_nav{
+                width: 320px;
+                float: left;
+                margin: 40px 0;
+        
+                ul{
+        
+                    > li{
+                        background: #fff;
+                        padding: 20px 30px;
+                        margin-bottom: 2px;
+                        font-weight: 600;
+                        transition: all .3s;
+        
                         a{
-                            color: #fff;
-                            font-size: 14px;
-                            line-height: 3.2;
-                            text-align: center;
-                            text-decoration: underline;
+                            font-size: 18px;
+                            line-height: 1.4;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                            color: #363537;
+                            transition: all .3s;
+                            letter-spacing: 2px;
+                        }
+        
+                        span{
+                            display: block;
+                            text-transform: uppercase;
+                            font-size: 13px;
+                            line-height: 1.4;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                            color: #908E93;
+                            letter-spacing: 2px;
+                        }
+        
+                        &.head{
+                            font-size: 20px;    
+                            line-height: 1.2;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                            background: #EBEBEB;
+                            letter-spacing: 2px;
+                        }
+
+                        &.active, &:hover{
+                            background: #F2F1ED;
+
+                            a{
+                                color: #874C00;
+                            }
                         }
                     }
                 }
-
-                .clear{
-                    clear: both;
-                }
-                    
-                button{
-                    margin-top: 48px;
-                }
             }
-
-            .theme_register_login, .theme_login_register{
-                width: 50%;
-                padding: 0 40px;
-                overflow: hidden;
-
-                hr{
-                    width: 60%;
-                    margin: 60px auto 40px;
-                    border-color: #D9D9D9;
-                }
-
-                p{
-                    color: #fff;
-                    font-size: 14px;
-                    line-height: 2.6;
-                    text-align: center;
-                }
-            }
-        }
-
-    }
-
-    .theme_register{
-        background: url(../img/register_bg.jpg) center top no-repeat;
-        background-size: cover;
-        position: relative;
-
-        .theme_register_feature{
-            position: absolute;
-            width: 32%;
-            left: 58%;
-
-            ul{
-                list-style: disc;
-                margin-top: 40%;
-
-                li{
-                    color: #fff;
-                    line-height: 2;
-                }
-            }
-        }
-    }
-
-    .theme_login{
-        background: url(../img/signin_bg.jpg) center top no-repeat;
-        background-size: cover;
-
-        .theme_login_box{
-            
-            .theme_login_form{
-                width: 50%;
-                padding: 0 40px;
-                overflow: hidden;
+        
+            .theme_members_car_step{
+                margin-top: 40px;
                 
-                .item{
-                    max-width:360px;
-                    margin: 10px auto;
+                ul{
+                    overflow: hidden;
+                    text-align: center;
+
+                    li{
+                        width: calc((100% - 20px) / 2);
+                        float: left;
+                        position: relative;
+                        line-height: 3.2;
+                        font-size: 16px;
+                        letter-spacing: 2px;
+                        color: #ABAAA8;
+
+                        &:after{
+                            content: "";
+                            width: 100%;
+                            height: 5px;
+                            background: #ABAAA8;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                        }
+
+                        &.active{
+                            color: #874C00;
+
+                            &:after{
+                                background: #874C00;
+                            }
+                        }
+                    }
+
+                    li + li{
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            .theme_members_content{
+                width: calc( 100% - 360px);
+                float: right;
+                margin: 40px 0;
+
+                &.theme_members_content_recordpage{
+                    width: 100%;
                     float: unset;
                 }
-                    
-                button{
-                    margin-top: 0;
+
+                &.theme_members_content_car{
+                    float: left;
                 }
+
+                .theme_members_index{
+
+                    .theme_members_index_info{
+                        overflow: hidden;
+
+                        .theme_members_index_info_text{
+                            width: 55%;
+                            float: left;
+
+                            h4{
+                                text-align: left;
+                                margin-bottom: 20px;
+                            }
+
+                            ol{
+                                list-style-type: decimal;
+                                margin-left: 24px;
+
+                                li{
+                                    font-size: 16px;
+                                    line-height: 2;
+                                    vertical-align: top;
+
+                                    ul{
+                                        width: calc(100% - 100px);
+                                        float: right;
+
+                                    }
+                                }
+                            }
+
+                            ul{
+
+                                li{
+                                    font-size: 16px;
+                                    line-height: 2;
+
+                                    img{
+                                        width: 18px;
+                                        display: inline-block;
+                                        margin-right: 10px;
+                                        vertical-align: middle;
+                                    }
+                                }
+                            }
+                        }
+                        .theme_members_index_info_photo{
+                            width: calc(45% - 40px);
+                            float: right;
+                        }
+
+                        &:nth-child(even){
+                            .theme_members_index_info_text{
+                                float: right;
+                            }
+                            .theme_members_index_info_photo{
+                                float: left;
+                            }
+                        }
+                    }
+
+                    .theme_members_index_info + .theme_members_index_info{
+                        margin-top: 80px;
+                    }
+
+                    hr{
+                        margin: 60px 0;
+                    }
+
+                    .theme_members_index_delivery{
+                        overflow: hidden;
+
+
+                        .theme_members_index_delivery_item{
+                            width: calc(76% / 3);
+                            float: left;
+                            position: relative;
+                            text-align: center;
+
+                            .photo{
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                        .theme_members_index_delivery_item + .theme_members_index_delivery_item{
+                            margin-left: 12%;
+
+                            &:before{
+                                content: '\e5cc';
+                                font-family: 'Material Icons';
+                                font-size: 32px;
+                                position: absolute;
+                                left: -30%;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+
+                        button{
+                            width: 360px;
+                            margin: 40px auto 0;
+                        }
+                    }
+                }
+
+                .theme_members_profile{
+                    background: #fff;
+                    padding: 40px;
+
+                    .theme_members_profile_form{
+
+                        .item{
+                            width: calc((100% - 40px) / 2);
+                            margin: 10px auto;
+                            position: relative;
+                            float: left;
+                            margin-right: 20px;
+                
+                            &.full{
+                                width: calc(100% - 20px);
+                            }
+
+                            span{
+                                color: #363537;
+                            }
+                
+                            .invoice{
+                                width: 180px;
+                                height: 20px;
+                                position: absolute;
+                                left: 130px;
+                                top: 0;
+                
+                                > div{
+                                    float: left;
+                                    margin-right: 16px;
+                                    line-height: 1.2;
+                
+                                    input, label{
+                                        display: inline-block;
+                                        color: #363537;
+                                    }
+                
+                                    input{
+                                        width: 12px;
+                                        height: 12px;
+                                        border-radius: 12px;
+                                        padding: 0;
+                                        margin-right: 2px;
+                                        outline: 1px solid #363537;
+                
+                                        &:checked{
+                                            background: #363537;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                
+                        button{
+                            width: calc((100% - 40px) / 2);
+                            margin: 50px auto 20px;
+                
+                            &.outline{
+                                margin-top: 0;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                .theme_members_table{
+                    display: table;
+                    table-layout: auto;
+                    width: 100%;
+
+                    table{
+                        width: 100%;
+
+                        tr{
+
+                            th{
+                                background: #874C00;
+                                color: #fff;
+                                padding: 10px;
+                                text-align: center;
+                                border-bottom: 3px solid #f4f5f6;
+                                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                                font-weight: 600;
+                                letter-spacing: 2px;
+                            }
+
+                            td{
+                                background: #fff;
+                                text-align: center;
+                                border-bottom: 3px solid #f4f5f6;
+
+                                .item{
+                                    flex: auto;
+                                    padding: 20px 10px;
+                                    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                                    font-size: 16px;
+
+                                    &.icon{
+                                        
+                                        i{ color: #DFDFDF;}
+
+                                        &.active {
+                                            i{ color: #FF9201;}
+                                        }
+
+                                        &:hover{
+                                            cursor: pointer;
+                                        }
+
+                                    }
+                                    
+                                    &.icon_a{
+                                        
+                                        &:hover{
+                                            cursor: pointer;
+                                        }
+                                    }
+        
+                                    &.photo{
+                                        width: 160px;
+                                    }
+        
+                                    &.price{
+                                        font-size: 18px;
+        
+                                        span{
+                                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                                            font-size: 16px;
+                                            margin-right: 5px;
+                                        }
+                                    }
+        
+                                    &.brand{
+                                        text-align: left;
+                                        font-weight: 600;
+                                        letter-spacing: 2px;
+
+                                        h6{
+                                            
+                                            span{
+                                                display: block;
+                                                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                                                font-size: 14px;
+                                                letter-spacing: 2px;
+                                                color: #908E93;
+                                                
+                                            }
+                                        }
+
+                                        ul{
+                                            text-align: left;
+                                            margin-top: 20px;
+                                            font-weight: 400;
+            
+                                            li{}
+                                        }
+                                    }
+
+                                    &.detail{
+                                        a{
+                                            display: inline-block;
+                                            border: 1px solid #363537;
+                                            padding: 2px 6px;
+                                            transition: all .3s;
+
+                                            &:hover{
+                                                background: #363537;
+                                                color: #fff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:last-child{
+                                th, td{
+                                    border: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .theme_members_recordpage_box{
+                    background: #fff;
+                    padding: 20px 40px;
+                    margin-bottom: 40px;
+
+                    &.theme_members_car_box{
+                        background: transparent;
+                        padding: 0;
+                    }
+
+                    .theme_members_recordpage_total{
+                        overflow: hidden;
+                        
+    
+                        h4{
+                            width: calc(100% - 200px);
+                            float: left;
+                        }
+    
+                        .total_price{
+                            width: 200px;
+                            float: right;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                            font-size: 22px;   
+                            line-height: 1.8; 
+                            text-align: right;
+    
+                            span{
+                                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                                font-size: 16px;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+    
+                    .theme_members_recordpage_group{
+    
+                        .theme_members_table_title{
+                            background: #F2F1ED;
+                            padding: 10px;
+                            overflow: hidden;
+    
+                            h5{
+                                width: calc(100% - 230px);
+                                float: left;
+                            }
+    
+                            .group_price{
+                                width: 140px;
+                                float: left;
+                                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                                font-size: 18px;   
+                                line-height: 1.6; 
+        
+                                span{
+                                    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                                    font-size: 16px;
+                                    margin-right: 5px;
+                                }
+                            }
+    
+                            .group_switch{
+                                width: 90px;
+                                float: right;
+                                padding-left: 8px;
+                                border: 1px solid #363537;
+                                line-height: 1.8; 
+    
+                                > div{
+                                    position: relative;
+    
+                                    &:after{
+                                        position: absolute;
+                                        right: 4px;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        font-family: 'Material Icons';
+                                    }
+    
+                                    &:hover{
+                                        cursor: pointer;
+                                    }
+                                }
+    
+                                .open{
+                                    display: block;
+    
+                                    &:after{
+                                        content: '\e145';
+                                    }
+                                }
+                                .close{
+                                    display: none;
+    
+                                    &:after{
+                                        content: '\e15b';
+                                    }
+                                }
+    
+                                &.active{
+    
+                                    .open{
+                                        display: none;
+                                    }
+                                    .close{
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+    
+                        .theme_members_recordpage{
+                            display: none;
+        
+                            table{
+        
+                                tr{
+        
+                                    td{
+        
+                                        .item{
+                                            padding: 10px;
+                
+                                            &.photo{
+                                                width: 80px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .theme_members_recordpage_group + .theme_members_recordpage_group{
+                        margin-top: 20px;
+                    }
+    
+                    .theme_members_recordpage_note{
+                        margin-top: 40px;
+    
+                        h5{}
+    
+                        p{
+                            background: #F4F5F6;
+                            padding: 10px;
+                            margin-top: 10px;
+                            letter-spacing: 2px;
+                        }
+                    }
+
+                    .theme_members_content_form{
+                        width: 100%;
+                        float: unset;
+                        background: #fff;
+                        // padding: 20px 40px;
+                        // margin-bottom: 40px;
+                        overflow: hidden;
+        
+                        .item{
+                            width: calc((100% - 40px) / 2);
+                            margin: 10px auto;
+                            position: relative;
+                            float: left;
+                            margin-right: 20px;
+                
+                            &.full{
+                                width: calc(100% - 20px);
+                            }
+        
+                            span{
+                                color: #363537;
+                            }
+        
+                            .field{
+                                width: 100%;
+                                font-size: 14px;
+                                line-height: 2;
+                                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                                background: transparent;
+                                padding: 6px 16px;
+                                color: #363537;
+                                background: #ebecec;
+                                border-radius: 6px;
+                                margin-top: 10px;
+                                letter-spacing: 2px;
+                            }
+                
+                            .invoice{
+                                width: 180px;
+                                height: 20px;
+                                position: absolute;
+                                left: 130px;
+                                top: 0;
+                
+                                > div{
+                                    float: left;
+                                    margin-right: 16px;
+                                    line-height: 1.2;
+                
+                                    input, label{
+                                        display: inline-block;
+                                        color: #363537;
+                                    }
+                
+                                    input{
+                                        width: 12px;
+                                        height: 12px;
+                                        border-radius: 12px;
+                                        padding: 0;
+                                        margin-right: 2px;
+                                        outline: 1px solid #363537;
+                
+                                        &:checked{
+                                            background: #363537;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                
+                        button{
+                            width: calc((100% - 40px) / 2);
+                            margin: 50px auto 20px;
+                
+                            &.outline{
+                                margin-top: 0;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+        
+                    .theme_members_content_btn{
+                        text-align: center;
+                        margin: 40px auto;
+        
+                        button{
+                            width: 280px;
+                            display: inline-block;
+                            margin: 0 10px;
+                            
+                            &.outline{
+                                color: #A99567;
+                                transition: all .3s;
+                            }
+        
+                            &:hover{
+                            
+                                &.outline{
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.theme_members_content_car.step1{
+                    
+                    .theme_members_table_title{
+                        background: transparent;
+
+                        .group_price{
+                            float: right;
+                        }
+                    }
+
+                    .theme_members_recordpage{
+                        display: block;
+                    }
+
+                    .theme_members_table_price{
+                        background: #F2F1ED;
+                        padding: 10px;
+                        overflow: hidden;
+
+                        .group_price{
+                            // width: 140px;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                            font-size: 18px;   
+                            line-height: 1.6; 
+                            float: right;
+    
+                            span{
+                                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                                font-size: 16px;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .theme_members_order{
+                width: 320px;
+                float: right;
+                margin: 40px 0;
+                background: #fff;
+                padding: 30px 20px;
+                margin-bottom: 40px;
+
+                hr{
+                    border-top: 1px solid #D9D9D9;
+                }
+
+                .theme_members_order_title{
+                    font-size: 20px;    
+                    line-height: 1.2;
+                    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                    // background: #EBEBEB;
+                    letter-spacing: 2px;
+                    font-weight: 600;
+        
+                    span{
+                        display: block;
+                        text-transform: uppercase;
+                        font-size: 13px;
+                        line-height: 1.4;
+                        font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                        color: #908E93;
+                        letter-spacing: 2px;
+                    }
+                }
+
+                .theme_members_order_total{
+                    overflow: hidden;
+                    font-weight: 600;
+
+                    .total_price{
+                        width: 100%;
+                        float: right;
+                        font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                        font-size: 22px;   
+                        line-height: 1.8; 
+                        text-align: right;
+
+                        span{
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                            font-size: 16px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                
+                .theme_members_order_delivery{
+                    margin: 20px 0;
+
+                    ol{
+                        list-style: decimal;
+                        margin-left: 20px;
+                        margin-top: 5px;
+                        text-align: justify;
+                        line-height: 2;
+
+                        li{
+                            color: #363537;
+                        }
+                    }
+                }
+
+                .theme_members_order_formbox{
+                    margin: 20px 0;
+
+                    .theme_members_order_form{
+                        overflow: hidden;
+
+                        .item{
+
+                            textarea{
+                                margin: 10px 0;
+                                border: 1px solid #D9D9D9;
+                            }
+
+                            input[type="checkbox"]{
+                                width: 16px;
+                                height: 16px;
+                                display: inline-block;
+                                border: 1px solid #363537;
+                                padding: 0;
+                                vertical-align: middle;
+
+                                &:before{
+                                    content: '\e5ca';
+                                    font-family: 'Material Icons';
+                                    vertical-align: top;
+                                    opacity: 0;
+                                    transition: all .3s;
+                                }
+
+                                &:checked{
+
+                                    &:before{
+                                        opacity: 1;
+                                    }
+
+
+                                }
+                            }
+
+                            label{
+                                color: #363537;
+                                display: inline-block;
+                                width: calc(100% - 24px);
+                                line-height: 2;
+                                font-family: 'Noto Sans TC', sans-serif;
+
+                                a{
+                                    display: inline-block;
+                                }
+                            }
+                        }
+
+                        p{
+                            font-size: 14px;
+                            line-height: 1.6;
+                            margin: 20px 0;
+                            letter-spacing: 2px;
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.theme_pagination,
+.theme_pagination *,
+.theme_pagination *:before,
+.theme_pagination *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: auto;
+}
+.theme_pagination {
+    line-height: 1;
+    font-weight: 400;
+    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+    -webkit-text-size-adjust: 100%;
+    margin: 1em auto;
+    text-align: center;
+    transition: font-size .2s ease-in-out;
+
+    ul {
+        list-style-type: none;
+        display: inline;
+        font-size: 100%;
+        margin: 0;
+        padding: .5em;
+
+        li {
+        display: inline-block;
+        font-size: 100%;
+        width: auto;
+        border-radius: 3px;
+
+            a {
+                color: #363537;
+                padding: 1em;
+                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                font-size: 14px;
+            }
+
+            &.current a{
+                color: #fff;
+                background: #874C00;
+                border-radius: 4px;
             }
         }
     }
 
+    > a {
+        display: inline-block;
+        vertical-align: middle;
+        // background: #DFDFDF;
+        padding: 0.5em;
+        border-radius: 3px;
+    }
+
+    &:focus, &:hover {
+    }
+
+    .disabled, [hidden], [disabled] {
+        opacity: .2;
+        pointer-events: none;
+    }
 }

@@ -1,10 +1,13 @@
 footer{
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 96px;
+    @media (max-width:960px){
+        padding-bottom: 10vw;
+    }
 
     .warningBox{
         width: 100%;
-        font-size: 48px;
+        font-size: 42px;
         line-height: 1.6;
         font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
         font-weight: 600;
@@ -13,17 +16,25 @@ footer{
         background: #B3AA8D;
         vertical-align: middle;
         padding: 12px 0;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
         position: fixed;
         z-index: 99;
         bottom: 0;
+        @media (max-width:800px){
+            font-size: 5.6vw;
+            letter-spacing: 0.6vw;
+            line-height: 80px;
+            padding: 0;
+        }
 
         img{
-            width: 76px;
-            height: 76px;
+            width: 72px;
             display: inline-block;
-            margin: 0 10px 0 20px;
+            margin: 0 10px;
             vertical-align: middle;
+            @media (max-width:800px){
+                width: 8vw;
+            }
         }
     }
 
@@ -44,34 +55,41 @@ footer{
             @media (max-width:1480px){
                 width: 100%;
             }
-            @media (max-width:1280px){
+            @media (max-width:1200px){
                 flex-wrap: wrap;
             }
-            @media (max-width:968px){
+            @media (max-width:960px){
                 display: block;
             }
 
             .menu_item{
                 text-align: left;
                 padding: 0 40px;
-                @media (max-width:968px){
-                    margin-top: 10px;
+                @media (max-width:1200px){
+                    flex: 1;
+                }
+                @media (max-width:960px){
+                    text-align: center;
                 }
 
                 &:last-child{
                     flex: 1;
-                    text-align: right;
+                    @media (max-width:1200px){
+                        width: 100%;
+                        flex: none;
+                        margin-top: 40px;
+                    }
                 }
 
-                .menu_item_title, .menu_item_info{
+                .menu_item_title{
                     min-width: 84px;
                     font-size: 20px;
                     font-family: 'Noto Serif TC', serif;
-                    font-weight: 400;
+                    font-weight: 600;
                     letter-spacing: 1px;
-                    @media (max-width:968px){
-                        text-align: center;
-                    }
+                    color: #fff;
+                    white-space: nowrap;
+
                     span{
                         display: block;
                         font-size: 12px;
@@ -82,7 +100,7 @@ footer{
                     a{
                         font-size: 20px;
                         font-family: 'Noto Serif TC', serif;
-                        font-weight: 400;
+                        font-weight: 600;
                         letter-spacing: 1px;
                         color: #fff;
                         white-space: nowrap;
@@ -90,12 +108,27 @@ footer{
                 }
 
                 .menu_item_content{
-                    font-size: 16px;
-                    letter-spacing: 2px;
                     margin-top: 20px;
-                    @media (max-width:968px){
-                        text-align: center;
-                        margin: 5px auto 0;
+                    padding-top: 30px;
+                    position: relative;
+                    @media (max-width:960px){
+                        margin-top: 15px;
+                        padding-top: 15px;
+                        margin-bottom: 30px;
+                    }
+
+                    &:before{
+                        content: "";
+                        width: 32px;
+                        height: 2px;
+                        background: #fff;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        @media (max-width:960px){
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
                     }
 
                     ul{
@@ -104,6 +137,11 @@ footer{
                             background-color: transparent;
                             width: 100%;
                             margin: 0 0 5px;
+                            font-size: 16px;
+                            font-weight: 400;
+                            white-space: nowrap;
+                            color: #fff;
+                            line-height: 1.6;
                             @media (max-width:968px){
                                 width: auto;
                                 display: inline-block;
@@ -111,17 +149,18 @@ footer{
                             }
 
                             a{
-                                padding: 0;
-                                font-weight: 300;
+                                font-size: 16px;
+                                font-weight: 400;
                                 white-space: nowrap;
                                 color: #fff;
+                                line-height: 1.6;
+                            }
                                 
-                                span{
-                                    font-size: 16px;
-                                    color: #fff;
-                                    vertical-align: middle;
-                                    margin-right: 6px;
-                                }
+                            span{
+                                font-size: 16px;
+                                color: #fff;
+                                vertical-align: middle;
+                                margin-right: 6px;
                             }
                         }
 
@@ -129,17 +168,18 @@ footer{
                 }
 
                 .menu_item_info{
+                    float: right;
+                    @media (max-width:1200px){
+                        float: unset;
+                        text-align: center;
+                    }
 
                     .logoBox{
-                        width: 200px;
-                        padding: 24px;
+                        width: 120px;
+                        padding: 10px;
                         background: #fff;
-                        border-radius: 20px;
+                        border-radius: 10px;
                         display: inline-block;
-                        // position: absolute;
-                        // top: 0;
-                        // right: 50%;
-                        // margin-right: -720px;
             
                         img{
                             width: 100%;
@@ -147,7 +187,8 @@ footer{
                     }
 
                     .copyright{
-                        font-size: 12px;
+                        font-size: 13px;
+                        line-height: 1.6;
                         font-weight: 300;
                         color: #fff;
                         margin-top: 10px;

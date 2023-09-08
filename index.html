@@ -44,15 +44,15 @@
 			<div class="theme_signin">
 				<div class="theme_signin_box">
 					<div class="theme_signin_info">
-						<h4>VIP 會員登入</h4>
+						<h3>VIP 會員登入</h3>
 						<div class="theme_signin_form">
 							<div class="item">
 								<label for="account">*<span>帳號</span></label>
-								<input type="text" v-model="account" name="account" placeholder="0912345678" maxlength="10" required />
+								<input type="text" name="account" placeholder="0912345678" maxlength="10" required />
 							</div>
 							<div class="item">
 								<label for="password">*<span>密碼</span></label>
-								<input type="text" v-model="password" name="password" placeholder="********" required />
+								<input type="text" name="password" placeholder="********" required />
 							</div>
 							<div class="item account_service">
 								<a href="register.html">加入會員</a>
@@ -62,15 +62,13 @@
 						</div>
 					</div>
 					<div class="theme_signin_notice">
+						<h3>VIP 會員獨享</h3>
 						<ul>
-							<li>極低的透明價格</li>
-							<li>專屬於您的選品小管家</li>
-							<li>新品預購權(預購的價格更低)</li>
-							<li>會員可享受 WINESWEE 定期舉辦的主題社交活動，比如品酒、親子、單身、商業、烹飪等不同特定主題活動。</li>
-							<li>優先使用門市活動空間場地權。</li>
-							<li>親友副卡一張 *副卡需收100元工本費。</li>
-							<li>免費寄存酒款。</li>
-							<li>名酒獵手，以比市面更具優勢的價格尋找購買極具送禮或者收藏的名酒，比如法國五大酒莊的拉菲酒莊、瑪歌酒莊、木桐酒莊、拉圖、Opus one等等。</li>
+							<li>以超優惠的價格買到超滿意的酒</li>
+							<li>優先購買本公司獨家代理所有商品權利</li>
+							<li>會員生日當月購酒小禮物,買愈多贈品愈多</li>
+							<li>可推薦朋友加入會員資格</li>
+							<li>未來品酒會的優先參加權</li>
 						</ul>
 						<button class="outline">
 							<a href="register.html">加入會員</a>
@@ -81,49 +79,68 @@
 		</div>
 		<div class="theme">
 			<div class="theme_category">
-				<h4>酒類專區</h4>
-				<div class="theme_category_box">
-					<div class="theme_category_item">
-						<a href="#">
-							<img src="img/category_bg01.jpg" alt="">
-							<div class="category_text">威士忌</div>
-						</a>
-					</div>
-					<div class="theme_category_item">
-						<a href="#">
-							<img src="img/category_bg02.jpg" alt="">
-							<div class="category_text">白葡萄酒</div>
-						</a>
-					</div>
-					<div class="theme_category_item">
-						<a href="#">
-							<img src="img/category_bg03.jpg" alt="">
-							<div class="category_text">紅葡萄酒</div>
-						</a>
-					</div>
-					<div class="theme_category_item">
-						<a href="#">
-							<img src="img/category_bg04.jpg" alt="">
-							<div class="category_text">香檳氣泡酒</div>
-						</a>
-						
+				<div class="container">
+					<h3>酒類專區<span>wine</span></h3>
+					<div class="theme_category_box theme_category_slider">
+						<div class="theme_category_item">
+							<a href="#">
+								<img src="img/category_wine.jpg" alt="">
+								<div class="category_text">葡萄酒<span>wine</span></div>
+							</a>
+						</div>
+						<div class="theme_category_item">
+							<a href="#">
+								<img src="img/category_whisky.jpg" alt="">
+								<div class="category_text">威士忌<span>whisky</span></div>
+							</a>
+						</div>
+						<div class="theme_category_item">
+							<a href="#">
+								<img src="img/category_brandy.jpg" alt="">
+								<div class="category_text">白蘭地<span>brandy</span></div>
+							</a>
+						</div>
+						<div class="theme_category_item">
+							<a href="#">
+								<img src="img/category_sake.jpg" alt="">
+								<div class="category_text">清酒<span>sake</span></div>
+							</a>						
+						</div>
+						<div class="theme_category_item">
+							<a href="#">
+								<img src="img/category_kaoliang.jpg" alt="">
+								<div class="category_text">高粱酒<span>kaoliang</span></div>
+							</a>						
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="theme">
 			<div class="theme_event">
-				<h4>活動專區</h4>
-				<div class="theme_event_box">
-					<div class="theme_event_item">
-						<a href="newspage.html">
-							<img src="img/event_01.jpg" alt="">
-						</a>
-					</div>
-					<div class="theme_event_item">
-						<a href="newspage.html">
-							<img src="img/event_02.jpg" alt="">
-						</a>
+				<div class="container">
+					<h3>活動專區<span>event</span></h3>
+					<div class="theme_event_box theme_event_slider">
+						<div class="theme_event_item">
+							<a href="newspage.html">
+								<img src="img/event_01.jpg" alt="">
+							</a>
+						</div>
+						<div class="theme_event_item">
+							<a href="newspage.html">
+								<img src="img/event_02.jpg" alt="">
+							</a>
+						</div>
+						<div class="theme_event_item">
+							<a href="newspage.html">
+								<img src="img/event_01.jpg" alt="">
+							</a>
+						</div>
+						<div class="theme_event_item">
+							<a href="newspage.html">
+								<img src="img/event_02.jpg" alt="">
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -166,6 +183,44 @@
 			slidesToScroll: 1,
 		});
 
+		$('.theme_category_slider').slick({
+			dots: false,
+			arrows: true,
+			infinite: false,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			responsive: [
+				{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3,
+				}
+				},
+				{
+				breakpoint: 960,
+				settings: {
+					slidesToShow: 2,
+				}
+				}
+			]
+		});
+
+		$('.theme_event_slider').slick({
+			dots: false,
+			arrows: true,
+			infinite: false,
+			slidesToShow: 2,
+			slidesToScroll: 1,
+			responsive: [
+				{
+				breakpoint: 960,
+				settings: {
+					slidesToShow: 1,
+				}
+				}
+			]
+		});
+
 		$(".findpassword").click(function() {
 			$(".popup_findpassword").addClass("is_acted");
 		});
@@ -173,6 +228,19 @@
 		$(".popup_findpassword .close").click(function() {
 			$(".popup_findpassword").removeClass("is_acted");
 		});
+
+
+		var width = $(window).width();
+
+		if (width > 960) {
+			if($(".theme_signin_form").height() > $(".theme_signin_notice ul").height()){
+				$(".theme_signin_notice ul").css("height",$(".theme_signin_form").height());
+			}else{
+				$(".theme_signin_form").css("height",$(".theme_signin_notice ul").height());
+			}
+		} else {
+			
+		}
 
 	})
 

@@ -3,13 +3,11 @@ header{
     top: 0;
     z-index: 98;
     background-color: #874C00;
-
     .topbar{
         width: 100%;
         max-width: 1440px;
+        height: 100px;
         margin: 0 auto;
-        // outline: 1px solid red;
-        // overflow: hidden;
 
         &:after{
             content: "";
@@ -26,6 +24,10 @@ header{
             top: 0;
             left: 50%;
             margin-left: -720px;
+            @media (max-width:1480px){
+                left: 0px;
+                margin-left: 0;
+            }
 
             img{
                 width: 100%;
@@ -35,10 +37,15 @@ header{
         .menuBox, .memberBox{
             float: left;
             margin-left: 260px;
+            opacity: 1;
+            visibility: visible;
+            @media (max-width:1480px){
+                margin-left: 210px;
+            }
 
             .menu_item{
                 float: left;
-                padding: 20px 0;
+                padding: 26px 0;
                 position: relative;
 
                 .menu_item_title{
@@ -59,7 +66,7 @@ header{
 
                     a{
                         color: #fff;
-                        padding: 12px 20px;
+                        padding: 6px 12px;
                         font-size: 18px;
                         line-height: 2;
                         position: relative;
@@ -84,7 +91,7 @@ header{
                     min-width: 100%;
                     position: absolute;
                     left: 0;
-                    top: 79px;
+                    top: 74px;
                     z-index: 10;
                     // opacity: .6;
 
@@ -180,14 +187,264 @@ header{
 
                 }
             }
+
+            .menu_item + .menu_item{
+                margin-left: 10px;
+            }
     
+        }
+
+        .menuBox{
+            @media (max-width:1200px){
+                display: none;
+            }
         }
 
         .memberBox{
             float: right;
             margin-left: 0px;
+            @media (max-width:1200px){
+                width: 100%;
+                height: 60px;
+                float: unset;
+                position:fixed;
+                right: 0;
+                bottom: 100px;
+
+                .menu_item{
+                    width: 100%;
+                    padding: 0;
+                    float: unset;
     
+                    .menu_item_title{
+                        display: none;
+                    }
+    
+                    .menu_item_content{
+                        display: block;
+                        position: static;
+                        top: 0;
+    
+                        ul{
+                            overflow: hidden;
+    
+                            li{
+                                width: 25%;
+                                float: left;
+                                text-align: center;
+                                border-top: 1px solid #874C00;
+    
+                                a{
+                                    height: 60px;
+                                    line-height: 60px;
+                                    padding: 0 20px;
+                                    // font-size: 16px
+                                }
+    
+                            }
+
+                            li + li{
+                                border-left: 1px solid #874C00;
+                            }
+                        }
+                    }
+                }
+
+            }
+    
+            @media (max-width:800px){
+                bottom: 80px;
+            }
         }
+    }
+
+
+    #menu-toggle{
+        width: 80px;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        background-color: transparent;
+        padding: 18px 24px;
+        margin-right: 16px;
+        transition: all .1s;
+        opacity: 0;
+        visibility: hidden;
+        @media (max-width:1200px){
+            opacity: 1;
+            visibility: visible;
+        }
+    
+
+        span{
+            display: block;
+            width: 34px;
+            height: 2px;
+            margin: 6px 0;
+            background-color: #ffffff;
+            position: relative;
+            transition: all .3s;
+        }
+
+        h6{
+            font-size: 12px;
+            color: #fff;
+            transition: all .3s;
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &.active{
+            // background-color: #c9a063;
+
+            span{
+                background-color: #fff;
+
+                &:nth-child(2){
+                    background-color: transparent;
+                }
+
+                &:nth-child(1){
+                    transform: rotate(-225deg);
+                    margin-top: 45%;
+                }
+
+                &:nth-child(3){
+                    transform: rotate(225deg);
+                    margin-top: -50%;
+                }
+            }
+
+            h6{
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+
+    #menu{
+        width: 100%;
+        height: 100vh;
+        display: none;
+
+        .menuBox{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(54,53,55,.9);
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding-top: 100px;
+            overflow-y: scroll;
+            @media (max-width:960px){
+                width: 100%;
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .menu_item{
+                text-align: center;
+                margin-bottom: 32px;
+                overflow: hidden; 
+            }
+
+            .menu_item_title, .menu_item_info,
+            .menu_item_title a, .menu_item_info a{
+                font-size: 20px;
+                font-family: 'Noto Serif TC', serif;
+                font-weight: 400;
+                letter-spacing: 1px;
+                color: #fff;
+                @media (max-width:960px){
+                    font-size: 24px;
+                }
+
+                span{
+                    display: block;
+                    font-size: 12px;
+                    text-transform: uppercase;  
+                    font-family: 'Playfair Display', serif;
+                }
+            }
+
+            .menu_item_content{
+                font-size: 16px;
+                letter-spacing: 2px;
+
+                ul{
+                    @media (max-width:960px){
+                        padding-top: 10px;
+                    }
+
+                    li{
+                        background-color: transparent;
+                        width: 100%;
+                        margin: 0 0 5px;
+                        @media (max-width:960px){
+                            width: auto;
+                            display: inline-block;
+                            margin: 0 5px 5px;
+                        }
+
+                        a{
+                            padding: 0;
+                            color: #fff;
+                            font-weight: 300;
+                            font-size: 16px;
+                            @media (max-width:960px){
+                                font-size: 18px;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .menu_item_social{
+                width: 30px;
+                float: right;
+                @media (max-width:960px){
+                    float: unset;
+                    margin: 0 auto;
+                }
+            }
+
+            .menu_item_info{
+
+                p, a, span{
+                    display: inline-block;
+                    font-size: 20px;
+                    font-family: 'Noto Serif TC', serif;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                }
+
+                p{
+                    margin-bottom: 20px;
+                    @media (max-width:960px){
+                        display: block;
+                    }
+                }
+                
+                span{
+                    width: 20px;
+                    text-align: center;
+                    background: #000;
+                    color: #fff;
+                    margin-right: 5px;
+                    font-size: 23px;
+                    font-weight: 600;
+                    line-height: 1;
+                }
+            }
+        }
+
     }
 
     .rightbar{

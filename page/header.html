@@ -1,19 +1,77 @@
+<!-- 手機 -->
+<button id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+    <h6>MENU</h6>
+</button>
 
+<div id="menu">
+    <div class="menuBox">
+        <div class="menu_item">
+                <div class="menu_item_title">
+                    <a href="./wine.html">酒類專區</a>
+                </div>
+            </div>
+            <div class="menu_item">
+                <div class="menu_item_title">
+                    <a href="./event.html">酒類活動專區</a>
+                </div>
+            </div>
+            <div class="menu_item">
+                <div class="menu_item_title">
+                    <a href="./presale.html">預購專區</a>
+                </div>
+            </div>
+            <div class="menu_item">
+                <div class="menu_item_title">
+                    <a href="./aboutus.html">關於我們</a>
+                </div>
+            </div>
+            <div class="menu_item">
+                <div class="menu_item_title">
+                    <a href="./news.html">最新消息</a>
+                </div>
+            </div>
+            <div class="menu_item">
+                <div class="menu_item_title">
+                    <a href="./contactus.html">聯絡我們</a>
+                </div>
+            </div>
+    </div>
+</div>
+
+<!-- 電腦 -->
 <div class="topbar">
     <h1 class="logoBox">
         <a href="index.html"><img src="./img/logo.jpg" alt=""></a>
     </h1>
     <div class="menuBox">
-        <div class="menu_item">
+        <!-- <div class="menu_item">
             <div class="menu_item_title">
                 <a href="#">VIP 專區<span class="material-icons icon_more">expand_more</span></a>
             </div>
             <div class="menu_item_content">
                 <ul>
-                    <li><a href="./">酒類專區</a></li>
-                    <li><a href="./">活動專區</a></li>
-                    <li><a href="./">預購專區</a></li>
+                    <li><a href="./"></a></li>
+                    <li><a href="./"></a></li>
+                    <li><a href="./"></a></li>
                 </ul>
+            </div>
+        </div> -->
+        <div class="menu_item">
+            <div class="menu_item_title">
+                <a href="./wine.html">酒類專區</a>
+            </div>
+        </div>
+        <div class="menu_item">
+            <div class="menu_item_title">
+                <a href="./event.html">酒類活動專區</a>
+            </div>
+        </div>
+        <div class="menu_item">
+            <div class="menu_item_title">
+                <a href="./presale.html">預購專區</a>
             </div>
         </div>
         <div class="menu_item">
@@ -25,53 +83,29 @@
             <div class="menu_item_title">
                 <a href="./news.html">最新消息</a>
             </div>
-            <div class="menu_item_content">
-                <!-- <ul>
-                    <li><a href="./"></a></li>
-                </ul> -->
-            </div>
         </div>
         <div class="menu_item">
             <div class="menu_item_title">
                 <a href="./contactus.html">聯絡我們</a>
             </div>
-            <div class="menu_item_content">
-                <!-- <ul>
-                    <li><a href="./"></a></li>
-                </ul> -->
-            </div>
         </div>
     </div>
     <div class="memberBox">
-        <div class="menu_item">
-            <div class="menu_item_title">
-                <a href="#"><span class="material-icons">shopping_cart</span>詢價車 <div class="number">(10)</div></a>
-            </div>
-            <div class="menu_item_content">
-                <!-- <ul>
-                    <li><a href="./"></a></li>
-                </ul> -->
-            </div>
-        </div>
         <div class="menu_item signup">
             <div class="menu_item_title">
                 <a href="./login.html"><span class="material-icons">person</span>註冊 / 登入</a>
             </div>
-            <div class="menu_item_content">
-                <!-- <ul>
-                    <li><a href="./"></a></li>
-                </ul> -->
-            </div>
         </div>
         <div class="menu_item">
             <div class="menu_item_title">
-                <a href="#"><span class="material-icons">person</span>王小明<span class="material-icons icon_more">expand_more</span></a>
+                <a href="./vip-members.html"><span class="material-icons">person</span>會員專區<span class="material-icons icon_more">expand_more</span></a>
             </div>
             <div class="menu_item_content">
                 <ul>
-                    <li><a href="./">會員資料</a></li>
-                    <li><a href="./">我的最愛</a></li>
-                    <li><a href="./">訂單記錄</a></li>
+                    <li><a href="./vip-profile.html">會員資料管理</a></li>
+                    <li><a href="./vip-favorite.html">喜愛清單</a></li>
+                    <li><a href="./vip-record.html">詢價記錄</a></li>
+                    <li><a href="javascript:;">登出</a></li>
                 </ul>
             </div>
         </div>
@@ -81,7 +115,7 @@
 <div class="rightbar">
     <ul>
         <li>
-            <a href="#">
+            <a href="./vip-quotation-step1.html">
                 <img src="./img/icon_shoppingcar.svg" alt="">
                 <div class="number">10</div>
             </a>
@@ -96,10 +130,10 @@
 <Script>
     $(document).ready(function () {
 
-        // $("#menu-toggle").click(function () {
-        //     $("#menu").slideToggle();
-        //     $("#menu-toggle").toggleClass("active");
-        // });
+        $("#menu-toggle").click(function () {
+            $("#menu").slideToggle();
+            $("#menu-toggle").toggleClass("active");
+        });
 
         $('header .menu_item').hover(
         function() {

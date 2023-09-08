@@ -17,7 +17,6 @@
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
 	<link rel="stylesheet" type="text/css" href="css/animate.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	<link rel="stylesheet" type="text/css" href="css/member.css" />
 	<!-- js -->
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<script src="js/slick.js"></script>
@@ -30,31 +29,32 @@
 	<section>
 		<div class="theme">
 			<div class="theme_login">
-				<div class="theme_login_box">
-					<div class="theme_login_title">
-						<h4>Welcome Back!</h4>
-					</div>
-                    <div class="theme_login_form">
-                        <div class="item full">
-                            <label for="account">*<span>帳號</span></label>
-                            <input type="text" v-model="account" name="account" placeholder="0912345678" maxlength="10" required />
-                        </div>
-                        <div class="item full">
-                            <label for="password">*<span>密碼</span></label>
-                            <input type="text" v-model="password" name="password" placeholder="********" required />
-                        </div>
-                        <div class="clear"></div>
-                        <div class="item account_service">
-                            <a href="javascript:;" class="findpassword">忘記密碼</a>
-                        </div>
-                        <button>會員登入</button>
-					</div>
-					<div class="theme_login_register">
-						<hr>
-						<p>若您尚未成為會員，請由此</p>
-						<button class="outline">
-							<a href="register.html">加入會員</a>
-						</button>
+				<div class="container">
+					<div class="theme_login_box">
+						<div class="theme_login_title">
+							<h3>Welcome Back!</h3>
+						</div>
+						<div class="theme_login_form">
+							<div class="item">
+								<label for="account">*<span>帳號</span></label>
+								<input type="text" name="account" placeholder="0912345678" maxlength="10" required />
+							</div>
+							<div class="item">
+								<label for="password">*<span>密碼</span></label>
+								<input type="text" name="password" placeholder="********" required />
+							</div>
+							<div class="item account_service">
+								<a href="javascript:;" class="findpassword">忘記密碼</a>
+							</div>
+							<button>會員登入</button>
+						</div>
+						<div class="theme_login_register">
+							<hr>
+							<p>若您尚未成為會員，請由此</p>
+							<button class="outline">
+								<a href="register.html">加入會員</a>
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
