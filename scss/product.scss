@@ -118,6 +118,13 @@
                                     cursor: pointer;
                                     background: #F2F1ED;
                                 }
+
+                                i{
+                                    font-size: 18px;
+                                    vertical-align: middle;
+                                    margin-right: 5px;
+                                    line-height: 2.4;
+                                }
                             }                            
                         }
                     }
@@ -132,129 +139,523 @@
                 .theme_product_filter{
 
                     ul{
+                        // overflow: hidden;
 
                         > li{
+                            width: calc((75% - 100px) / 5);
+                            float: left;
+                            position: relative;
+                            background: #fff;
+                            font-size: 16px;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                            font-weight: 600;
+                            letter-spacing: 2px;
+                            border-radius: 6px;
+                            padding: 10px 20px;
 
-                            ol{
+                            &:after{
+                                content: '\e5cf';
+                                font-family: 'Material Icons';
+                                position: absolute;
+                                top: 15px;
+                                right: 10px;
+                                transition: all .3s;
+                            }
 
-                                li{
-                                    display: inline-block;
-                                    margin-left: 16px;
+                            &.active{
 
-                                    input[type="checkbox"]{
-                                        width: 15px;
-                                        height: 15px;
+                                &:after{
+                                    content: '\e5ce';
+                                }
+                            }
+
+                            &:hover{
+                                cursor: pointer;
+                                background: #F2F1ED;
+                            }
+
+                            &.search{
+                                width: 25%;
+                            }
+
+                            button{
+                                font-size: 16px;
+                                letter-spacing: 2px;
+                            }
+
+                            input[type="text"] {
+                                margin-top: 0;
+                                font-size: 16px;
+                                background: #fff;
+                            }
+
+                            &.search, &.button{
+                                background: transparent;
+                                padding: 0;
+
+                                &:after{ display: none;}
+                            }
+
+                            .filter_item{
+                                display: none;
+                                position: absolute;
+                                z-index: 10;
+                                top: 99%;
+                                // left: 0;
+                                width: 800%;
+                                max-width: 1080px;
+                                height: auto;
+                                background: rgba(255,255,255,.9);
+                                border: 2px solid #F2F1ED;;
+                                padding: 20px;
+
+                                ol{
+                                    margin-bottom: 10px;
+
+                                    li{
                                         display: inline-block;
-                                        border: 1px solid #363537;
-                                        padding: 0;
-                                        vertical-align: middle;
+                                        margin-left: 16px;
 
-                                        &:before{
-                                            content: '\e5ca';
-                                            font-family: 'Material Icons';
-                                            vertical-align: top;
-                                            opacity: 0;
-                                            transition: all .3s;
-                                        }
-
-                                        &:checked{
+                                        input[type="checkbox"]{
+                                            width: 14px;
+                                            height: 14px;
+                                            display: inline-block;
+                                            border: 1px solid #BDBDBD;
+                                            padding: 0;
+                                            vertical-align: middle;
 
                                             &:before{
-                                                opacity: 1;
+                                                content: '\e5ca';
+                                                font-family: 'Material Icons';
+                                                vertical-align: top;
+                                                opacity: 0;
+                                                transition: all .3s;
+                                            }
+
+                                            &:checked{
+
+                                                &:before{
+                                                    opacity: 1;
+                                                }
                                             }
                                         }
-                                    }
 
-                                    label{
-                                        display: inline-block;
-                                        font-size: 15px;
-                                        font-family: 'Noto Sans TC', sans-serif;
-                                        vertical-align: middle;
-                                    }
-                                    
-                                    textarea{
-                                        margin: 10px 0;
-                                        border: 1px solid #D9D9D9;
-                                    }
+                                        label{
+                                            display: inline-block;
+                                            font-size: 14px;
+                                            font-family: 'Noto Sans TC', sans-serif;
+                                            vertical-align: middle;
+                                            color: #363537;
+                                            font-weight: 400;
+                                        }
+                                        
+                                        textarea{
+                                            margin: 10px 0;
+                                            border: 1px solid #D9D9D9;
+                                        }
 
-                                    &:first-child{
-                                        display: block;
+                                        &:first-child{
+                                            display: block;
+                                        }
                                     }
                                 }
+
+                                button.filter_check{
+                                    width: 100px;
+                                    padding: 5px 0;
+                                    margin-top: 20px;
+                                }
+                            }
+
+                            &:nth-child(1) .filter_item{
+                                left: 0;
+                            }
+                            &:nth-child(2) .filter_item{
+                                left: calc(-100% - 20px);
+                            }
+                            &:nth-child(3) .filter_item{
+                                left: calc(-200% - 40px);
+                            }
+                            &:nth-child(4) .filter_item{
+                                left: calc(-300% - 60px);
+                            }
+                        }
+
+                        > li + li{
+                            margin-left: 20px;
+                        }
+                    }
+
+                    .theme_product_filter_result{
+                        margin-top: 20px;
+
+                        .item{
+                            display: inline-block;
+                            margin-right: 10px;
+                            border: 1px solid #363537;
+                            border-radius: 20px;
+                            padding: 2px 8px;
+                            font-size: 14px;
+
+                            i{
+                                font-size: 16px;
+                                line-height: 1.2;
+                                vertical-align: middle;
+                                margin-right: 5px;
+                            }
+
+                            &:hover{
+                                cursor: pointer;
                             }
                         }
                     }
                 }
 
-                .theme_product_group{}
+                .theme_product_select{
+                    text-align: right;
+                    margin-top: 20px;
+
+                    > div{
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-left: 20px;
+
+                        &:hover{
+                            cursor: pointer;
+                        }
+
+                        i{
+                            vertical-align: middle;
+                            font-size: 16px;
+                            margin-right: -6px;
+                        }
+
+                        input[type="checkbox"]{
+                            width: 14px;
+                            height: 14px;
+                            display: inline-block;
+                            border: 1px solid #363537;
+                            padding: 0;
+                            display: inline-block;
+                            vertical-align: middle;
+
+                            &:before{
+                                content: '\e5ca';
+                                font-family: 'Material Icons';
+                                vertical-align: top;
+                                opacity: 0;
+                                transition: all .3s;
+                            }
+
+                            &:checked{
+
+                                &:before{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        label{
+                            display: inline-block;
+                            font-size: 14px;
+                            font-family: 'Noto Sans TC', sans-serif;
+                            vertical-align: middle;
+                            color: #363537;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .theme_product_select_count{}
+
+                    .theme_product_select_price{}
+                }
+
+                .theme_product_group{
+                    overflow: hidden;
+                    margin-top: 10px;
+
+                    .theme_product_item{
+                        width: calc((100% - 40px) / 3);
+                        float: left;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        padding: 20px;
+                        background: #fff;
+                        position: relative;
+
+                        &:nth-child(3n){
+                            margin-right: 0;
+                        }
+                     
+                        .favorite{
+                            position: absolute;
+                            right: 10px;
+                            top: 10px;
+                            
+                            i{ color: #DFDFDF;}
+
+                            &.active {
+                                i{ color: #FF9201;}
+                            }
+
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+
+                        a{}
+
+                        .photo{}
+
+                        .product_info{
+                            overflow: hidden;
+
+                            h6{
+                                width: 100%;
+                                position: relative;
+                                padding: 10px 0;
+                                float: left;
+                                
+                                span{
+                                    display: block;
+                                    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                                    font-size: 14px;
+                                    letter-spacing: 2px;
+                                    color: #908E93;
+                                    
+                                }
+
+                                &:after{
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+                                    width: 40px;
+                                    height: 1px;
+                                    background: #D9D9D9;
+                                }
+                            }
+
+                            ul.product_info_detail{
+                                width: calc(100% - 120px);
+                                margin: 10px 0;
+                                float: left;
+    
+                                li{}
+                            }
+    
+                            .product_info_inventory{
+                                width: 120px;
+                                margin: 10px 0;
+                                float: right;
+                                text-align: right;
+                            }
+                        }
+    
+                        .product_info_price{
+                            width: 140px;
+                            float: left;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                            font-size: 20px;   
+                            line-height: 1.6; 
+                            color: #FF9201;
+                            line-height: 2;
+    
+                            span{
+                                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                                font-size: 14px;
+                                margin-right: 5px;
+                                color: #FF9201;
+                            }
+                        }
+
+                        .product_info_addcar{
+                            width: 50%;
+                            float: right;
+                            color: #FF9201;
+                            font-size: 16px;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                            font-weight: 600;
+                            letter-spacing: 2px;
+                            border: 1px solid #FF9201;
+                            border-radius: 4px;
+                            text-align: center;
+                            line-height: 2;
+                            transition: all .3s;
+
+                            i{
+                                color: #FF9201;
+                                font-size: 16px;
+                                font-weight: 600;
+                                letter-spacing: 2px;
+                                vertical-align: middle;
+                                line-height: 2;
+                                transition: all .3s;
+                            }
+
+                            &:hover{
+                                background: #FF9201;
+                                color: #fff;
+                                cursor: pointer;
+
+                                i{
+                                    color: #fff;
+                                }
+
+                            }
+
+                        }
+
+                    }
+                }
+
+                &.theme_preorder_content{
+                    width: 100%;
+                    float: unset;
+
+                    .theme_product_group{
+    
+                        .theme_product_item{
+                            width: calc((100% - 60px) / 4);
+                            float: left;
+                            margin-right: 20px;
+                            margin-bottom: 20px;
+                            padding: 20px;
+                            background: #fff;
+                            position: relative;
+    
+                            &:nth-child(3n){
+                                margin-right: 20px;
+                            }
+    
+                            &:nth-child(4n){
+                                margin-right: 0;
+                            }
+    
+                        }
+                    }
+                }
             }
         }
 
-    }
-}
+        .theme_preorder_notice{
+            background: url(../img/preorder_notice_bg.jpg) center top no-repeat;
+            background-size: cover; 
+            padding: 60px 0;  
+            
+            .preorder_notice_type{
 
-.theme_pagination,
-.theme_pagination *,
-.theme_pagination *:before,
-.theme_pagination *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-kerning: auto;
-}
-.theme_pagination {
-    line-height: 1;
-    font-weight: 400;
-    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-    -webkit-text-size-adjust: 100%;
-    margin: 1em auto;
-    text-align: center;
-    transition: font-size .2s ease-in-out;
+                ul{
+                    text-align: center;
 
-    ul {
-        list-style-type: none;
-        display: inline;
-        font-size: 100%;
-        margin: 0;
-        padding: .5em;
+                    li{
+                        display: inline-block;
+                        padding: 0 20px;
+                        font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 1;
+                        
+                    }
 
-        li {
-        display: inline-block;
-        font-size: 100%;
-        width: auto;
-        border-radius: 3px;
-
-            a {
-                color: #363537;
-                padding: 1em;
-                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-                font-size: 14px;
+                    li + li{
+                        border-left: 1px solid #363537;
+                    }
+                }
             }
 
-            &.current a{
-                color: #fff;
-                background: #874C00;
-                border-radius: 4px;
+            .preorder_notice_feature{
+                margin-top: 80px;
+
+                .feature_title{
+                    font-size: 24px;
+                    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                    font-weight: 600;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+
+                .feature_info{
+                    font-size: 16px;
+                    text-align: center;
+                }
+
+                .feature_point{
+                    font-size: 16px;
+                    text-align: center;
+                    overflow: hidden;
+                    width: 80%;
+                    margin: 40px auto 0;
+
+                    .item{
+                        width: calc((100% - 40px) /2);
+                        float: left;
+                        border: 1px solid #371f00;
+                        border-radius: 4px;
+                        padding: 40px;
+
+                        p{
+                            margin-top: 20px;
+                            text-align: left;
+                        }
+                    }
+
+                    .item + .item{
+                        margin-left: 40px;
+                    }
+
+                    ol{
+                        list-style-type: decimal;
+                        background: #371f00;
+                        text-align: left;
+                        padding: 40px 60px;
+
+                        li{
+                            color: #fff;
+                        }
+                    }
+                }
+
+                &.feature_theme1{}
+
+                &.feature_theme2{}
+
+                &.list{
+                    text-align: center;
+
+                    .list_btn{
+                        display: inline-block;
+
+                        a{
+                            padding: 5px 20px;
+                            font-size: 20px;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                            margin: 0 10px;
+                            text-align: center;
+                            font-weight: 600;
+                            letter-spacing: 2px;
+    
+                            &.download{
+                                background: #C0A975;
+                                border: 1px solid #C0A975;
+                                color: #363537;
+                            }
+                            &.upload{
+                                background: #fff;
+                                border: 1px solid #C0A975;
+                                // color: #fff;
+                            }
+    
+                            i{
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+
+                }
             }
+            
         }
-    }
 
-    > a {
-        display: inline-block;
-        vertical-align: middle;
-        // background: #DFDFDF;
-        padding: 0.5em;
-        border-radius: 3px;
-    }
-
-    &:focus, &:hover {
-    }
-
-    .disabled, [hidden], [disabled] {
-        opacity: .2;
-        pointer-events: none;
     }
 }

@@ -1315,27 +1315,6 @@ footer #goTop:hover {
   cursor: pointer;
 }
 
-.theme .theme_members .theme_members_title {
-  height: 360px;
-  background: url(../img/vip-members_bg.jpg) center top no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.theme .theme_members .theme_favorite_title {
-  height: 360px;
-  background: url(../img/vip-favorite_bg.jpg) center top no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.theme .theme_members .theme_record_title {
-  height: 360px;
-  background: url(../img/vip-record_bg.jpg) center top no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
 .theme .theme_members .theme_members_box {
   overflow: hidden;
 }

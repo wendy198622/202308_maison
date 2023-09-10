@@ -61,6 +61,12 @@
     }
 
     .theme_page_title{
+        height: 360px;
+        // background: url(../img/news_bg.jpg) center top no-repeat;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
 
         h3{
             height: 70px;
@@ -281,13 +287,10 @@
     }
 
     .theme_news{
+        margin-bottom: 60px;
+        margin-top: -20px;
         
-        .theme_news_title{
-            height: 360px;
-            background: url(../img/news_bg.jpg) center top no-repeat;
-            background-size: cover;
-            position: relative;
-        }
+        .theme_news_title{}
 
         .theme_news_category{
             text-align: center;
@@ -463,6 +466,148 @@
 
     }
 
+    .theme_campaign{
+        margin-bottom: 60px;
+        
+        .theme_campaign_title{}
+
+        .theme_campaign_category{
+            text-align: center;
+            padding: 60px 0;
+            
+            ul{
+                
+                li{
+                    display: inline-block;
+
+                    &.active{
+                        color: #874C00;
+                    }
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+
+                li + li{
+
+                    &:before{
+                        content: '|';
+                        margin: 0 20px;
+                        color: #363537;
+                    }
+                }
+            }
+        }
+
+        .theme_campaign_box{
+            margin-top: 60px;
+            margin-bottom: 20px;
+            overflow: hidden;
+
+            .theme_campaign_item{
+                width: calc((100% - 120px) / 3);
+                margin: 0 60px 60px 0;
+                float: left;
+                position: relative;
+                padding: 20px;
+                // overflow: hidden;
+                border: 1px solid #874C00;
+
+                &:nth-child(3n){
+                    margin-right: 0;
+                }
+
+                @media (max-width:1200px){
+                    width: calc((100% - 60px) / 3);
+                    margin: 0 30px 60px 0;
+                }
+                @media (max-width:960px){
+                    width: calc((100% - 30px) / 2);
+                    margin: 0 30px 30px 0;
+
+                    &:nth-child(3n){
+                        margin-right: 30px;
+                    }
+
+                    &:nth-child(2n){
+                        margin-right: 0;
+                    }
+                }
+
+                @media (max-width:800px){
+                    padding: 0 20px;
+                }
+
+                @media (max-width:480px){
+                    width: 100%;
+                    margin: 0 0 30px 0;
+                }
+
+                .campaign_photo{
+                    // padding-top: 20px;
+                }
+
+                .campaign_text{
+                    .campaign_text_info{
+                        margin-top: 30px;
+                        overflow: hidden;
+                        @media (max-width:540px){
+                            text-align: center;
+                        }
+
+                        .category{
+                            color: #fff;
+                            // border: 1px solid #874C00;
+                            background: #874C00;
+                            // float: right;
+                            padding: 0 6px;
+                            font-size: 15px;
+                            display: inline-block;
+                            line-height: 2;
+                            @media (max-width:540px){
+                                display: inline-block;
+                                float: unset;
+                                margin: 0 auto;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    h6{
+                        font-size: 18px;
+                        letter-spacing: 2px;
+                        font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                        font-weight: 600;
+                        margin-top: 20px;
+                    }
+                }
+
+                .campaign_more{
+                    width: 100%;
+                    max-width: 360px;
+                    height: 40px;
+                    line-height: 40px;
+                    margin: 40px auto -40px;
+                    background: #874C00;
+                    color: #fff;
+                    font-size: 22px;
+                    border-radius: 6px;
+                    text-align: center;
+                    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                    letter-spacing: 2px;
+                    transition: all .3s;
+                }
+
+                &:hover{
+                    cursor: pointer;
+
+                }
+            }
+        }
+
+    }
+
     .theme_newspage{
         background: #F4F5F6;
 
@@ -522,10 +667,6 @@
     .theme_aboutus{
         
         .theme_aboutus_title{
-            height: 360px;
-            background: url(../img/aboutus_bg.jpg) center top no-repeat;
-            background-size: cover;
-            position: relative;
 
             h3{
                 height: 40px;
@@ -652,10 +793,6 @@
         padding-bottom: 80px;
         
         .theme_contactus_title{
-            height: 360px;
-            background: url(../img/contactus_bg.jpg) right top no-repeat;
-            background-size: cover;
-            position: relative;
             @media (max-width:600px){
                 background-position: 90% top;
             }
@@ -1056,6 +1193,70 @@
         background-size: cover;
         background-attachment: fixed;
     }
+}
 
+.theme_pagination,
+.theme_pagination *,
+.theme_pagination *:before,
+.theme_pagination *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: auto;
+}
+.theme_pagination {
+    line-height: 1;
+    font-weight: 400;
+    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+    -webkit-text-size-adjust: 100%;
+    margin: 1em auto;
+    text-align: center;
+    transition: font-size .2s ease-in-out;
 
+    ul {
+        list-style-type: none;
+        display: inline;
+        font-size: 100%;
+        margin: 0;
+        padding: .5em;
+
+        li {
+        display: inline-block;
+        font-size: 100%;
+        width: auto;
+        border-radius: 3px;
+
+            a {
+                color: #363537;
+                padding: 1em;
+                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                font-size: 14px;
+            }
+
+            &.current a{
+                color: #fff;
+                background: #874C00;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    > a {
+        display: inline-block;
+        vertical-align: middle;
+        // background: #DFDFDF;
+        padding: 0.5em;
+        border-radius: 3px;
+    }
+
+    &:focus, &:hover {
+    }
+
+    .disabled, [hidden], [disabled] {
+        opacity: .2;
+        pointer-events: none;
+    }
 }

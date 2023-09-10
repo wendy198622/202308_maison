@@ -39,7 +39,7 @@
 				</div>
 			</div>
 			<div class="theme_members">
-                <div class="theme_page_title theme_favorite_title">
+                <div class="theme_page_title theme_favorite_title" style="background-image: url(img/vip-favorite_bg.jpg);">
                     <h3><span>FAVORITE</span>喜愛清單</h3>
 				</div>
 				<div class="theme_members_box">
@@ -72,7 +72,7 @@
 									</tr>
 									<tr>
 										<td>
-											<div class="item icon active">
+											<div class="item icon favorite active">
 												<i class="material-icons">
 													favorite
 												</i>
@@ -115,7 +115,7 @@
 									</tr>
 									<tr>
 										<td>
-											<div class="item icon active">
+											<div class="item icon favorite active">
 												<i class="material-icons">
 													favorite
 												</i>
@@ -158,7 +158,7 @@
 									</tr>
 									<tr>
 										<td>
-											<div class="item icon active">
+											<div class="item icon favorite active">
 												<i class="material-icons">
 													favorite
 												</i>
@@ -201,7 +201,7 @@
 									</tr>
 									<tr>
 										<td>
-											<div class="item icon active">
+											<div class="item icon favorite active">
 												<i class="material-icons">
 													favorite
 												</i>
@@ -244,7 +244,7 @@
 									</tr>
 									<tr>
 										<td>
-											<div class="item icon active">
+											<div class="item icon favorite active">
 												<i class="material-icons">
 													favorite
 												</i>
@@ -287,7 +287,7 @@
 									</tr>
 									<tr>
 										<td>
-											<div class="item icon active">
+											<div class="item icon favorite active">
 												<i class="material-icons">
 													favorite
 												</i>
@@ -330,7 +330,7 @@
 									</tr>
 									<tr>
 										<td>
-											<div class="item icon active">
+											<div class="item icon favorite active">
 												<i class="material-icons">
 													favorite
 												</i>
@@ -373,7 +373,7 @@
 									</tr>
 									<tr>
 										<td>
-											<div class="item icon active">
+											<div class="item icon favorite active">
 												<i class="material-icons">
 													favorite
 												</i>
@@ -416,7 +416,7 @@
 									</tr>
 									<tr>
 										<td>
-											<div class="item icon active">
+											<div class="item icon favorite active">
 												<i class="material-icons">
 													favorite
 												</i>
@@ -459,7 +459,7 @@
 									</tr>
 									<tr>
 										<td>
-											<div class="item icon active">
+											<div class="item icon favorite active">
 												<i class="material-icons">
 													favorite
 												</i>
@@ -548,6 +548,10 @@
         $(".theme_pagination ul li").click(function() {
             $(this).addClass("current");
             $(this).siblings().removeClass("current");
+        });
+        
+        $(".favorite").click(function() {
+            $(this).toggleClass("active");
         });
 
 	})
