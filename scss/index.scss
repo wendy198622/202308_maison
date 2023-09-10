@@ -67,6 +67,10 @@
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
+        @media (max-width:800px){
+            height: 240px;
+            background-position: right top;
+        }
 
         h3{
             height: 70px;
@@ -76,9 +80,6 @@
             text-align: center;
             color: #363537;
             letter-spacing: 6px;
-
-
-            
             position: absolute;
             z-index: 5;
             top: 0;
@@ -87,6 +88,9 @@
             left: 0;
             margin: auto;
             color: #fff;
+            @media (max-width:800px){
+                font-size: 26px;
+            }
     
             span{
                 font-size: 28px;
@@ -96,6 +100,9 @@
                 display: block;
                 color: rgba(255,255,255,.2);
                 letter-spacing: 4px;
+                @media (max-width:800px){
+                    font-size: 20px;
+                }
             }
         }
 
@@ -524,7 +531,7 @@
                 }
                 @media (max-width:960px){
                     width: calc((100% - 30px) / 2);
-                    margin: 0 30px 30px 0;
+                    margin: 0 30px 40px 0;
 
                     &:nth-child(3n){
                         margin-right: 30px;
@@ -536,12 +543,12 @@
                 }
 
                 @media (max-width:800px){
-                    padding: 0 20px;
+                    // padding: 0 20px;
                 }
 
                 @media (max-width:480px){
                     width: 100%;
-                    margin: 0 0 30px 0;
+                    margin: 0 0 40px 0;
                 }
 
                 .campaign_photo{
@@ -737,16 +744,8 @@
                         line-height: 2;
                     }
 
-                    h4{
-                        font-size: 32px;
-                    }
-
                     h5{
                         font-size: 26px;
-                    }
-
-                    h6{
-                        font-size: 22px;
                     }
 
                     p{
@@ -1080,6 +1079,21 @@
                         }
                     }
 
+                    .city{
+                        width: 140px;
+                        float: left;
+                        margin-right: 20px;
+                    }
+                    .dist{
+                        width: 140px;
+                        float: left;
+                        margin-right: 20px;
+                    }
+                    .address{
+                        width: calc(100% - 320px);
+                        float: left;
+                    }
+
                     .invoice{
                         width: 180px;
                         height: 20px;
@@ -1228,6 +1242,21 @@
         font-size: 100%;
         width: auto;
         border-radius: 3px;
+        @media (max-width:600px){
+            &:nth-child(7), &:nth-child(8), &:nth-child(9){
+                display: none;
+            }
+        }
+        @media (max-width:480px){
+            &:nth-child(6), &:nth-child(11){
+                display: none;
+            }
+        }
+        @media (max-width:360px){
+            &:nth-child(5){
+                display: none;
+            }
+        }
 
             a {
                 color: #363537;

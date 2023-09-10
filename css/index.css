@@ -183,7 +183,7 @@ input[type="text"]:focus {
 
 select {
   width: 100%;
-  height: 54px;
+  height: 40px;
   font-size: 20px;
   line-height: 2;
   font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
@@ -1374,6 +1374,13 @@ footer #goTop:hover {
   position: relative;
 }
 
+@media (max-width: 800px) {
+  .theme .theme_page_title {
+    height: 240px;
+    background-position: right top;
+  }
+}
+
 .theme .theme_page_title h3 {
   height: 70px;
   font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
@@ -1391,6 +1398,12 @@ footer #goTop:hover {
   color: #fff;
 }
 
+@media (max-width: 800px) {
+  .theme .theme_page_title h3 {
+    font-size: 26px;
+  }
+}
+
 .theme .theme_page_title h3 span {
   font-size: 28px;
   line-height: 1;
@@ -1399,6 +1412,12 @@ footer #goTop:hover {
   display: block;
   color: rgba(255, 255, 255, 0.2);
   letter-spacing: 4px;
+}
+
+@media (max-width: 800px) {
+  .theme .theme_page_title h3 span {
+    font-size: 20px;
+  }
 }
 
 .theme .theme_signin {
@@ -1843,7 +1862,7 @@ footer #goTop:hover {
 @media (max-width: 960px) {
   .theme .theme_campaign .theme_campaign_box .theme_campaign_item {
     width: calc((100% - 30px) / 2);
-    margin: 0 30px 30px 0;
+    margin: 0 30px 40px 0;
   }
   .theme .theme_campaign .theme_campaign_box .theme_campaign_item:nth-child(3n) {
     margin-right: 30px;
@@ -1853,16 +1872,10 @@ footer #goTop:hover {
   }
 }
 
-@media (max-width: 800px) {
-  .theme .theme_campaign .theme_campaign_box .theme_campaign_item {
-    padding: 0 20px;
-  }
-}
-
 @media (max-width: 480px) {
   .theme .theme_campaign .theme_campaign_box .theme_campaign_item {
     width: 100%;
-    margin: 0 0 30px 0;
+    margin: 0 0 40px 0;
   }
 }
 
@@ -2060,16 +2073,8 @@ footer #goTop:hover {
   line-height: 2;
 }
 
-.theme .theme_aboutus .theme_aboutus_box .theme_aboutus_item .aboutus_text h4 {
-  font-size: 32px;
-}
-
 .theme .theme_aboutus .theme_aboutus_box .theme_aboutus_item .aboutus_text h5 {
   font-size: 26px;
-}
-
-.theme .theme_aboutus .theme_aboutus_box .theme_aboutus_item .aboutus_text h6 {
-  font-size: 22px;
 }
 
 .theme .theme_aboutus .theme_aboutus_box .theme_aboutus_item .aboutus_text p {
@@ -2417,6 +2422,35 @@ footer #goTop:hover {
   text-decoration: underline;
 }
 
+.theme .theme_login .theme_login_box .theme_login_form .item .city, .theme .theme_login .theme_login_box .theme_login_register .item .city,
+.theme .theme_login .theme_login_box .theme_register_form .item .city, .theme .theme_login .theme_login_box .theme_register_login .item .city, .theme .theme_login .theme_register_box .theme_login_form .item .city, .theme .theme_login .theme_register_box .theme_login_register .item .city,
+.theme .theme_login .theme_register_box .theme_register_form .item .city, .theme .theme_login .theme_register_box .theme_register_login .item .city, .theme .theme_register .theme_login_box .theme_login_form .item .city, .theme .theme_register .theme_login_box .theme_login_register .item .city,
+.theme .theme_register .theme_login_box .theme_register_form .item .city, .theme .theme_register .theme_login_box .theme_register_login .item .city, .theme .theme_register .theme_register_box .theme_login_form .item .city, .theme .theme_register .theme_register_box .theme_login_register .item .city,
+.theme .theme_register .theme_register_box .theme_register_form .item .city, .theme .theme_register .theme_register_box .theme_register_login .item .city {
+  width: 140px;
+  float: left;
+  margin-right: 20px;
+}
+
+.theme .theme_login .theme_login_box .theme_login_form .item .dist, .theme .theme_login .theme_login_box .theme_login_register .item .dist,
+.theme .theme_login .theme_login_box .theme_register_form .item .dist, .theme .theme_login .theme_login_box .theme_register_login .item .dist, .theme .theme_login .theme_register_box .theme_login_form .item .dist, .theme .theme_login .theme_register_box .theme_login_register .item .dist,
+.theme .theme_login .theme_register_box .theme_register_form .item .dist, .theme .theme_login .theme_register_box .theme_register_login .item .dist, .theme .theme_register .theme_login_box .theme_login_form .item .dist, .theme .theme_register .theme_login_box .theme_login_register .item .dist,
+.theme .theme_register .theme_login_box .theme_register_form .item .dist, .theme .theme_register .theme_login_box .theme_register_login .item .dist, .theme .theme_register .theme_register_box .theme_login_form .item .dist, .theme .theme_register .theme_register_box .theme_login_register .item .dist,
+.theme .theme_register .theme_register_box .theme_register_form .item .dist, .theme .theme_register .theme_register_box .theme_register_login .item .dist {
+  width: 140px;
+  float: left;
+  margin-right: 20px;
+}
+
+.theme .theme_login .theme_login_box .theme_login_form .item .address, .theme .theme_login .theme_login_box .theme_login_register .item .address,
+.theme .theme_login .theme_login_box .theme_register_form .item .address, .theme .theme_login .theme_login_box .theme_register_login .item .address, .theme .theme_login .theme_register_box .theme_login_form .item .address, .theme .theme_login .theme_register_box .theme_login_register .item .address,
+.theme .theme_login .theme_register_box .theme_register_form .item .address, .theme .theme_login .theme_register_box .theme_register_login .item .address, .theme .theme_register .theme_login_box .theme_login_form .item .address, .theme .theme_register .theme_login_box .theme_login_register .item .address,
+.theme .theme_register .theme_login_box .theme_register_form .item .address, .theme .theme_register .theme_login_box .theme_register_login .item .address, .theme .theme_register .theme_register_box .theme_login_form .item .address, .theme .theme_register .theme_register_box .theme_login_register .item .address,
+.theme .theme_register .theme_register_box .theme_register_form .item .address, .theme .theme_register .theme_register_box .theme_register_login .item .address {
+  width: calc(100% - 320px);
+  float: left;
+}
+
 .theme .theme_login .theme_login_box .theme_login_form .item .invoice, .theme .theme_login .theme_login_box .theme_login_register .item .invoice,
 .theme .theme_login .theme_login_box .theme_register_form .item .invoice, .theme .theme_login .theme_login_box .theme_register_login .item .invoice, .theme .theme_login .theme_register_box .theme_login_form .item .invoice, .theme .theme_login .theme_register_box .theme_login_register .item .invoice,
 .theme .theme_login .theme_register_box .theme_register_form .item .invoice, .theme .theme_login .theme_register_box .theme_register_login .item .invoice, .theme .theme_register .theme_login_box .theme_login_form .item .invoice, .theme .theme_register .theme_login_box .theme_login_register .item .invoice,
@@ -2593,6 +2627,24 @@ footer #goTop:hover {
   font-size: 100%;
   width: auto;
   border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+  .theme_pagination ul li:nth-child(7), .theme_pagination ul li:nth-child(8), .theme_pagination ul li:nth-child(9) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme_pagination ul li:nth-child(6), .theme_pagination ul li:nth-child(11) {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .theme_pagination ul li:nth-child(5) {
+    display: none;
+  }
 }
 
 .theme_pagination ul li a {

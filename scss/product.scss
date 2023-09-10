@@ -23,8 +23,15 @@
                 width: 320px;
                 float: left;
                 margin: 40px 0;
+                @media (max-width:1200px){
+                    width: 100%;
+                }
         
                 ul{
+                    overflow: hidden;
+                    @media (max-width:1200px){
+                        background: #fff;
+                    }
         
                     > li{
                         background: #fff;
@@ -32,7 +39,14 @@
                         margin-bottom: 2px;
                         transition: all .3s;
                         font-weight: 600;
-                        overflow: hidden;
+                        // overflow: hidden;
+                        @media (max-width:1200px){
+                            width: calc(100% / 8);
+                            float: left;
+                            padding: 10px;
+                        }
+
+
         
                         a{
                             font-size: 18px;
@@ -51,6 +65,10 @@
                             font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
                             color: #908E93;
                             letter-spacing: 2px;
+                            @media (max-width:1200px){
+                                font-size: 12px;
+                                letter-spacing: 1px;
+                            }
                         }
         
                         &.head{
@@ -59,6 +77,9 @@
                             font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
                             letter-spacing: 2px;
                             background: #F2F1ED;
+                            @media (max-width:1200px){
+                                display: none;
+                            }
                         }
 
                         &.active, &:hover{
@@ -104,6 +125,11 @@
                         .subnav{
                             margin: 16px -30px 0;
                             display: none;
+                            @media (max-width:1200px){
+                                width: 800%;
+                                background: #fff;
+                                padding: 0 24px;
+                            }
 
                             li{
                                 width: 100%;
@@ -113,6 +139,11 @@
                                 padding: 0 48px;
                                 font-size: 16px;
                                 letter-spacing: 2px;
+                                @media (max-width:1200px){
+                                    width: auto;
+                                    display: inline-block;
+                                    padding: 0 20px;
+                                }
 
                                 &.active, &:hover{
                                     cursor: pointer;
@@ -127,6 +158,22 @@
                                 }
                             }                            
                         }
+
+                        @media (max-width:1200px){
+                            &:nth-child(3) .subnav{ margin-left: -150%;}
+                            &:nth-child(4) .subnav{ margin-left: -265%;}
+                            &:nth-child(5) .subnav{ margin-left: -380%;}
+                            &:nth-child(6) .subnav{ margin-left: -495%;}
+                            &:nth-child(7) .subnav{ margin-left: -610%;}
+                            &:nth-child(8) .subnav{ margin-left: -725%;}
+                            &:nth-child(9) .subnav{ margin-left: -840%;}
+                        }
+                    }
+
+                    @media (max-width:1200px){
+                        > li + li{
+                            border-left: 1px solid #f4f5f6;
+                        }
                     }
                 }
             }
@@ -135,6 +182,9 @@
                 width: calc( 100% - 360px);
                 float: right;
                 margin: 40px 0;
+                @media (max-width:1200px){
+                    width: 100%;
+                }
 
                 .theme_product_filter{
 
@@ -142,7 +192,7 @@
                         // overflow: hidden;
 
                         > li{
-                            width: calc((75% - 100px) / 5);
+                            width: calc((57% - 100px) / 4);
                             float: left;
                             position: relative;
                             background: #fff;
@@ -152,6 +202,7 @@
                             letter-spacing: 2px;
                             border-radius: 6px;
                             padding: 10px 20px;
+                            @media (max-width:800px){}
 
                             &:after{
                                 content: '\e5cf';
@@ -172,6 +223,10 @@
                             &:hover{
                                 cursor: pointer;
                                 background: #F2F1ED;
+                            }
+
+                            &:nth-child(1){
+                                width: 18%;
                             }
 
                             &.search{
@@ -292,6 +347,7 @@
                         .item{
                             display: inline-block;
                             margin-right: 10px;
+                            margin-bottom: 10px;
                             border: 1px solid #363537;
                             border-radius: 20px;
                             padding: 2px 8px;
@@ -382,9 +438,21 @@
                         padding: 20px;
                         background: #fff;
                         position: relative;
+                        @media (max-width:800px){
+                            width: calc((100% - 20px) / 2);                            
+                        }
 
                         &:nth-child(3n){
                             margin-right: 0;
+                            @media (max-width:800px){
+                                margin-right: 20px;
+                            }
+                        }
+
+                        &:nth-child(2n){
+                            @media (max-width:800px){
+                                margin-right: 0;
+                            }
                         }
                      
                         .favorite{
@@ -440,6 +508,9 @@
                                 width: calc(100% - 120px);
                                 margin: 10px 0;
                                 float: left;
+                                @media (max-width:960px){
+                                    width: 100%;
+                                }
     
                                 li{}
                             }
@@ -449,6 +520,10 @@
                                 margin: 10px 0;
                                 float: right;
                                 text-align: right;
+                                @media (max-width:960px){
+                                    width: 100%;
+                                    text-align: left;
+                                }
                             }
                         }
     
@@ -460,6 +535,11 @@
                             line-height: 1.6; 
                             color: #FF9201;
                             line-height: 2;
+                            @media (max-width:1480px){
+                                float: unset;
+                                width: 100%;
+                                text-align: right;
+                            }
     
                             span{
                                 font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
@@ -482,6 +562,11 @@
                             text-align: center;
                             line-height: 2;
                             transition: all .3s;
+                            @media (max-width:1480px){
+                                width: 100%;
+                                float: unset;
+                                // margin: 0 auto;
+                            }
 
                             i{
                                 color: #FF9201;
@@ -555,6 +640,7 @@
                         font-weight: 600;
                         font-size: 20px;
                         line-height: 1;
+                        letter-spacing: 2px;
                         
                     }
 

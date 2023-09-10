@@ -235,6 +235,7 @@
                             position: relative;
                             float: left;
                             margin-right: 20px;
+                            overflow: hidden;
                 
                             &.full{
                                 width: calc(100% - 20px);
@@ -242,6 +243,21 @@
 
                             span{
                                 color: #363537;
+                            }
+
+                            .city{
+                                width: 200px;
+                                float: left;
+                                margin-right: 20px;
+                            }
+                            .dist{
+                                width: 200px;
+                                float: left;
+                                margin-right: 20px;
+                            }
+                            .address{
+                                width: calc(100% - 440px);
+                                float: left;
                             }
                 
                             .invoice{
