@@ -30,6 +30,9 @@
         ol{
             padding: 50px 0 30px;
             overflow: hidden;
+            @media (max-width:1200px){
+                padding: 80px 0 30px;
+            }
 
             li{
                 float: left;
@@ -70,6 +73,10 @@
         @media (max-width:800px){
             height: 240px;
             background-position: right top;
+            
+            &.theme_wine_title{
+                background-position: center top;                
+            }
         }
 
         h3{
@@ -1287,5 +1294,21 @@
     .disabled, [hidden], [disabled] {
         opacity: .2;
         pointer-events: none;
+    }
+}
+
+.mask{
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    background: rgba(0,0,0,.8);
+    display: none;
+    transition: all .3s;
+
+    &.active{
+        display: block;
     }
 }

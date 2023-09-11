@@ -596,6 +596,14 @@ header .topbar .logoBox {
   }
 }
 
+@media (max-width: 1200px) {
+  header .topbar .logoBox {
+    width: 160px;
+    padding: 12px;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
 header .topbar .logoBox img {
   width: 100%;
 }
@@ -1342,6 +1350,12 @@ footer #goTop:hover {
   overflow: hidden;
 }
 
+@media (max-width: 1200px) {
+  .theme .theme_breadcrumbs ol {
+    padding: 80px 0 30px;
+  }
+}
+
 .theme .theme_breadcrumbs ol li {
   float: left;
 }
@@ -1378,6 +1392,9 @@ footer #goTop:hover {
   .theme .theme_page_title {
     height: 240px;
     background-position: right top;
+  }
+  .theme .theme_page_title.theme_wine_title {
+    background-position: center top;
   }
 }
 
@@ -2670,5 +2687,22 @@ footer #goTop:hover {
 .theme_pagination .disabled, .theme_pagination [hidden], .theme_pagination [disabled] {
   opacity: .2;
   pointer-events: none;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.mask.active {
+  display: block;
 }
 /*# sourceMappingURL=index.css.map */

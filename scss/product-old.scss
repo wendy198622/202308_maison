@@ -213,7 +213,6 @@
                 position: relative;
                 @media (max-width:1200px){
                     width: 100%;
-                    margin: 20px 0 40px;
                 }
 
                 .theme_product_filter{
@@ -223,10 +222,6 @@
                         z-index: 101;
                         top: 100px;
                         right: 0;
-
-                        &.theme_preorder_filter{
-                            width: 100%;
-                        }
                     }
 
                     .product_filter_switch{
@@ -263,10 +258,9 @@
 
                     ul.product_filter_content{
                         transition: all .3s;
-                        position: relative;
                         @media (max-width:1200px){
                             display: none;
-                            width: 200%;
+                            width: calc(200%);
                             background: #fff;
                             max-height: 600px;
                             overflow-y: scroll;
@@ -276,20 +270,19 @@
                             &.active{
                                 display: block;
                             }
-
-                            &.preorder_filter_content{
-                                width: 100%;
-                            }
                         }
 
                         > li{
                             width: calc((57% - 100px) / 4);
                             float: left;
-                            // position: relative;
+                            position: relative;
                             background: #fff;
+                            font-size: 16px;
+                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                            font-weight: 600;
+                            letter-spacing: 2px;
                             border-radius: 6px;
                             padding: 10px 20px;
-                            overflow: hidden;
                             @media (max-width:1200px){
                                 width: 100%;
                                 float: unset;
@@ -298,28 +291,19 @@
                                 border-radius: 0;
                             }
 
-                            .filter_title{
-                                font-size: 16px;
-                                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-                                font-weight: 600;
-                                letter-spacing: 2px;
-
-                                i{
-                                    float: right;
-                                    font-size: 18px;
-                                    line-height: 1.4;
-                                }
-                                
-                                i.gomore{ display: block;}
-                                i.goless{ display: none;}
+                            &:after{
+                                content: '\e5cc';
+                                font-family: 'Material Icons';
+                                position: absolute;
+                                top: 15px;
+                                right: 10px;
+                                transition: all .3s;
                             }
 
                             &.active{
 
-                                .filter_title{
-                                    
-                                    i.gomore{ display: none;}
-                                    i.goless{ display: block;}
+                                &:after{
+                                    content: '\e5ce';
                                 }
                             }
 
@@ -375,8 +359,8 @@
                                 position: absolute;
                                 z-index: 10;
                                 top: 99%;
-                                left: 0;
-                                width: 100%;
+                                // left: 0;
+                                width: 800%;
                                 max-width: 1080px;
                                 height: auto;
                                 background: #fff;
@@ -386,8 +370,7 @@
                                     display: block;
                                     width: 100%;
                                     position: relative;
-                                    top: 0;
-                                    left: 0;
+                                    top: auto;
                                     padding: 20px 0 0;
                                     border: 0;
                                 }
@@ -447,6 +430,27 @@
                                     width: 100px;
                                     padding: 5px 0;
                                     margin-top: 20px;
+                                }
+                            }
+
+                            &:nth-child(1) .filter_item{
+                                left: 0;
+                            }
+                            &:nth-child(2) .filter_item{
+                                left: calc(-100% - 20px);
+                            }
+                            &:nth-child(3) .filter_item{
+                                left: calc(-200% - 40px);
+                            }
+                            &:nth-child(4) .filter_item{
+                                left: calc(-300% - 60px);
+                            }
+                            @media (max-width:1200px){
+                                &:nth-child(1) .filter_item,
+                                &:nth-child(2) .filter_item,
+                                &:nth-child(3) .filter_item,
+                                &:nth-child(4) .filter_item{
+                                    left: 0;
                                 }
                             }
                         }
@@ -632,7 +636,7 @@
                                 width: calc(100% - 120px);
                                 margin: 10px 0;
                                 float: left;
-                                @media (max-width:1200px){
+                                @media (max-width:960px){
                                     width: 100%;
                                 }
     
@@ -644,7 +648,7 @@
                                 margin: 10px 0;
                                 float: right;
                                 text-align: right;
-                                @media (max-width:1200px){
+                                @media (max-width:960px){
                                     width: 100%;
                                     text-align: left;
                                 }
@@ -732,9 +736,6 @@
                             padding: 20px;
                             background: #fff;
                             position: relative;
-                            @media (max-width:800px){
-                                width: calc((100% - 20px) / 2);                            
-                            }
     
                             &:nth-child(3n){
                                 margin-right: 20px;
@@ -742,15 +743,6 @@
     
                             &:nth-child(4n){
                                 margin-right: 0;
-                                @media (max-width:800px){
-                                    margin-right: 20px;
-                                }
-                            }
-    
-                            &:nth-child(2n){
-                                @media (max-width:800px){
-                                    margin-right: 0;
-                                }
                             }
     
                         }

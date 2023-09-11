@@ -28,6 +28,12 @@ header{
                 left: 0px;
                 margin-left: 0;
             }
+            @media (max-width:1200px){
+                width: 160px;
+                padding: 12px;
+                // background: #fff;
+                border-radius: 0 0 10px 10px;
+            }
 
             img{
                 width: 100%;

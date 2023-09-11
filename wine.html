@@ -29,6 +29,7 @@
 
 	<section>
 		<div class="theme">
+            <div class="mask"></div>
 			<div class="theme_breadcrumbs">
 				<div class="container">
 					<ol>
@@ -45,7 +46,10 @@
 				<div class="theme_product_box">
 					<div class="container">
 						<div class="theme_product_nav">
-							<ul>
+                            <div class="product_nav_switch">
+                                酒類清單
+                            </div>
+							<ul class="product_nav_content">
 								<li class="head">
 									酒類專區<span>shop by category</span>
 								</li>
@@ -192,9 +196,14 @@
 						</div>
 						<div class="theme_product_content">
 							<div class="theme_product_filter">
-                                <ul>
+                                <div class="product_filter_switch">條件篩選</div>
+                                <ul class="product_filter_content">
                                     <li>
-                                        產地/產區
+                                        <div class="filter_title">
+                                            產地/產區
+                                            <i class="material-icons gomore">chevron_right</i>
+                                            <i class="material-icons goless">expand_less</i>
+                                        </div>
                                         <div class="filter_item">
                                             <ol>
                                                 <li>
@@ -266,7 +275,11 @@
                                         </div>
                                     </li>
                                     <li>
-                                        價格
+                                        <div class="filter_title">
+                                            價格
+                                            <i class="material-icons gomore">chevron_right</i>
+                                            <i class="material-icons goless">expand_less</i>
+                                        </div>
                                         <div class="filter_item">
                                             <ol>
                                                 <li></li>
@@ -307,7 +320,11 @@
                                         </div>
                                     </li>
                                     <li>
-                                        年份
+                                        <div class="filter_title">
+                                            年份
+                                            <i class="material-icons gomore">chevron_right</i>
+                                            <i class="material-icons goless">expand_less</i>
+                                        </div>
                                         <div class="filter_item">
                                             <ol>
                                                 <li></li>
@@ -340,7 +357,11 @@
                                         </div>
                                     </li>
                                     <li>
-                                        評分
+                                        <div class="filter_title">
+                                                評分
+                                            <i class="material-icons gomore">chevron_right</i>
+                                            <i class="material-icons goless">expand_less</i>
+                                        </div>
                                         <div class="filter_item">
                                             <ol>
                                                 <li></li>
@@ -384,19 +405,10 @@
                                         <input type="text" name="searchfield" placeholder="請輸入文字..." />
                                     </li>
                                     <li class="button">
-                                        <button>搜尋</button>
+                                        <button onclick="javascript:location.href='wine-filter-result.html'">搜尋</button>
                                     </li>
                                     <div class="clear"></div>
                                 </ul>
-                                <!-- 搜尋後顯示 -->
-                                <div class="theme_product_filter_result">
-                                    <div class="item"><i class="material-icons">close</i>法國</div>
-                                    <div class="item"><i class="material-icons">close</i>美國</div>
-                                    <div class="item"><i class="material-icons">close</i>Bordeaux 波爾多</div>
-                                    <div class="item"><i class="material-icons">close</i>2010</div>
-                                    <div class="item"><i class="material-icons">close</i>$1,001~$2,000</div>
-                                    <div class="item"><i class="material-icons">close</i>$2,001~$3,000</div>
-                                </div>
                             </div>
                             <div class="theme_product_select">
                                 <div class="theme_product_select_count">
@@ -851,15 +863,43 @@
             $(this).toggleClass("active");
         });
 
-        $(".theme_product_filter ul > li").hover(function () {
+        $(".product_filter_content > li .filter_title").click(function () {
             // $(".subnav").slideToggle();
-            $(this).find('.filter_item').slideToggle();
-            $(this).toggleClass("active");
+            $(this).siblings('.filter_item').slideToggle();
+            $(this).parent().toggleClass("active");
+            $(this).parent().siblings().removeClass("active");
+            $(this).parent().siblings().find('.filter_item').css('display','none');
+        });
+
+        $(".filter_check").click(function () {
+            $(this).parent(".filter_item").css('display','none');
         });
         
         $(".favorite").click(function() {
             $(this).toggleClass("active");
         });
+        
+        
+        $(".product_nav_switch").click(function() {
+            $('.product_filter_switch').removeClass("active");
+            $('.product_filter_content').removeClass("active");
+
+            $(this).toggleClass("active");
+            $('.product_nav_content').toggleClass("active");
+            $('.mask').toggleClass("active");
+        });
+        
+        
+        $(".product_filter_switch").click(function() {
+            $('.product_nav_switch').removeClass("active");
+            $('.product_nav_content').removeClass("active");
+            
+            $('.product_filter_content').toggleClass("active");
+            $('.product_nav_switch').removeClass("active");
+            $('.mask').toggleClass("active");
+        });
+
+        
 
 	})
 
