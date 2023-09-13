@@ -234,9 +234,14 @@
 						</div>
 						<div class="theme_product_content">
 							<div class="theme_product_filter">
-                                <ul>
+                                <div class="product_filter_switch">條件篩選</div>
+                                <ul class="product_filter_content">
                                     <li>
-                                        產地/產區
+                                        <div class="filter_title">
+                                            產地/產區
+                                            <i class="material-icons gomore">chevron_right</i>
+                                            <i class="material-icons goless">expand_less</i>
+                                        </div>
                                         <div class="filter_item">
                                             <ol>
                                                 <li>
@@ -308,7 +313,11 @@
                                         </div>
                                     </li>
                                     <li>
-                                        價格
+                                        <div class="filter_title">
+                                            價格
+                                            <i class="material-icons gomore">chevron_right</i>
+                                            <i class="material-icons goless">expand_less</i>
+                                        </div>
                                         <div class="filter_item">
                                             <ol>
                                                 <li></li>
@@ -349,7 +358,11 @@
                                         </div>
                                     </li>
                                     <li>
-                                        年份
+                                        <div class="filter_title">
+                                            年份
+                                            <i class="material-icons gomore">chevron_right</i>
+                                            <i class="material-icons goless">expand_less</i>
+                                        </div>
                                         <div class="filter_item">
                                             <ol>
                                                 <li></li>
@@ -382,7 +395,11 @@
                                         </div>
                                     </li>
                                     <li>
-                                        評分
+                                        <div class="filter_title">
+                                                評分
+                                            <i class="material-icons gomore">chevron_right</i>
+                                            <i class="material-icons goless">expand_less</i>
+                                        </div>
                                         <div class="filter_item">
                                             <ol>
                                                 <li></li>
@@ -426,7 +443,7 @@
                                         <input type="text" name="searchfield" placeholder="請輸入文字..." />
                                     </li>
                                     <li class="button">
-                                        <button>搜尋</button>
+                                        <button onclick="javascript:location.href='wine-filter-result.html'">搜尋</button>
                                     </li>
                                     <div class="clear"></div>
                                 </ul>

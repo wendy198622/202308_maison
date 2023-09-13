@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>Maison Alan Collection</title>
+	<meta name="author" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="Resource-type" content="" />
+	<!-- <link rel="icon" href="img/logo.ico"> -->
+	<!-- <meta property="og:image" content="../img/index/1200x628.jpg"> -->
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<!-- js -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/slick.js"></script>
+	<script src="js/wow.min.js"></script>
+</head>
+
+<body>
+	<header id="header"></header>
+
+	<section>
+		<div class="theme">
+			<div class="theme_image theme_image_slider">
+				<div class="theme_image_item">
+					<img src="img/kv-image01.jpg" alt="">
+				</div>
+				<div class="theme_image_item">
+					<img src="img/kv-image01.jpg" alt="">
+				</div>
+				<div class="theme_image_item">
+					<img src="img/kv-image01.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="theme">
+			<div class="theme_signin">
+				<div class="theme_signin_box">
+					<div class="theme_signin_info">
+						<h3>VIP 會員登入</h3>
+						<div class="theme_signin_form">
+							<div class="item">
+								<label for="account">*<span>帳號</span></label>
+								<input type="text" name="account" placeholder="0912345678" maxlength="10" required />
+							</div>
+							<div class="item">
+								<label for="password">*<span>密碼</span></label>
+								<input type="text" name="password" placeholder="********" required />
+							</div>
+							<div class="item account_service">
+								<a href="register.html">加入會員</a>
+								<a href="javascript:;" class="findpassword">忘記密碼</a>
+							</div>
+							<button>會員登入</button>
+						</div>
+					</div>
+					<div class="theme_signin_notice">
+						<h3>VIP 會員獨享</h3>
+						<ul>
+							<li>以超優惠的價格買到超滿意的酒</li>
+							<li>優先購買本公司獨家代理所有商品權利</li>
+							<li>會員生日當月購酒小禮物,買愈多贈品愈多</li>
+							<li>可推薦朋友加入會員資格</li>
+							<li>未來品酒會的優先參加權</li>
+						</ul>
+						<button class="outline">
+							<a href="register.html">加入會員</a>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="theme">
+			<div class="theme_category">
+				<div class="container">
+					<h3>酒類專區<span>wine</span></h3>
+					<div class="theme_category_box theme_category_slider">
+						<div class="theme_category_item">
+							<a href="#">
+								<img src="img/category_wine.jpg" alt="">
+								<div class="category_text">葡萄酒<span>wine</span></div>
+							</a>
+						</div>
+						<div class="theme_category_item">
+							<a href="#">
+								<img src="img/category_whisky.jpg" alt="">
+								<div class="category_text">威士忌<span>whisky</span></div>
+							</a>
+						</div>
+						<div class="theme_category_item">
+							<a href="#">
+								<img src="img/category_brandy.jpg" alt="">
+								<div class="category_text">白蘭地<span>brandy</span></div>
+							</a>
+						</div>
+						<div class="theme_category_item">
+							<a href="#">
+								<img src="img/category_sake.jpg" alt="">
+								<div class="category_text">清酒<span>sake</span></div>
+							</a>						
+						</div>
+						<div class="theme_category_item">
+							<a href="#">
+								<img src="img/category_kaoliang.jpg" alt="">
+								<div class="category_text">高粱酒<span>kaoliang</span></div>
+							</a>						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="theme">
+			<div class="theme_event">
+				<div class="container">
+					<h3>活動專區<span>event</span></h3>
+					<div class="theme_event_box theme_event_slider">
+						<div class="theme_event_item">
+							<a href="newspage.html">
+								<img src="img/campaign_01.jpg" alt="">
+							</a>
+						</div>
+						<div class="theme_event_item">
+							<a href="newspage.html">
+								<img src="img/campaign_02.jpg" alt="">
+							</a>
+						</div>
+						<div class="theme_event_item">
+							<a href="newspage.html">
+								<img src="img/campaign_01.jpg" alt="">
+							</a>
+						</div>
+						<div class="theme_event_item">
+							<a href="newspage.html">
+								<img src="img/campaign_02.jpg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="popup popup_findpassword">
+		<div class="popup_content popup_code">
+			<p>請輸入您註冊時填寫的Email，我們將寄出重設密碼的信件給您</p>
+			<div class="popup_code_form">
+				<div class="item full">
+					<!-- <label for="email">*<span>Email</span></label> -->
+					<input type="text" v-model="email" name="email" placeholder="mingming@xxx.com" required />
+				</div>
+				<button>送出</button>
+			</div>
+			<div class="icon close">
+				<span class="material-icons">
+					close
+				</span>
+			</div>
+		</div>
+	</div>
+	
+	<footer id="footer"></footer>
+
+</body>
+<script>
+	$(document).ready(function () {
+		new WOW().init();
+
+		$('#header').load('page/header-visitor.html');
+		$('#footer').load('page/footer-visitor.html');
+
+		$('.theme_image_slider').slick({
+			dots: true,
+			arrows: false,
+			infinite: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+		});
+
+		$('.theme_category_slider').slick({
+			dots: false,
+			arrows: true,
+			infinite: false,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			responsive: [
+				{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3,
+				}
+				},
+				{
+				breakpoint: 960,
+				settings: {
+					slidesToShow: 2,
+				}
+				}
+			]
+		});
+
+		$('.theme_event_slider').slick({
+			dots: false,
+			arrows: true,
+			infinite: false,
+			slidesToShow: 2,
+			slidesToScroll: 1,
+			responsive: [
+				{
+				breakpoint: 960,
+				settings: {
+					slidesToShow: 1,
+				}
+				}
+			]
+		});
+
+		$(".findpassword").click(function() {
+			$(".popup_findpassword").addClass("is_acted");
+		});
+
+		$(".popup_findpassword .close").click(function() {
+			$(".popup_findpassword").removeClass("is_acted");
+		});
+
+
+		var width = $(window).width();
+
+		if (width > 960) {
+			if($(".theme_signin_form").height() > $(".theme_signin_notice ul").height()){
+				$(".theme_signin_notice ul").css("height",$(".theme_signin_form").height());
+			}else{
+				$(".theme_signin_form").css("height",$(".theme_signin_notice ul").height());
+			}
+		} else {
+			
+		}
+
+	})
+
+</script>
+</html>
