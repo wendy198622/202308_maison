@@ -1380,6 +1380,12 @@ footer #goTop:hover {
   color: #363537;
 }
 
+@media (max-width: 1200px) {
+  .theme .theme_breadcrumbs.theme_campaign_breadcrumbs ol {
+    padding: 140px 0 30px;
+  }
+}
+
 .theme .theme_page_title {
   height: 360px;
   background-position: center top;

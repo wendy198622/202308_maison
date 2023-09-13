@@ -61,6 +61,15 @@
                 }
             }
         }
+
+        &.theme_campaign_breadcrumbs{
+
+            ol{
+                @media (max-width:1200px){
+                    padding: 140px 0 30px;
+                }
+            }
+        }
     }
 
     .theme_page_title{

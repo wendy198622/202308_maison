@@ -87,10 +87,11 @@
                         margin-bottom: 2px;
                         transition: all .3s;
                         font-weight: 600;
-                        // overflow: hidden;
+                        overflow: hidden;
                         @media (max-width:1200px){
                             padding: 20px;
                             border-bottom: 2px solid #F2F1ED;
+                            overflow: visible;
                         }
 
 
@@ -209,6 +210,21 @@
                     @media (max-width:1200px){
                         > li + li{
                             border-left: 1px solid #f4f5f6;
+                        }
+                    }
+                }
+
+                &.theme_campaign_nav{
+                    @media (max-width:1200px){
+                        ul{ 
+                            display: block;
+                            overflow: hidden;
+
+                            li{
+                                width: calc(100% / 3);
+                                float: left;
+                                text-align: center;
+                            }
                         }
                     }
                 }
@@ -763,6 +779,22 @@
     
                         }
                     }
+                }
+
+                &.theme_campaign_content{
+
+                    .theme_product_filter{
+                        @media (max-width:1200px){
+                            top: 160px;
+                            width: 100%;
+
+                            .product_filter_content{
+                                width: 100%;
+                            }
+                        }
+
+                    }
+
                 }
 
                 .theme_productpage_inner{
