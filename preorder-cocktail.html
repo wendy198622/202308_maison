@@ -47,13 +47,27 @@
                     <div class="container">
                         <div class="preorder_notice_type">
                             <ul>
-                                <li>葡萄酒</li>
-                                <li>威士忌</li>
-                                <li>白蘭地</li>
-                                <li>清酒燒灼</li>
-                                <li>高粱酒</li>
-                                <li>水果酒</li>
-                                <li>調酒</li>
+                                <li>
+                                    <a href="preorder-wine.html">葡萄酒</a>
+                                </li>
+                                <li>
+                                    <a href="preorder-whisky.html">威士忌</a>
+                                </li>
+                                <li>
+                                    <a href="preorder-brandy.html">白蘭地</a>
+                                </li>
+                                <li>
+                                    <a href="preorder-sake.html">清酒燒灼</a>
+                                </li>
+                                <li>
+                                    <a href="preorder-kaoliang.html">高粱酒</a>
+                                </li>
+                                <li>
+                                    <a href="preorder-fruitwine.html">水果酒</a>
+                                </li>
+                                <li class="active">
+                                    <a href="javascript:;">調酒</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="preorder_notice_feature feature_theme1">
@@ -100,11 +114,11 @@
                 </div>
 				<div class="theme_product_box">
 					<div class="container">
-						<div class="theme_product_content theme_preorder_content">
+						<div class="theme_product_content theme_preorder_content theme_preorder_contentB">
 							<div class="theme_product_filter theme_preorder_filter">
                                 <div class="product_filter_switch">條件篩選</div>
                                 <ul class="product_filter_content preorder_filter_content">
-                                    <li>
+                                    <!-- <li>
                                         <div class="filter_title">
                                             產地/產區
                                             <i class="material-icons gomore">chevron_right</i>
@@ -306,26 +320,33 @@
                                             </ol>
                                             <button class="filter_check">確認</button>
                                         </div>
-                                    </li>
+                                    </li> -->
                                     <li class="search">
                                         <input type="text" name="searchfield" placeholder="請輸入文字..." />
                                     </li>
+                                    <!-- <li class="button close">
+                                        <button>取消</button>
+                                    </li> -->
                                     <li class="button">
-                                            <button onclick="javascript:location.href='preorder-filter-result.html'">搜尋</button>
+                                            <button class="search_btn">搜尋</button>
                                     </li>
                                     <div class="clear"></div>
                                 </ul>
-                                <!-- 搜尋後顯示 -->
-                                <div class="theme_product_filter_result">
-                                    <div class="item"><i class="material-icons">close</i>法國</div>
-                                    <div class="item"><i class="material-icons">close</i>美國</div>
-                                    <div class="item"><i class="material-icons">close</i>Bordeaux 波爾多</div>
-                                    <div class="item"><i class="material-icons">close</i>2010</div>
-                                    <div class="item"><i class="material-icons">close</i>$1,001~$2,000</div>
-                                    <div class="item"><i class="material-icons">close</i>$2,001~$3,000</div>
-                                </div>
                             </div>
-                            <div class="theme_product_select">
+                            <!-- 搜尋後顯示 樣式A -->
+                            <!-- <div class="theme_product_filter_result theme_product_filter_resultA theme_preorder_filter_result">
+                                <div class="item"><i class="material-icons">close</i>法國</div>
+                                <div class="item"><i class="material-icons">close</i>美國</div>
+                                <div class="item"><i class="material-icons">close</i>Bordeaux 波爾多</div>
+                                <div class="item"><i class="material-icons">close</i>2010</div>
+                                <div class="item"><i class="material-icons">close</i>$1,001~$2,000</div>
+                                <div class="item"><i class="material-icons">close</i>$2,001~$3,000</div>
+                            </div> -->
+                            <!-- 搜尋後顯示 樣式B -->
+                            <div class="theme_product_filter_result theme_product_filter_resultB theme_campaign_filter_result">
+                                <div class="result">此酒款不在活動範圍內，請重新搜尋</div>
+                            </div>
+                            <div class="theme_product_select theme_preorder_select">
                                 <div class="theme_product_select_count">
                                     <input type="checkbox" name="" id="count" value="" />
                                     <label for="count">有庫存</label>
@@ -808,6 +829,21 @@
             $('.product_filter_content').toggleClass("active");
             $('.product_nav_switch').removeClass("active");
             $('.mask').toggleClass("active");
+        });
+
+        $(".close button").click(function() {
+            $(this).parent().parent().removeClass("active");
+            $('.mask').toggleClass("active");
+
+        });
+
+        $(".search_btn").click(function() {
+
+            if ($(window).width() < 1201) {
+                $('.theme_product_filter_result').toggleClass("active");
+            } else {
+                $('.theme_product_filter_result').toggleClass("active");
+            }
         });
 
 	})

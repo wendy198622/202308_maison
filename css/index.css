@@ -1350,12 +1350,6 @@ footer #goTop:hover {
   overflow: hidden;
 }
 
-@media (max-width: 1200px) {
-  .theme .theme_breadcrumbs ol {
-    padding: 80px 0 30px;
-  }
-}
-
 .theme .theme_breadcrumbs ol li {
   float: left;
 }
@@ -1378,12 +1372,6 @@ footer #goTop:hover {
   vertical-align: middle;
   margin: 0 10px;
   color: #363537;
-}
-
-@media (max-width: 1200px) {
-  .theme .theme_breadcrumbs.theme_campaign_breadcrumbs ol {
-    padding: 140px 0 30px;
-  }
 }
 
 .theme .theme_page_title {

@@ -404,11 +404,23 @@
                                     <li class="search">
                                         <input type="text" name="searchfield" placeholder="請輸入文字..." />
                                     </li>
+                                    <li class="button close">
+                                        <button>取消</button>
+                                    </li>
                                     <li class="button">
-                                        <button onclick="javascript:location.href='wine-filter-result.html'">搜尋</button>
+                                        <button class="search_btn">搜尋</button>
                                     </li>
                                     <div class="clear"></div>
                                 </ul>
+                            </div>
+                            <!-- 搜尋後顯示 樣式A -->
+                            <div class="theme_product_filter_result">
+                                <div class="item"><i class="material-icons">close</i>法國</div>
+                                <div class="item"><i class="material-icons">close</i>美國</div>
+                                <div class="item"><i class="material-icons">close</i>Bordeaux 波爾多</div>
+                                <div class="item"><i class="material-icons">close</i>2010</div>
+                                <div class="item"><i class="material-icons">close</i>$1,001~$2,000</div>
+                                <div class="item"><i class="material-icons">close</i>$2,001~$3,000</div>
                             </div>
                             <div class="theme_product_select">
                                 <div class="theme_product_select_count">
@@ -899,7 +911,22 @@
             $('.mask').toggleClass("active");
         });
 
-        
+        $(".close button").click(function() {
+            $(this).parent().parent().removeClass("active");
+            $('.mask').toggleClass("active");
+
+        });
+
+        $(".search_btn").click(function() {
+
+            if ($(window).width() < 1201) {
+                $('.theme_product_filter_result').toggleClass("active");
+                $('.product_filter_content').removeClass("active");
+                $('.mask').toggleClass("active");
+            } else {
+                $('.theme_product_filter_result').toggleClass("active");
+            }
+        });
 
 	})
 
