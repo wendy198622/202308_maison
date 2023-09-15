@@ -135,16 +135,13 @@
             $("#menu-toggle").toggleClass("active");
         });
 
-        $('header .menu_item').hover(
-        function() {
-            // 找到子選單並顯示
-            $(this).find('.menu_item_content').delay(300).slideDown();
-        },
-        function() {
-            // 隱藏子選單
-            $(this).find('.menu_item_content').slideUp();
-        }
-    );
+        $('.menu_item').hover(
+            if ($(window).width() > 1199) {
+                $(this).find('.menu_item_content').toggleClass("active");
+            } else {
+                
+            }
+        );
 
     });
 </Script>

@@ -15,6 +15,9 @@
                 width: 320px;
                 float: left;
                 margin: 40px 0;
+                @media (max-width:1200px){
+                    display: none;
+                }
         
                 ul{
         
@@ -108,6 +111,9 @@
                 width: calc( 100% - 360px);
                 float: right;
                 margin: 40px 0;
+                @media (max-width:1200px){
+                    width: 100%;
+                }
 
                 &.theme_members_content_recordpage{
                     width: 100%;
@@ -126,15 +132,26 @@
                         .theme_members_index_info_text{
                             width: 55%;
                             float: left;
+                            @media (max-width:800px){
+                                width: 100%;
+                            }
 
                             h4{
                                 text-align: left;
                                 margin-bottom: 20px;
+                                @media (max-width:800px){
+                                    text-align: center;
+                                    margin-top: 20px;
+                                }
                             }
 
                             ol{
                                 list-style-type: decimal;
-                                margin-left: 24px;
+                                padding-left: 24px;
+                                @media (max-width:800px){
+                                    width: 340px;
+                                    margin: 0 auto;
+                                }
 
                                 li{
                                     font-size: 16px;
@@ -144,12 +161,19 @@
                                     ul{
                                         width: calc(100% - 100px);
                                         float: right;
+                                        @media (max-width:800px){
+                                            width: 100%;
+                                        }
 
                                     }
                                 }
                             }
 
                             ul{
+                                @media (max-width:800px){
+                                    width: 340px;
+                                    margin: 0 auto;
+                                }
 
                                 li{
                                     font-size: 16px;
@@ -167,6 +191,14 @@
                         .theme_members_index_info_photo{
                             width: calc(45% - 40px);
                             float: right;
+                            @media (max-width:800px){
+                                width: 100%;
+
+                                img{
+                                    width: 80%;
+                                    margin: 0 auto;
+                                }
+                            }
                         }
 
                         &:nth-child(even){
@@ -230,15 +262,22 @@
                     .theme_members_profile_form{
 
                         .item{
-                            width: calc((100% - 40px) / 2);
+                            width: calc((100% - 20px) / 2);
                             margin: 10px auto;
                             position: relative;
                             float: left;
                             margin-right: 20px;
                             overflow: hidden;
+                            @media (max-width:600px){
+                                width: 100%;
+                            }
                 
                             &.full{
-                                width: calc(100% - 20px);
+                                width: 100%;
+                            }
+
+                            &.mr0{
+                                margin-right: 0;
                             }
 
                             span{
@@ -249,15 +288,25 @@
                                 width: 200px;
                                 float: left;
                                 margin-right: 20px;
+                                @media (max-width:960px){
+                                    width: calc((100% - 20px) / 2);
+                                }
                             }
                             .dist{
                                 width: 200px;
                                 float: left;
                                 margin-right: 20px;
+                                @media (max-width:960px){
+                                    width: calc((100% - 20px) / 2);
+                                    margin-right: 0;
+                                }
                             }
                             .address{
                                 width: calc(100% - 440px);
                                 float: left;
+                                @media (max-width:960px){
+                                    width: 100%;
+                                }
                             }
                 
                             .invoice{
@@ -296,6 +345,9 @@
                         button{
                             width: calc((100% - 40px) / 2);
                             margin: 50px auto 20px;
+                            @media (max-width:960px){
+                                width: 100%;
+                            }
                 
                             &.outline{
                                 margin-top: 0;

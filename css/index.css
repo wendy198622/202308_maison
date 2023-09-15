@@ -675,6 +675,10 @@ header .topbar .menuBox .menu_item .menu_item_content, header .topbar .memberBox
   z-index: 10;
 }
 
+header .topbar .menuBox .menu_item .menu_item_content.active, header .topbar .memberBox .menu_item .menu_item_content.active {
+  display: block;
+}
+
 header .topbar .menuBox .menu_item .menu_item_content ul li, header .topbar .memberBox .menu_item .menu_item_content ul li {
   background-color: #fff;
 }
@@ -779,6 +783,9 @@ header .topbar .memberBox {
     position: static;
     top: 0;
   }
+  header .topbar .memberBox .menu_item .menu_item_content.active {
+    display: block;
+  }
   header .topbar .memberBox .menu_item .menu_item_content ul {
     overflow: hidden;
   }
@@ -843,6 +850,15 @@ header #menu-toggle h6 {
   color: #fff;
   -webkit-transition: all .3s;
   transition: all .3s;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  header #menu-toggle h6 {
+    font-size: 0.6vw;
+    letter-spacing: 0px;
+  }
 }
 
 header #menu-toggle:hover {
@@ -934,6 +950,10 @@ header #menu .menuBox .menu_item_title a span, header #menu .menuBox .menu_item_
 header #menu .menuBox .menu_item_content {
   font-size: 16px;
   letter-spacing: 2px;
+}
+
+header #menu .menuBox .menu_item_content.active {
+  display: block;
 }
 
 @media (max-width: 960px) {
