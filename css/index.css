@@ -558,80 +558,75 @@ button.outline:hover a {
 }
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
+  width: 100%;
+  height: 121px;
+  position: fixed;
   top: 0;
   z-index: 98;
-  background-color: #874C00;
 }
 
 header .topbar {
   width: 100%;
-  max-width: 1440px;
   height: 100px;
+  background-color: #874C00;
+}
+
+header .topbar .topbar_innerbox {
+  width: 100%;
+  height: 120px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
-header .topbar:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-header .topbar .logoBox {
+header .topbar .topbar_innerbox .logoBox {
   width: 200px;
+  float: left;
   padding: 24px;
   background: #fff;
   border-radius: 0 0 20px 20px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -720px;
 }
 
-@media (max-width: 1480px) {
-  header .topbar .logoBox {
-    left: 0px;
-    margin-left: 0;
-  }
+header .topbar .topbar_innerbox .menuBox {
+  float: left;
+  margin-left: 20px;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
-  header .topbar .logoBox {
-    width: 160px;
-    padding: 12px;
-    border-radius: 0 0 10px 10px;
+  header .topbar .topbar_innerbox .menuBox {
+    float: unset;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 98;
+    background: #874C00;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    padding-top: 60px;
+    display: none;
   }
 }
 
-header .topbar .logoBox img {
-  width: 100%;
-}
-
-header .topbar .menuBox, header .topbar .memberBox {
-  float: left;
-  margin-left: 260px;
-  opacity: 1;
-  visibility: visible;
-}
-
-@media (max-width: 1480px) {
-  header .topbar .menuBox, header .topbar .memberBox {
-    margin-left: 210px;
-  }
-}
-
-header .topbar .menuBox .menu_item, header .topbar .memberBox .menu_item {
+header .topbar .topbar_innerbox .menuBox .menu_item {
   float: left;
   padding: 26px 0;
   position: relative;
 }
 
-header .topbar .menuBox .menu_item .menu_item_title, header .topbar .memberBox .menu_item .menu_item_title {
+@media (max-width: 1200px) {
+  header .topbar .topbar_innerbox .menuBox .menu_item {
+    float: unset;
+    text-align: center;
+    padding: 16px 0;
+  }
+}
+
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title {
   position: relative;
 }
 
-header .topbar .menuBox .menu_item .menu_item_title:before, header .topbar .memberBox .menu_item .menu_item_title:before {
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title:before {
   content: "";
   width: 0%;
   height: 1px;
@@ -644,16 +639,18 @@ header .topbar .menuBox .menu_item .menu_item_title:before, header .topbar .memb
   transition: all .3s;
 }
 
-header .topbar .menuBox .menu_item .menu_item_title a, header .topbar .memberBox .menu_item .menu_item_title a {
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title a {
   color: #fff;
   padding: 6px 12px;
   font-size: 18px;
   line-height: 2;
   position: relative;
   z-index: 2;
+  font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+  font-weight: 600;
 }
 
-header .topbar .menuBox .menu_item .menu_item_title a span, header .topbar .memberBox .menu_item .menu_item_title a span {
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title a span {
   margin-right: 6px;
   color: #fff;
   vertical-align: middle;
@@ -661,12 +658,12 @@ header .topbar .menuBox .menu_item .menu_item_title a span, header .topbar .memb
   transition: all .3s;
 }
 
-header .topbar .menuBox .menu_item .menu_item_title a .number, header .topbar .memberBox .menu_item .menu_item_title a .number {
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title a .number {
   color: #FFC908;
   display: inline-block;
 }
 
-header .topbar .menuBox .menu_item .menu_item_content, header .topbar .memberBox .menu_item .menu_item_content {
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_content {
   display: none;
   min-width: 100%;
   position: absolute;
@@ -675,140 +672,250 @@ header .topbar .menuBox .menu_item .menu_item_content, header .topbar .memberBox
   z-index: 10;
 }
 
-header .topbar .menuBox .menu_item .menu_item_content.active, header .topbar .memberBox .menu_item .menu_item_content.active {
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_content.active {
   display: block;
 }
 
-header .topbar .menuBox .menu_item .menu_item_content ul li, header .topbar .memberBox .menu_item .menu_item_content ul li {
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_content ul li {
   background-color: #fff;
 }
 
-header .topbar .menuBox .menu_item .menu_item_content ul li a, header .topbar .memberBox .menu_item .menu_item_content ul li a {
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_content ul li a {
   line-height: 1.2;
   padding: 14px 20px;
   white-space: nowrap;
   color: #363537;
 }
 
-header .topbar .menuBox .menu_item .menu_item_content ul li:hover, header .topbar .memberBox .menu_item .menu_item_content ul li:hover {
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_content ul li:hover {
   background-color: #FFC908;
 }
 
-header .topbar .menuBox .menu_item.signup .menu_item_title, header .topbar .memberBox .menu_item.signup .menu_item_title {
+header .topbar .topbar_innerbox .menuBox .menu_item.signup .menu_item_title {
   background: #fff;
   border-radius: 6px;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
-header .topbar .menuBox .menu_item.signup .menu_item_title:before, header .topbar .memberBox .menu_item.signup .menu_item_title:before {
+header .topbar .topbar_innerbox .menuBox .menu_item.signup .menu_item_title:before {
   display: none;
 }
 
-header .topbar .menuBox .menu_item.signup .menu_item_title a, header .topbar .memberBox .menu_item.signup .menu_item_title a {
+header .topbar .topbar_innerbox .menuBox .menu_item.signup .menu_item_title a {
   color: #874C00;
 }
 
-header .topbar .menuBox .menu_item.signup .menu_item_title a span, header .topbar .memberBox .menu_item.signup .menu_item_title a span {
+header .topbar .topbar_innerbox .menuBox .menu_item.signup .menu_item_title a span {
   color: #874C00;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
-header .topbar .menuBox .menu_item:hover .menu_item_title:before, header .topbar .memberBox .menu_item:hover .menu_item_title:before {
+header .topbar .topbar_innerbox .menuBox .menu_item:hover .menu_item_title:before {
   width: 100%;
 }
 
-header .topbar .menuBox .menu_item:hover .menu_item_title a, header .topbar .memberBox .menu_item:hover .menu_item_title a {
+header .topbar .topbar_innerbox .menuBox .menu_item:hover .menu_item_title a {
   color: #fff;
 }
 
-header .topbar .menuBox .menu_item:hover .menu_item_title a span, header .topbar .memberBox .menu_item:hover .menu_item_title a span {
+header .topbar .topbar_innerbox .menuBox .menu_item:hover .menu_item_title a span {
   color: #fff;
 }
 
-header .topbar .menuBox .menu_item:hover .menu_item_title a span.icon_more, header .topbar .memberBox .menu_item:hover .menu_item_title a span.icon_more {
+header .topbar .topbar_innerbox .menuBox .menu_item:hover .menu_item_title a span.icon_more {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }
 
-header .topbar .menuBox .menu_item:hover.signup .menu_item_title, header .topbar .memberBox .menu_item:hover.signup .menu_item_title {
+header .topbar .topbar_innerbox .menuBox .menu_item:hover.signup .menu_item_title {
   background: #FFC908;
 }
 
-header .topbar .menuBox .menu_item:hover.signup .menu_item_title a, header .topbar .memberBox .menu_item:hover.signup .menu_item_title a {
+header .topbar .topbar_innerbox .menuBox .menu_item:hover.signup .menu_item_title a {
   color: #874C00;
 }
 
-header .topbar .menuBox .menu_item:hover.signup .menu_item_title a span, header .topbar .memberBox .menu_item:hover.signup .menu_item_title a span {
+header .topbar .topbar_innerbox .menuBox .menu_item:hover.signup .menu_item_title a span {
   color: #874C00;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
-header .topbar .menuBox .menu_item + .menu_item, header .topbar .memberBox .menu_item + .menu_item {
+header .topbar .topbar_innerbox .menuBox .menu_item + .menu_item {
   margin-left: 10px;
 }
 
-@media (max-width: 1200px) {
-  header .topbar .menuBox {
-    display: none;
-  }
-}
-
-header .topbar .memberBox {
+header .topbar .topbar_innerbox .memberBox {
   float: right;
-  margin-left: 0px;
 }
 
 @media (max-width: 1200px) {
-  header .topbar .memberBox {
-    width: 100%;
-    height: 60px;
+  header .topbar .topbar_innerbox .memberBox {
     float: unset;
+    width: 100%;
+    height: 70px;
     position: fixed;
-    right: 0;
     bottom: 100px;
+    left: 0;
   }
-  header .topbar .memberBox .menu_item {
-    width: 100%;
-    padding: 0;
-    float: unset;
-  }
-  header .topbar .memberBox .menu_item .menu_item_title {
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item {
+  padding: 26px 0;
+  position: relative;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_title {
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_title {
     display: none;
   }
-  header .topbar .memberBox .menu_item .menu_item_content {
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_title:before {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_title a {
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 2;
+  position: relative;
+  z-index: 2;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_title a span {
+  margin-right: 6px;
+  color: #fff;
+  vertical-align: middle;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_title a .number {
+  color: #FFC908;
+  display: inline-block;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_content {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 74px;
+  z-index: 10;
+}
+
+@media (max-width: 1200px) {
+  header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_content {
     display: block;
-    position: static;
-    top: 0;
+    position: relative;
+    left: auto;
+    top: auto;
   }
-  header .topbar .memberBox .menu_item .menu_item_content.active {
-    display: block;
-  }
-  header .topbar .memberBox .menu_item .menu_item_content ul {
-    overflow: hidden;
-  }
-  header .topbar .memberBox .menu_item .menu_item_content ul li {
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_content ul {
+  overflow: hidden;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_content ul li {
+  background-color: #fff;
+}
+
+@media (max-width: 1200px) {
+  header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_content ul li {
     width: 25%;
     float: left;
     text-align: center;
-    border-top: 1px solid #874C00;
+    border-top: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
   }
-  header .topbar .memberBox .menu_item .menu_item_content ul li a {
-    height: 60px;
-    line-height: 60px;
-    padding: 0 20px;
-  }
-  header .topbar .memberBox .menu_item .menu_item_content ul li + li {
-    border-left: 1px solid #874C00;
+  header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_content ul li:last-child {
+    background-repeat: 0;
   }
 }
 
-@media (max-width: 800px) {
-  header .topbar .memberBox {
-    bottom: 80px;
-  }
+header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_content ul li a {
+  line-height: 1.2;
+  padding: 14px 20px;
+  white-space: nowrap;
+  color: #363537;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_content ul li:hover {
+  background-color: #FFC908;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item.signup .menu_item_title {
+  background: #fff;
+  border-radius: 6px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item.signup .menu_item_title:before {
+  display: none;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item.signup .menu_item_title a {
+  color: #874C00;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item.signup .menu_item_title a span {
+  color: #874C00;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item:hover .menu_item_title:before {
+  width: 100%;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item:hover .menu_item_title a {
+  color: #fff;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item:hover .menu_item_title a span {
+  color: #fff;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item:hover .menu_item_title a span.icon_more {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item:hover.signup .menu_item_title {
+  background: #FFC908;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item:hover.signup .menu_item_title a {
+  color: #874C00;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item:hover.signup .menu_item_title a span {
+  color: #874C00;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+header .topbar .topbar_innerbox .memberBox .menu_item + .menu_item {
+  margin-left: 10px;
 }
 
 header #menu-toggle {
@@ -888,146 +995,6 @@ header #menu-toggle.active span:nth-child(3) {
 header #menu-toggle.active h6 {
   opacity: 0;
   visibility: hidden;
-}
-
-header #menu {
-  width: 100%;
-  height: 100vh;
-  display: none;
-}
-
-header #menu .menuBox {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(54, 53, 55, 0.9);
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding-top: 100px;
-  overflow-y: scroll;
-}
-
-@media (max-width: 960px) {
-  header #menu .menuBox {
-    width: 100%;
-  }
-}
-
-header #menu .menuBox::-webkit-scrollbar {
-  display: none;
-}
-
-header #menu .menuBox .menu_item {
-  text-align: center;
-  margin-bottom: 32px;
-  overflow: hidden;
-}
-
-header #menu .menuBox .menu_item_title, header #menu .menuBox .menu_item_info,
-header #menu .menuBox .menu_item_title a, header #menu .menuBox .menu_item_info a {
-  font-size: 20px;
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 400;
-  letter-spacing: 1px;
-  color: #fff;
-}
-
-@media (max-width: 960px) {
-  header #menu .menuBox .menu_item_title, header #menu .menuBox .menu_item_info,
-  header #menu .menuBox .menu_item_title a, header #menu .menuBox .menu_item_info a {
-    font-size: 24px;
-  }
-}
-
-header #menu .menuBox .menu_item_title span, header #menu .menuBox .menu_item_info span,
-header #menu .menuBox .menu_item_title a span, header #menu .menuBox .menu_item_info a span {
-  display: block;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-family: 'Playfair Display', serif;
-}
-
-header #menu .menuBox .menu_item_content {
-  font-size: 16px;
-  letter-spacing: 2px;
-}
-
-header #menu .menuBox .menu_item_content.active {
-  display: block;
-}
-
-@media (max-width: 960px) {
-  header #menu .menuBox .menu_item_content ul {
-    padding-top: 10px;
-  }
-}
-
-header #menu .menuBox .menu_item_content ul li {
-  background-color: transparent;
-  width: 100%;
-  margin: 0 0 5px;
-}
-
-@media (max-width: 960px) {
-  header #menu .menuBox .menu_item_content ul li {
-    width: auto;
-    display: inline-block;
-    margin: 0 5px 5px;
-  }
-}
-
-header #menu .menuBox .menu_item_content ul li a {
-  padding: 0;
-  color: #fff;
-  font-weight: 300;
-  font-size: 16px;
-}
-
-@media (max-width: 960px) {
-  header #menu .menuBox .menu_item_content ul li a {
-    font-size: 18px;
-  }
-}
-
-header #menu .menuBox .menu_item_social {
-  width: 30px;
-  float: right;
-}
-
-@media (max-width: 960px) {
-  header #menu .menuBox .menu_item_social {
-    float: unset;
-    margin: 0 auto;
-  }
-}
-
-header #menu .menuBox .menu_item_info p, header #menu .menuBox .menu_item_info a, header #menu .menuBox .menu_item_info span {
-  display: inline-block;
-  font-size: 20px;
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-
-header #menu .menuBox .menu_item_info p {
-  margin-bottom: 20px;
-}
-
-@media (max-width: 960px) {
-  header #menu .menuBox .menu_item_info p {
-    display: block;
-  }
-}
-
-header #menu .menuBox .menu_item_info span {
-  width: 20px;
-  text-align: center;
-  background: #000;
-  color: #fff;
-  margin-right: 5px;
-  font-size: 23px;
-  font-weight: 600;
-  line-height: 1;
 }
 
 header .rightbar {
@@ -1449,6 +1416,10 @@ footer #goTop:hover {
   .theme .theme_page_title h3 span {
     font-size: 20px;
   }
+}
+
+.theme .theme_image {
+  margin-top: 100px;
 }
 
 .theme .theme_signin {
@@ -2383,12 +2354,15 @@ footer #goTop:hover {
   margin-top: 20px;
 }
 
-.theme .theme_login, .theme .theme_register {
+.theme .theme_login {
+  background: url(../img/signin-bg.jpg) right top no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   position: relative;
   overflow: hidden;
 }
 
-.theme .theme_login:before, .theme .theme_register:before {
+.theme .theme_login:before {
   content: "";
   width: 50%;
   height: 100%;
@@ -2399,94 +2373,103 @@ footer #goTop:hover {
   top: 0;
 }
 
-.theme .theme_login .theme_login_box, .theme .theme_login .theme_register_box, .theme .theme_register .theme_login_box, .theme .theme_register .theme_register_box {
+@media (max-width: 960px) {
+  .theme .theme_login:before {
+    display: none;
+  }
+}
+
+.theme .theme_login .theme_login_box {
   width: 50%;
   position: relative;
   z-index: 2;
   margin: 100px 0;
 }
 
-.theme .theme_login .theme_login_box .theme_login_title, .theme .theme_login .theme_login_box .theme_register_title, .theme .theme_login .theme_register_box .theme_login_title, .theme .theme_login .theme_register_box .theme_register_title, .theme .theme_register .theme_login_box .theme_login_title, .theme .theme_register .theme_login_box .theme_register_title, .theme .theme_register .theme_register_box .theme_login_title, .theme .theme_register .theme_register_box .theme_register_title {
+@media (max-width: 960px) {
+  .theme .theme_login .theme_login_box {
+    width: 640px;
+    background: #363537;
+    padding: 60px 40px;
+    border-radius: 20px;
+    float: unset;
+    margin: 60px auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .theme .theme_login .theme_login_box {
+    width: 94%;
+  }
+}
+
+@media (max-width: 560px) {
+  .theme .theme_login .theme_login_box {
+    padding: 60px 20px;
+  }
+}
+
+.theme .theme_login .theme_login_box .theme_login_title {
   text-align: center;
 }
 
-.theme .theme_login .theme_login_box .theme_login_title h3, .theme .theme_login .theme_login_box .theme_register_title h3, .theme .theme_login .theme_register_box .theme_login_title h3, .theme .theme_login .theme_register_box .theme_register_title h3, .theme .theme_register .theme_login_box .theme_login_title h3, .theme .theme_register .theme_login_box .theme_register_title h3, .theme .theme_register .theme_register_box .theme_login_title h3, .theme .theme_register .theme_register_box .theme_register_title h3 {
+.theme .theme_login .theme_login_box .theme_login_title h3 {
   font-size: 36px;
   color: #fff;
 }
 
-.theme .theme_login .theme_login_box .theme_login_form .item, .theme .theme_login .theme_login_box .theme_login_register .item,
-.theme .theme_login .theme_login_box .theme_register_form .item, .theme .theme_login .theme_login_box .theme_register_login .item, .theme .theme_login .theme_register_box .theme_login_form .item, .theme .theme_login .theme_register_box .theme_login_register .item,
-.theme .theme_login .theme_register_box .theme_register_form .item, .theme .theme_login .theme_register_box .theme_register_login .item, .theme .theme_register .theme_login_box .theme_login_form .item, .theme .theme_register .theme_login_box .theme_login_register .item,
-.theme .theme_register .theme_login_box .theme_register_form .item, .theme .theme_register .theme_login_box .theme_register_login .item, .theme .theme_register .theme_register_box .theme_login_form .item, .theme .theme_register .theme_register_box .theme_login_register .item,
-.theme .theme_register .theme_register_box .theme_register_form .item, .theme .theme_register .theme_register_box .theme_register_login .item {
-  width: calc((100% - 40px) / 2);
+.theme .theme_login .theme_login_box .theme_login_form {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.theme .theme_login .theme_login_box .theme_login_form .item {
+  width: 360px;
   margin: 10px auto;
   position: relative;
 }
 
-.theme .theme_login .theme_login_box .theme_login_form .item.full, .theme .theme_login .theme_login_box .theme_login_register .item.full,
-.theme .theme_login .theme_login_box .theme_register_form .item.full, .theme .theme_login .theme_login_box .theme_register_login .item.full, .theme .theme_login .theme_register_box .theme_login_form .item.full, .theme .theme_login .theme_register_box .theme_login_register .item.full,
-.theme .theme_login .theme_register_box .theme_register_form .item.full, .theme .theme_login .theme_register_box .theme_register_login .item.full, .theme .theme_register .theme_login_box .theme_login_form .item.full, .theme .theme_register .theme_login_box .theme_login_register .item.full,
-.theme .theme_register .theme_login_box .theme_register_form .item.full, .theme .theme_register .theme_login_box .theme_register_login .item.full, .theme .theme_register .theme_register_box .theme_login_form .item.full, .theme .theme_register .theme_register_box .theme_login_register .item.full,
-.theme .theme_register .theme_register_box .theme_register_form .item.full, .theme .theme_register .theme_register_box .theme_register_login .item.full {
+@media (max-width: 560px) {
+  .theme .theme_login .theme_login_box .theme_login_form .item {
+    width: 100%;
+  }
+}
+
+.theme .theme_login .theme_login_box .theme_login_form .item.full {
   width: calc(100% - 20px);
 }
 
-.theme .theme_login .theme_login_box .theme_login_form .item.account_service, .theme .theme_login .theme_login_box .theme_login_register .item.account_service,
-.theme .theme_login .theme_login_box .theme_register_form .item.account_service, .theme .theme_login .theme_login_box .theme_register_login .item.account_service, .theme .theme_login .theme_register_box .theme_login_form .item.account_service, .theme .theme_login .theme_register_box .theme_login_register .item.account_service,
-.theme .theme_login .theme_register_box .theme_register_form .item.account_service, .theme .theme_login .theme_register_box .theme_register_login .item.account_service, .theme .theme_register .theme_login_box .theme_login_form .item.account_service, .theme .theme_register .theme_login_box .theme_login_register .item.account_service,
-.theme .theme_register .theme_login_box .theme_register_form .item.account_service, .theme .theme_register .theme_login_box .theme_register_login .item.account_service, .theme .theme_register .theme_register_box .theme_login_form .item.account_service, .theme .theme_register .theme_register_box .theme_login_register .item.account_service,
-.theme .theme_register .theme_register_box .theme_register_form .item.account_service, .theme .theme_register .theme_register_box .theme_register_login .item.account_service {
+.theme .theme_login .theme_login_box .theme_login_form .item.account_service {
   width: calc((100% - 40px) / 2);
   margin: 40px auto 0;
 }
 
-.theme .theme_login .theme_login_box .theme_login_form .item.account_service a, .theme .theme_login .theme_login_box .theme_login_register .item.account_service a,
-.theme .theme_login .theme_login_box .theme_register_form .item.account_service a, .theme .theme_login .theme_login_box .theme_register_login .item.account_service a, .theme .theme_login .theme_register_box .theme_login_form .item.account_service a, .theme .theme_login .theme_register_box .theme_login_register .item.account_service a,
-.theme .theme_login .theme_register_box .theme_register_form .item.account_service a, .theme .theme_login .theme_register_box .theme_register_login .item.account_service a, .theme .theme_register .theme_login_box .theme_login_form .item.account_service a, .theme .theme_register .theme_login_box .theme_login_register .item.account_service a,
-.theme .theme_register .theme_login_box .theme_register_form .item.account_service a, .theme .theme_register .theme_login_box .theme_register_login .item.account_service a, .theme .theme_register .theme_register_box .theme_login_form .item.account_service a, .theme .theme_register .theme_register_box .theme_login_register .item.account_service a,
-.theme .theme_register .theme_register_box .theme_register_form .item.account_service a, .theme .theme_register .theme_register_box .theme_register_login .item.account_service a {
+.theme .theme_login .theme_login_box .theme_login_form .item.account_service a {
   color: #fff;
   line-height: 3.2;
   text-align: center;
   text-decoration: underline;
 }
 
-.theme .theme_login .theme_login_box .theme_login_form .item .city, .theme .theme_login .theme_login_box .theme_login_register .item .city,
-.theme .theme_login .theme_login_box .theme_register_form .item .city, .theme .theme_login .theme_login_box .theme_register_login .item .city, .theme .theme_login .theme_register_box .theme_login_form .item .city, .theme .theme_login .theme_register_box .theme_login_register .item .city,
-.theme .theme_login .theme_register_box .theme_register_form .item .city, .theme .theme_login .theme_register_box .theme_register_login .item .city, .theme .theme_register .theme_login_box .theme_login_form .item .city, .theme .theme_register .theme_login_box .theme_login_register .item .city,
-.theme .theme_register .theme_login_box .theme_register_form .item .city, .theme .theme_register .theme_login_box .theme_register_login .item .city, .theme .theme_register .theme_register_box .theme_login_form .item .city, .theme .theme_register .theme_register_box .theme_login_register .item .city,
-.theme .theme_register .theme_register_box .theme_register_form .item .city, .theme .theme_register .theme_register_box .theme_register_login .item .city {
+.theme .theme_login .theme_login_box .theme_login_form .item .city {
   width: 140px;
   float: left;
   margin-right: 20px;
 }
 
-.theme .theme_login .theme_login_box .theme_login_form .item .dist, .theme .theme_login .theme_login_box .theme_login_register .item .dist,
-.theme .theme_login .theme_login_box .theme_register_form .item .dist, .theme .theme_login .theme_login_box .theme_register_login .item .dist, .theme .theme_login .theme_register_box .theme_login_form .item .dist, .theme .theme_login .theme_register_box .theme_login_register .item .dist,
-.theme .theme_login .theme_register_box .theme_register_form .item .dist, .theme .theme_login .theme_register_box .theme_register_login .item .dist, .theme .theme_register .theme_login_box .theme_login_form .item .dist, .theme .theme_register .theme_login_box .theme_login_register .item .dist,
-.theme .theme_register .theme_login_box .theme_register_form .item .dist, .theme .theme_register .theme_login_box .theme_register_login .item .dist, .theme .theme_register .theme_register_box .theme_login_form .item .dist, .theme .theme_register .theme_register_box .theme_login_register .item .dist,
-.theme .theme_register .theme_register_box .theme_register_form .item .dist, .theme .theme_register .theme_register_box .theme_register_login .item .dist {
+.theme .theme_login .theme_login_box .theme_login_form .item .dist {
   width: 140px;
   float: left;
   margin-right: 20px;
 }
 
-.theme .theme_login .theme_login_box .theme_login_form .item .address, .theme .theme_login .theme_login_box .theme_login_register .item .address,
-.theme .theme_login .theme_login_box .theme_register_form .item .address, .theme .theme_login .theme_login_box .theme_register_login .item .address, .theme .theme_login .theme_register_box .theme_login_form .item .address, .theme .theme_login .theme_register_box .theme_login_register .item .address,
-.theme .theme_login .theme_register_box .theme_register_form .item .address, .theme .theme_login .theme_register_box .theme_register_login .item .address, .theme .theme_register .theme_login_box .theme_login_form .item .address, .theme .theme_register .theme_login_box .theme_login_register .item .address,
-.theme .theme_register .theme_login_box .theme_register_form .item .address, .theme .theme_register .theme_login_box .theme_register_login .item .address, .theme .theme_register .theme_register_box .theme_login_form .item .address, .theme .theme_register .theme_register_box .theme_login_register .item .address,
-.theme .theme_register .theme_register_box .theme_register_form .item .address, .theme .theme_register .theme_register_box .theme_register_login .item .address {
+.theme .theme_login .theme_login_box .theme_login_form .item .address {
   width: calc(100% - 320px);
   float: left;
 }
 
-.theme .theme_login .theme_login_box .theme_login_form .item .invoice, .theme .theme_login .theme_login_box .theme_login_register .item .invoice,
-.theme .theme_login .theme_login_box .theme_register_form .item .invoice, .theme .theme_login .theme_login_box .theme_register_login .item .invoice, .theme .theme_login .theme_register_box .theme_login_form .item .invoice, .theme .theme_login .theme_register_box .theme_login_register .item .invoice,
-.theme .theme_login .theme_register_box .theme_register_form .item .invoice, .theme .theme_login .theme_register_box .theme_register_login .item .invoice, .theme .theme_register .theme_login_box .theme_login_form .item .invoice, .theme .theme_register .theme_login_box .theme_login_register .item .invoice,
-.theme .theme_register .theme_login_box .theme_register_form .item .invoice, .theme .theme_register .theme_login_box .theme_register_login .item .invoice, .theme .theme_register .theme_register_box .theme_login_form .item .invoice, .theme .theme_register .theme_register_box .theme_login_register .item .invoice,
-.theme .theme_register .theme_register_box .theme_register_form .item .invoice, .theme .theme_register .theme_register_box .theme_register_login .item .invoice {
+.theme .theme_login .theme_login_box .theme_login_form .item .invoice {
   width: 180px;
   height: 20px;
   position: absolute;
@@ -2494,34 +2477,18 @@ footer #goTop:hover {
   top: 0;
 }
 
-.theme .theme_login .theme_login_box .theme_login_form .item .invoice > div, .theme .theme_login .theme_login_box .theme_login_register .item .invoice > div,
-.theme .theme_login .theme_login_box .theme_register_form .item .invoice > div, .theme .theme_login .theme_login_box .theme_register_login .item .invoice > div, .theme .theme_login .theme_register_box .theme_login_form .item .invoice > div, .theme .theme_login .theme_register_box .theme_login_register .item .invoice > div,
-.theme .theme_login .theme_register_box .theme_register_form .item .invoice > div, .theme .theme_login .theme_register_box .theme_register_login .item .invoice > div, .theme .theme_register .theme_login_box .theme_login_form .item .invoice > div, .theme .theme_register .theme_login_box .theme_login_register .item .invoice > div,
-.theme .theme_register .theme_login_box .theme_register_form .item .invoice > div, .theme .theme_register .theme_login_box .theme_register_login .item .invoice > div, .theme .theme_register .theme_register_box .theme_login_form .item .invoice > div, .theme .theme_register .theme_register_box .theme_login_register .item .invoice > div,
-.theme .theme_register .theme_register_box .theme_register_form .item .invoice > div, .theme .theme_register .theme_register_box .theme_register_login .item .invoice > div {
+.theme .theme_login .theme_login_box .theme_login_form .item .invoice > div {
   float: left;
   margin-right: 16px;
   line-height: 1.2;
 }
 
-.theme .theme_login .theme_login_box .theme_login_form .item .invoice > div input, .theme .theme_login .theme_login_box .theme_login_form .item .invoice > div label, .theme .theme_login .theme_login_box .theme_login_register .item .invoice > div input, .theme .theme_login .theme_login_box .theme_login_register .item .invoice > div label,
-.theme .theme_login .theme_login_box .theme_register_form .item .invoice > div input,
-.theme .theme_login .theme_login_box .theme_register_form .item .invoice > div label, .theme .theme_login .theme_login_box .theme_register_login .item .invoice > div input, .theme .theme_login .theme_login_box .theme_register_login .item .invoice > div label, .theme .theme_login .theme_register_box .theme_login_form .item .invoice > div input, .theme .theme_login .theme_register_box .theme_login_form .item .invoice > div label, .theme .theme_login .theme_register_box .theme_login_register .item .invoice > div input, .theme .theme_login .theme_register_box .theme_login_register .item .invoice > div label,
-.theme .theme_login .theme_register_box .theme_register_form .item .invoice > div input,
-.theme .theme_login .theme_register_box .theme_register_form .item .invoice > div label, .theme .theme_login .theme_register_box .theme_register_login .item .invoice > div input, .theme .theme_login .theme_register_box .theme_register_login .item .invoice > div label, .theme .theme_register .theme_login_box .theme_login_form .item .invoice > div input, .theme .theme_register .theme_login_box .theme_login_form .item .invoice > div label, .theme .theme_register .theme_login_box .theme_login_register .item .invoice > div input, .theme .theme_register .theme_login_box .theme_login_register .item .invoice > div label,
-.theme .theme_register .theme_login_box .theme_register_form .item .invoice > div input,
-.theme .theme_register .theme_login_box .theme_register_form .item .invoice > div label, .theme .theme_register .theme_login_box .theme_register_login .item .invoice > div input, .theme .theme_register .theme_login_box .theme_register_login .item .invoice > div label, .theme .theme_register .theme_register_box .theme_login_form .item .invoice > div input, .theme .theme_register .theme_register_box .theme_login_form .item .invoice > div label, .theme .theme_register .theme_register_box .theme_login_register .item .invoice > div input, .theme .theme_register .theme_register_box .theme_login_register .item .invoice > div label,
-.theme .theme_register .theme_register_box .theme_register_form .item .invoice > div input,
-.theme .theme_register .theme_register_box .theme_register_form .item .invoice > div label, .theme .theme_register .theme_register_box .theme_register_login .item .invoice > div input, .theme .theme_register .theme_register_box .theme_register_login .item .invoice > div label {
+.theme .theme_login .theme_login_box .theme_login_form .item .invoice > div input, .theme .theme_login .theme_login_box .theme_login_form .item .invoice > div label {
   display: inline-block;
   color: #fff;
 }
 
-.theme .theme_login .theme_login_box .theme_login_form .item .invoice > div input, .theme .theme_login .theme_login_box .theme_login_register .item .invoice > div input,
-.theme .theme_login .theme_login_box .theme_register_form .item .invoice > div input, .theme .theme_login .theme_login_box .theme_register_login .item .invoice > div input, .theme .theme_login .theme_register_box .theme_login_form .item .invoice > div input, .theme .theme_login .theme_register_box .theme_login_register .item .invoice > div input,
-.theme .theme_login .theme_register_box .theme_register_form .item .invoice > div input, .theme .theme_login .theme_register_box .theme_register_login .item .invoice > div input, .theme .theme_register .theme_login_box .theme_login_form .item .invoice > div input, .theme .theme_register .theme_login_box .theme_login_register .item .invoice > div input,
-.theme .theme_register .theme_login_box .theme_register_form .item .invoice > div input, .theme .theme_register .theme_login_box .theme_register_login .item .invoice > div input, .theme .theme_register .theme_register_box .theme_login_form .item .invoice > div input, .theme .theme_register .theme_register_box .theme_login_register .item .invoice > div input,
-.theme .theme_register .theme_register_box .theme_register_form .item .invoice > div input, .theme .theme_register .theme_register_box .theme_register_login .item .invoice > div input {
+.theme .theme_login .theme_login_box .theme_login_form .item .invoice > div input {
   width: 12px;
   height: 12px;
   border-radius: 12px;
@@ -2530,38 +2497,44 @@ footer #goTop:hover {
   outline: 1px solid #fff;
 }
 
-.theme .theme_login .theme_login_box .theme_login_form .item .invoice > div input:checked, .theme .theme_login .theme_login_box .theme_login_register .item .invoice > div input:checked,
-.theme .theme_login .theme_login_box .theme_register_form .item .invoice > div input:checked, .theme .theme_login .theme_login_box .theme_register_login .item .invoice > div input:checked, .theme .theme_login .theme_register_box .theme_login_form .item .invoice > div input:checked, .theme .theme_login .theme_register_box .theme_login_register .item .invoice > div input:checked,
-.theme .theme_login .theme_register_box .theme_register_form .item .invoice > div input:checked, .theme .theme_login .theme_register_box .theme_register_login .item .invoice > div input:checked, .theme .theme_register .theme_login_box .theme_login_form .item .invoice > div input:checked, .theme .theme_register .theme_login_box .theme_login_register .item .invoice > div input:checked,
-.theme .theme_register .theme_login_box .theme_register_form .item .invoice > div input:checked, .theme .theme_register .theme_login_box .theme_register_login .item .invoice > div input:checked, .theme .theme_register .theme_register_box .theme_login_form .item .invoice > div input:checked, .theme .theme_register .theme_register_box .theme_login_register .item .invoice > div input:checked,
-.theme .theme_register .theme_register_box .theme_register_form .item .invoice > div input:checked, .theme .theme_register .theme_register_box .theme_register_login .item .invoice > div input:checked {
+.theme .theme_login .theme_login_box .theme_login_form .item .invoice > div input:checked {
   background: #fff;
 }
 
-.theme .theme_login .theme_login_box .theme_login_form button, .theme .theme_login .theme_login_box .theme_login_register button,
-.theme .theme_login .theme_login_box .theme_register_form button, .theme .theme_login .theme_login_box .theme_register_login button, .theme .theme_login .theme_register_box .theme_login_form button, .theme .theme_login .theme_register_box .theme_login_register button,
-.theme .theme_login .theme_register_box .theme_register_form button, .theme .theme_login .theme_register_box .theme_register_login button, .theme .theme_register .theme_login_box .theme_login_form button, .theme .theme_register .theme_login_box .theme_login_register button,
-.theme .theme_register .theme_login_box .theme_register_form button, .theme .theme_register .theme_login_box .theme_register_login button, .theme .theme_register .theme_register_box .theme_login_form button, .theme .theme_register .theme_register_box .theme_login_register button,
-.theme .theme_register .theme_register_box .theme_register_form button, .theme .theme_register .theme_register_box .theme_register_login button {
-  width: calc((100% - 40px) / 2);
+.theme .theme_login .theme_login_box .theme_login_form button {
+  width: 360px;
   margin: 0 auto 50px;
 }
 
-.theme .theme_login .theme_login_box .theme_login_form button.outline, .theme .theme_login .theme_login_box .theme_login_register button.outline,
-.theme .theme_login .theme_login_box .theme_register_form button.outline, .theme .theme_login .theme_login_box .theme_register_login button.outline, .theme .theme_login .theme_register_box .theme_login_form button.outline, .theme .theme_login .theme_register_box .theme_login_register button.outline,
-.theme .theme_login .theme_register_box .theme_register_form button.outline, .theme .theme_login .theme_register_box .theme_register_login button.outline, .theme .theme_register .theme_login_box .theme_login_form button.outline, .theme .theme_register .theme_login_box .theme_login_register button.outline,
-.theme .theme_register .theme_login_box .theme_register_form button.outline, .theme .theme_register .theme_login_box .theme_register_login button.outline, .theme .theme_register .theme_register_box .theme_login_form button.outline, .theme .theme_register .theme_register_box .theme_login_register button.outline,
-.theme .theme_register .theme_register_box .theme_register_form button.outline, .theme .theme_register .theme_register_box .theme_register_login button.outline {
+@media (max-width: 560px) {
+  .theme .theme_login .theme_login_box .theme_login_form button {
+    width: 100%;
+  }
+}
+
+.theme .theme_login .theme_login_box .theme_login_form button.outline {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.theme .theme_login .theme_login_box .theme_login_register, .theme .theme_login .theme_login_box .theme_register_login, .theme .theme_login .theme_register_box .theme_login_register, .theme .theme_login .theme_register_box .theme_register_login, .theme .theme_register .theme_login_box .theme_login_register, .theme .theme_register .theme_login_box .theme_register_login, .theme .theme_register .theme_register_box .theme_login_register, .theme .theme_register .theme_register_box .theme_register_login {
-  width: calc((100% - 40px) / 2);
-  margin: 0 auto;
+@media (max-width: 560px) {
+  .theme .theme_login .theme_login_box .theme_login_register {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
-.theme .theme_login .theme_login_box .theme_login_register p, .theme .theme_login .theme_login_box .theme_register_login p, .theme .theme_login .theme_register_box .theme_login_register p, .theme .theme_login .theme_register_box .theme_register_login p, .theme .theme_register .theme_login_box .theme_login_register p, .theme .theme_register .theme_login_box .theme_register_login p, .theme .theme_register .theme_register_box .theme_login_register p, .theme .theme_register .theme_register_box .theme_register_login p {
+.theme .theme_login .theme_login_box .theme_login_register hr {
+  width: 360px;
+}
+
+@media (max-width: 560px) {
+  .theme .theme_login .theme_login_box .theme_login_register hr {
+    width: 100%;
+  }
+}
+
+.theme .theme_login .theme_login_box .theme_login_register p {
   color: #fff;
   font-size: 14px;
   line-height: 3.2;
@@ -2569,56 +2542,430 @@ footer #goTop:hover {
   margin-top: 30px;
 }
 
-.theme .theme_login .theme_login_box .theme_login_register button, .theme .theme_login .theme_login_box .theme_register_login button, .theme .theme_login .theme_register_box .theme_login_register button, .theme .theme_login .theme_register_box .theme_register_login button, .theme .theme_register .theme_login_box .theme_login_register button, .theme .theme_register .theme_login_box .theme_register_login button, .theme .theme_register .theme_register_box .theme_login_register button, .theme .theme_register .theme_register_box .theme_register_login button {
-  width: 100%;
+.theme .theme_login .theme_login_box .theme_login_register button {
+  width: 360px;
 }
 
-.theme .theme_login .theme_login_box .theme_register_form, .theme .theme_login .theme_register_box .theme_register_form, .theme .theme_register .theme_login_box .theme_register_form, .theme .theme_register .theme_register_box .theme_register_form {
+@media (max-width: 560px) {
+  .theme .theme_login .theme_login_box .theme_login_register button {
+    width: 100%;
+  }
+}
+
+.theme .theme_register {
+  height: 80vh;
+  background: url(../img/register-bg.jpg) right top no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 960px) {
+  .theme .theme_register {
+    height: auto;
+  }
+}
+
+.theme .theme_register:before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: #363537;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 960px) {
+  .theme .theme_register:before {
+    display: none;
+  }
+}
+
+.theme .theme_register .theme_register_box {
+  width: 50%;
+  position: relative;
+  z-index: 2;
+  float: left;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+@media (max-width: 960px) {
+  .theme .theme_register .theme_register_box {
+    width: 640px;
+    height: auto;
+    background: #363537;
+    padding: 60px 40px;
+    border-radius: 20px;
+    float: unset;
+    margin: 60px auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .theme .theme_register .theme_register_box {
+    width: 94%;
+  }
+}
+
+@media (max-width: 560px) {
+  .theme .theme_register .theme_register_box {
+    padding: 60px 20px;
+  }
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner {
+  padding: 100px 0;
+}
+
+@media (max-width: 960px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner {
+    padding: 0;
+  }
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_title {
+  text-align: center;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_title h3 {
+  font-size: 36px;
+  color: #fff;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form {
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.theme .theme_login .theme_login_box .theme_register_form .item, .theme .theme_login .theme_register_box .theme_register_form .item, .theme .theme_register .theme_login_box .theme_register_form .item, .theme .theme_register .theme_register_box .theme_register_form .item {
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item {
+  width: calc((100% - 40px) / 2);
+  margin: 10px auto;
+  position: relative;
   float: left;
   margin-right: 20px;
 }
 
-.theme .theme_login .theme_login_box .theme_register_form button, .theme .theme_login .theme_register_box .theme_register_form button, .theme .theme_register .theme_login_box .theme_register_form button, .theme .theme_register .theme_register_box .theme_register_form button {
-  margin-top: 50px;
+@media (max-width: 1200px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item {
+    width: 360px;
+    float: unset;
+    margin: 10px auto;
+  }
 }
 
-.theme .theme_login .theme_register_box, .theme .theme_register .theme_register_box {
+@media (max-width: 560px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item {
+    width: 100%;
+  }
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item.full {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item.full {
+    width: 360px;
+  }
+}
+
+@media (max-width: 560px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item.full {
+    width: 100%;
+  }
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item.account_service {
+  width: calc((100% - 40px) / 2);
+  margin: 40px auto 0;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item.account_service a {
+  color: #fff;
+  line-height: 3.2;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .city {
+  width: 140px;
+  float: left;
+  margin-right: 20px;
+}
+
+@media (max-width: 1200px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .city {
+    width: 170px;
+  }
+}
+
+@media (max-width: 560px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .city {
+    width: calc((100% - 20px) / 2);
+  }
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .dist {
+  width: 140px;
+  float: left;
+  margin-right: 20px;
+}
+
+@media (max-width: 1200px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .dist {
+    width: 170px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .dist {
+    width: calc((100% - 20px) / 2);
+  }
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .address {
+  width: calc(100% - 320px);
   float: left;
 }
 
-.theme .theme_login .theme_register_feature, .theme .theme_register .theme_register_feature {
-  width: 40%;
+@media (max-width: 1200px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .address {
+    width: 360px;
+    float: unset;
+  }
+}
+
+@media (max-width: 560px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .address {
+    width: 100%;
+  }
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .invoice {
+  width: 180px;
+  height: 20px;
+  position: absolute;
+  left: 130px;
+  top: 0;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .invoice > div {
+  float: left;
+  margin-right: 16px;
+  line-height: 1.2;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .invoice > div input, .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .invoice > div label {
+  display: inline-block;
+  color: #fff;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .invoice > div input {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  padding: 0;
+  margin-right: 2px;
+  outline: 1px solid #fff;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form .item .invoice > div input:checked {
+  background: #fff;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form button {
+  width: 360px;
+  margin: 50px auto;
+}
+
+@media (max-width: 560px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form button {
+    width: 100%;
+  }
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_form button.outline {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 560px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item {
+  width: calc((100% - 40px) / 2);
+  margin: 10px auto;
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item {
+    width: 360px;
+  }
+}
+
+@media (max-width: 560px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item {
+    width: 100%;
+  }
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item.full {
+  width: calc(100% - 20px);
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item.account_service {
+  width: calc((100% - 40px) / 2);
+  margin: 40px auto 0;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item.account_service a {
+  color: #fff;
+  line-height: 3.2;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item .city {
+  width: 140px;
+  float: left;
+  margin-right: 20px;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item .dist {
+  width: 140px;
+  float: left;
+  margin-right: 20px;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item .address {
+  width: calc(100% - 320px);
+  float: left;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item .invoice {
+  width: 180px;
+  height: 20px;
+  position: absolute;
+  left: 130px;
+  top: 0;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item .invoice > div {
+  float: left;
+  margin-right: 16px;
+  line-height: 1.2;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item .invoice > div input, .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item .invoice > div label {
+  display: inline-block;
+  color: #fff;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item .invoice > div input {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  padding: 0;
+  margin-right: 2px;
+  outline: 1px solid #fff;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login .item .invoice > div input:checked {
+  background: #fff;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login button {
+  width: 360px;
+  margin: 50px auto;
+}
+
+@media (max-width: 560px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login button {
+    width: 100%;
+  }
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login button.outline {
+  width: 360px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 560px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login button.outline {
+    width: 100%;
+  }
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login hr {
+  width: 360px;
+}
+
+@media (max-width: 560px) {
+  .theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login hr {
+    width: 100%;
+  }
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 3.2;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.theme .theme_register .theme_register_box .theme_register_box_inner .theme_register_login button {
+  width: 100%;
+}
+
+.theme .theme_register .theme_register_feature {
+  width: 46%;
   float: right;
 }
 
-.theme .theme_login .theme_register_feature ul, .theme .theme_register .theme_register_feature ul {
-  list-style: disc;
-  margin-top: 35%;
+@media (max-width: 960px) {
+  .theme .theme_register .theme_register_feature {
+    width: 640px;
+    float: unset;
+    margin: 0 auto 40px;
+  }
 }
 
-.theme .theme_login .theme_register_feature ul li, .theme .theme_register .theme_register_feature ul li {
+@media (max-width: 800px) {
+  .theme .theme_register .theme_register_feature {
+    width: 94%;
+  }
+}
+
+.theme .theme_register .theme_register_feature ul {
+  list-style: disc;
+  margin-top: 35%;
+  padding-left: 32px;
+}
+
+@media (max-width: 960px) {
+  .theme .theme_register .theme_register_feature ul {
+    margin-top: 0;
+  }
+}
+
+.theme .theme_register .theme_register_feature ul li {
   color: #fff;
   line-height: 2;
   font-size: 18px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-}
-
-.theme .theme_login {
-  background: url(../img/signin-bg.jpg) center top no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.theme .theme_register {
-  background: url(../img/register-bg.jpg) center top no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .theme_pagination,
