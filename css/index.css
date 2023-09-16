@@ -685,6 +685,8 @@ header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_content ul li a {
   padding: 14px 20px;
   white-space: nowrap;
   color: #363537;
+  font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+  font-weight: 600;
 }
 
 header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_content ul li:hover {
@@ -797,6 +799,8 @@ header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_title a {
   line-height: 2;
   position: relative;
   z-index: 2;
+  font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+  font-weight: 600;
 }
 
 header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_title a span {
