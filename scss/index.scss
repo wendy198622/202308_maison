@@ -126,6 +126,15 @@
 
     .theme_image{
         margin-top: 100px;
+        
+        img{
+            &.pc{ display: block;}
+            &.mob{ display: none;}
+            @media (max-width:960px){
+                &.pc{ display: none;}
+                &.mob{ display: block;}
+            }
+        }
     }
 
     .theme_signin{
@@ -1051,6 +1060,7 @@
         background-attachment: fixed;
         position: relative;
         overflow: hidden;
+        margin-top: 100px;
         @media (max-width:960px){
             // height: 820px;
         }
@@ -1230,6 +1240,7 @@
         background-attachment: fixed;
         position: relative;
         overflow: hidden;
+        margin-top: 100px;
 
         @media (max-width:960px){
             height: auto;
@@ -1285,7 +1296,6 @@
                     text-align: center;
     
                     h3{
-                        font-size: 36px;
                         color: #fff;
                     }
                 }
@@ -1296,7 +1306,7 @@
                     overflow: hidden;
 
                     .item{
-                        width: calc((100% - 40px) / 2);
+                        width: calc((100% - 20px) / 2);
                         margin: 10px auto;
                         position: relative;
                         float: left;
@@ -1317,6 +1327,13 @@
                             }
                             @media (max-width:560px){
                                 width: 100%;
+                            }
+                        }
+
+                        &.mr0{
+                            margin-right: 0;
+                            @media (max-width:1200px){
+                                margin: 10px auto;
                             }
                         }
     

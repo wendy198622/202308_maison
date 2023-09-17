@@ -898,10 +898,22 @@
 
             $(this).toggleClass("active");
             $('.product_nav_content').toggleClass("active");
-            $('.mask').toggleClass("active");
+            
+            if ($(window).width() < 1201) {
+                $('.mask').toggleClass("active");
+            }
         });
+
+
+        if ($(window).width() < 1201) {
+            $('.product_nav_content .subnav li').click(function() {
+                $('.product_nav_content').toggleClass("active");
+                $('.mask').toggleClass("active");
+            });
+        }
         
         
+    
         $(".product_filter_switch").click(function() {
             $('.product_nav_switch').removeClass("active");
             $('.product_nav_content').removeClass("active");

@@ -12,11 +12,11 @@
             overflow: hidden;
             position: relative;
 
-            .container{
-                @media (max-width: 1200px){
-                    width: 100%;
-                }
-            }
+            // .container{
+            //     @media (max-width: 1200px){
+            //         width: 100%;
+            //     }
+            // }
     
             .theme_product_nav{
                 width: 320px;
@@ -1020,6 +1020,9 @@
                                     margin: 10px 0;
                                     font-size: 14px;
                                     font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                                    @media (max-width:480px){
+                                        font-size: 12px;
+                                    }
 
                                     &:after{
                                         content: "";
