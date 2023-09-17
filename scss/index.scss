@@ -164,6 +164,9 @@
                     width: 100%;
                     float: unset;
                 }
+                @media (max-width:540px){
+                    padding: 0 20px;
+                }
 
                 h3{
                     color: #fff;
@@ -218,6 +221,9 @@
                     margin: 60px auto 0;
                     padding-top: 40px;
                 }
+                @media (max-width:540px){
+                    padding: 40px 20px 0;
+                }
 
                 h3{
                     color: #fff;
@@ -262,7 +268,7 @@
             }
 
             .theme_category_item{
-                padding: 16px;
+                padding: 8px;
                 position: relative;
 
                 
@@ -282,6 +288,9 @@
                     height: 64px;
                     letter-spacing: 8px;
                     text-shadow: 0 0 10px rgba(0,0,0,.8);
+                    @media (max-width:600px){
+                        font-size: 26px;
+                    }
 
                     span{
                         text-transform: uppercase;
@@ -291,6 +300,9 @@
                         letter-spacing: 10px;
                         display: block;
                         line-height: 1.8;
+                        @media (max-width:600px){
+                            font-size: 16px;
+                        }
 
                     }
                 }
