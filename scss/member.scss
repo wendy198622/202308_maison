@@ -114,6 +114,9 @@
                 @media (max-width:1200px){
                     width: 100%;
                 }
+                @media (max-width:860px){
+                    overflow-x: scroll;
+                }
 
                 &.theme_members_content_recordpage{
                     width: 100%;
@@ -361,6 +364,9 @@
                     display: table;
                     table-layout: auto;
                     width: 100%;
+                    @media (max-width:860px){
+                        width: 860px;
+                    }
 
                     table{
                         width: 100%;
@@ -479,6 +485,9 @@
                     background: #fff;
                     padding: 20px 40px;
                     margin-bottom: 40px;
+                    @media (max-width:860px){
+                        padding: 20px;
+                    }
 
                     &.theme_members_car_box{
                         background: transparent;
@@ -511,15 +520,25 @@
                     }
     
                     .theme_members_recordpage_group{
+                        @media (max-width:860px){
+                            width: 100%;
+                            overflow-x: scroll;
+                        }
     
                         .theme_members_table_title{
                             background: #F2F1ED;
                             padding: 10px;
                             overflow: hidden;
+                            @media (max-width:860px){
+                                width: 860px
+                            }
     
                             h5{
                                 width: calc(100% - 230px);
                                 float: left;
+                                @media (max-width:860px){
+                                    width: 100px;
+                                }
                             }
     
                             .group_price{
@@ -528,6 +547,9 @@
                                 font-family: 'Roboto', 'Noto Serif TC', serif;    
                                 font-size: 18px;   
                                 line-height: 1.6; 
+                                @media (max-width:860px){
+                                    float: right;
+                                }
         
                                 span{
                                     font-family: 'Roboto', 'Noto Serif TC', serif;    
@@ -542,6 +564,9 @@
                                 padding-left: 8px;
                                 border: 1px solid #363537;
                                 line-height: 1.8; 
+                                @media (max-width:860px){
+                                    float: left;
+                                }
     
                                 > div{
                                     position: relative;
@@ -773,6 +798,9 @@
                 background: #fff;
                 padding: 30px 20px;
                 margin-bottom: 40px;
+                @media (max-width:1200px){
+                    width: 100%;
+                }
 
                 hr{
                     border-top: 1px solid #D9D9D9;

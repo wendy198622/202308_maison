@@ -468,13 +468,18 @@
                                     </div>
                                     <div class="theme_members_content_btn">
                                         <button class="outline" onclick="history.back()">回上一頁</button>
-                                        <button>送出</button>
+                                        <button id="send">送出</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="popup">
+			<div class="popup_content">
+				<p>感謝您的詢價，我們將儘速與您聯繫</p>
 			</div>
 		</div>
 	</section>
@@ -515,6 +520,15 @@
         $(".group_switch3").click(function () {
             $(".theme_members_recordpage3").slideToggle();
             $(".group_switch3").toggleClass("active");
+        });
+        
+        $("#send").click(function() {
+			$(".popup").addClass("is_acted");
+
+			setTimeout(function() {
+				$(".popup").removeClass("is_acted");
+			}, 3000);
+
         });
 
 	})

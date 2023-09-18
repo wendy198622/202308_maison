@@ -84,10 +84,15 @@
 								<textarea id="message" name="message" required></textarea>
 							</div>
 							<div class="clear"></div>
-							<button>確認送出</button>
+							<button id="send">確認送出</button>
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="popup">
+			<div class="popup_content">
+				<p>感謝您的填寫，我們將儘速與您聯繫</p>
 			</div>
 		</div>
 	</section>
@@ -109,6 +114,15 @@
 			slidesToShow: 1,
 			slidesToScroll: 1,
 		});
+        
+        $("#send").click(function() {
+			$(".popup").addClass("is_acted");
+
+			setTimeout(function() {
+				$(".popup").removeClass("is_acted");
+			}, 3000);
+
+        });
 
 	})
 

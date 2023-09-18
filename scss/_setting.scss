@@ -250,7 +250,9 @@ button{
   visibility: hidden;
   transition: all .5s;
   .popup_content{
-      text-align: center;
+      width: 80%;
+      max-width: 600px;
+      height: 80px;
       background-color: #fff;
       color: #000000;
       border-radius: 6px;
@@ -260,6 +262,27 @@ button{
       bottom: 0;
       left: 0;
       margin: auto;
+      text-align: center;
+
+      &:before{
+          content: "";
+          width: 0;
+          height: 100%;
+          vertical-align: middle;
+          display: inline-block;
+      }
+
+      p{
+        width: 90%;
+        font-size: 16px;
+        line-height: 1.6;
+        vertical-align: middle;
+        display: inline-block;
+    }
+      @media (max-width:400px){
+        line-height: 20px;
+        vertical-align: middle;
+    }
       &.popup_img{
           width: 600px;
           height: 600px;
@@ -268,95 +291,6 @@ button{
               width: 100vw;
               height: 100vw;
               padding: 10vw;
-          }
-      }
-      &.popup_code{
-          width: 720px;
-          height: 300px;
-          padding: 60px 40px;
-          @media (max-width:600px){
-              width: 100vw;
-              height: 100vw;
-              padding: 10vw;
-          }
-
-          p{
-            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-            font-weight: 600;
-            text-align: center;
-            letter-spacing: 2px;
-          }
-
-          .popup_code_form{
-
-            .item{
-                margin: 10px auto 40px;
-
-                label{
-                    font-size: 14px;
-                    line-height: 1.2;
-                    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-                    color: #c9a063;
-                    letter-spacing: 1px;
-                    display: block;
-
-                    span{
-                        width: 48px;
-                        font-size: 18px;
-                        color: #fff;
-                        font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-                        margin: 0 10px;
-                        display: inline-block;
-                        text-align: justify;
-                        text-justify: distribute-all-lines;
-                        text-align-last: justify;
-                        @media (max-width:1280px){
-                            font-size: 16px;
-                        }             
-                        @media (max-width:600px){
-                            width: 80px;
-                        }   
-
-                        &.nowidth{
-                            width: 300px;
-                            @media (max-width:1020px) and (min-width:960px){
-                                width: 280px;
-                            }
-                            @media (max-width:540px){
-                                width: auto;
-                            }
-                        }      
-                    }
-                }
-
-                input[type="text"]{
-                    width: 100%;
-                    font-size: 20px;
-                    line-height: 2;
-                    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-                    background: transparent;
-                    padding: 6px 16px;
-                    color: #874C00;
-                    background: #ebecec;
-                    border-radius: 6px;
-                    margin-top: 10px;
-                    letter-spacing: 2px;
-                    // border-bottom: 1px solid #c9a063;
-                    @media (max-width:640px){
-                        font-size: 16px;
-                    }             
-
-                    &:focus{
-                        outline: 0;
-                    }
-                }
-
-                ::placeholder {
-                    color: #999;
-                    letter-spacing: 2px;
-                }
-            }
-
           }
       }
 
