@@ -795,6 +795,11 @@
 			slidesToScroll: 1,
         });        
         
+        $(".theme_pagination li").click(function() {
+            $(this).toggleClass("current");
+            $(this).siblings().removeClass("current");
+        });
+        
         $(".theme_product_nav li").click(function() {
             $(this).toggleClass("active");
             $(this).siblings().removeClass("active");

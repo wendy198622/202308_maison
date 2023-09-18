@@ -1616,11 +1616,16 @@
 .theme_pagination {
     line-height: 1;
     font-weight: 400;
-    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+    // font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
     -webkit-text-size-adjust: 100%;
-    margin: 1em auto;
+    margin: 40px auto 0;
     text-align: center;
     transition: font-size .2s ease-in-out;
+
+    a{
+        // width: 50px;
+        display: inline-block !important;
+    }
 
     ul {
         list-style-type: none;
@@ -1653,7 +1658,7 @@
             a {
                 color: #363537;
                 padding: 1em;
-                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                font-family: 'Roboto', 'Noto Serif TC', serif;
                 font-size: 14px;
             }
 

@@ -168,6 +168,11 @@
 			slidesToScroll: 1,
         });
         
+        $(".theme_pagination li").click(function() {
+            $(this).toggleClass("current");
+            $(this).siblings().removeClass("current");
+        });
+        
         $(".filter").click(function() {
             $(this).addClass("active");
             $(this).siblings().removeClass("active");

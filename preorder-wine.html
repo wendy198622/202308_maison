@@ -120,14 +120,14 @@
                                 <ul class="product_filter_content preorder_filter_content">
                                     <li>
                                         <div class="filter_title">
-                                            產地/產區
+                                            產地/國家
                                             <i class="material-icons gomore">chevron_right</i>
                                             <i class="material-icons goless">expand_less</i>
                                         </div>
                                         <div class="filter_item">
                                             <ol>
                                                 <li>
-                                                    <h6>產地</h6>
+                                                    <!-- <h6>產地</h6> -->
                                                 </li>
                                                 <li>
                                                     <input type="checkbox" name="" id="france" value="" />
@@ -168,27 +168,6 @@
                                                 <li>
                                                     <input type="checkbox" name="" id="southafrica" value="" />
                                                     <label for="southafrica">南非</label>
-                                                </li>
-                                            </ol>
-                                            <ol>
-                                                <li>
-                                                    <h6>產區</h6>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" name="" id="bordeaux" value="" />
-                                                    <label for="bordeaux">波爾多</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" name="" id="burgundy" value="" />
-                                                    <label for="burgundy">勃根地</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" name="" id="Champagne" value="" />
-                                                    <label for="Champagne">香檳</label>
-                                                </li>
-                                                <li>
-                                                    <input type="checkbox" name="" id="rhone" value="" />
-                                                    <label for="rhone">隆河</label>
                                                 </li>
                                             </ol>
                                             <button class="filter_check">確認</button>
@@ -794,6 +773,11 @@
 			slidesToShow: 1,
 			slidesToScroll: 1,
         });        
+        
+        $(".theme_pagination li").click(function() {
+            $(this).toggleClass("current");
+            $(this).siblings().removeClass("current");
+        });
         
         $(".theme_product_nav li").click(function() {
             $(this).toggleClass("active");

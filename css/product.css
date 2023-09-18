@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Noto+Serif+Display:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Noto+Serif+Display:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @font-face {
   .material-icons {
@@ -28,10 +28,10 @@ body {
 a, a:hover, a:active, a:visited {
   color: #363537;
   text-decoration: none;
-  display: block;
   -webkit-transition: all .3s;
   transition: all .3s;
   outline: 0;
+  display: block;
 }
 
 img {
@@ -845,23 +845,14 @@ header .topbar .topbar_innerbox .memberBox .menu_item {
   }
 }
 
+header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_title {
+  position: relative;
+}
+
 @media (max-width: 1200px) {
   header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_title {
     display: none;
   }
-}
-
-header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_title:before {
-  content: "";
-  width: 0%;
-  height: 1px;
-  background: #fff;
-  position: absolute;
-  z-index: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-transition: all .3s;
-  transition: all .3s;
 }
 
 header .topbar .topbar_innerbox .memberBox .menu_item .menu_item_title a {
@@ -2573,7 +2564,7 @@ footer #goTop:hover {
   margin: 10px 0;
   float: left;
   text-align: left;
-  font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+  font-family: 'Roboto', 'Noto Serif TC', serif;
 }
 
 .theme .theme_product .theme_product_box .theme_product_content .theme_productpage_inner .productpage_intro .product_info .product_info_inventory {
@@ -2581,7 +2572,7 @@ footer #goTop:hover {
   margin: 10px 0;
   float: right;
   text-align: right;
-  font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+  font-family: 'Roboto', 'Noto Serif TC', serif;
 }
 
 .theme .theme_product .theme_product_box .theme_product_content .theme_productpage_inner .productpage_intro .product_info .product_info_price {

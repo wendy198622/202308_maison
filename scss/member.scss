@@ -386,7 +386,7 @@
                                 .item{
                                     flex: auto;
                                     padding: 20px 10px;
-                                    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+                                    font-family: 'Roboto', 'Noto Serif TC', serif;
                                     font-size: 16px;
 
                                     &.icon{
@@ -497,13 +497,13 @@
                         .total_price{
                             width: 200px;
                             float: right;
-                            font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                            font-family: 'Roboto', 'Noto Serif TC', serif;    
                             font-size: 22px;   
                             line-height: 1.8; 
                             text-align: right;
     
                             span{
-                                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                                font-family: 'Roboto', 'Noto Serif TC', serif;    
                                 font-size: 16px;
                                 margin-right: 5px;
                             }
@@ -525,12 +525,12 @@
                             .group_price{
                                 width: 140px;
                                 float: left;
-                                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                                font-family: 'Roboto', 'Noto Serif TC', serif;    
                                 font-size: 18px;   
                                 line-height: 1.6; 
         
                                 span{
-                                    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;    
+                                    font-family: 'Roboto', 'Noto Serif TC', serif;    
                                     font-size: 16px;
                                     margin-right: 5px;
                                 }
@@ -898,71 +898,5 @@
             }
         }
 
-    }
-}
-
-.theme_pagination,
-.theme_pagination *,
-.theme_pagination *:before,
-.theme_pagination *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-kerning: auto;
-}
-.theme_pagination {
-    line-height: 1;
-    font-weight: 400;
-    font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-    -webkit-text-size-adjust: 100%;
-    margin: 1em auto;
-    text-align: center;
-    transition: font-size .2s ease-in-out;
-
-    ul {
-        list-style-type: none;
-        display: inline;
-        font-size: 100%;
-        margin: 0;
-        padding: .5em;
-
-        li {
-        display: inline-block;
-        font-size: 100%;
-        width: auto;
-        border-radius: 3px;
-
-            a {
-                color: #363537;
-                padding: 1em;
-                font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-                font-size: 14px;
-            }
-
-            &.current a{
-                color: #fff;
-                background: #874C00;
-                border-radius: 4px;
-            }
-        }
-    }
-
-    > a {
-        display: inline-block;
-        vertical-align: middle;
-        // background: #DFDFDF;
-        padding: 0.5em;
-        border-radius: 3px;
-    }
-
-    &:focus, &:hover {
-    }
-
-    .disabled, [hidden], [disabled] {
-        opacity: .2;
-        pointer-events: none;
     }
 }

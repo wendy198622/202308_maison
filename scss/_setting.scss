@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Noto+Serif+Display:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Noto+Serif+Display:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 .material-icons{
@@ -17,7 +17,8 @@
 //setting
 body{ font-family: 'Noto Sans TC', sans-serif ; background: #f4f5f6; font-size: 14px;}
 *{ box-sizing: border-box; color: #363537; font-family: 'Noto Sans TC', sans-serif ; letter-spacing: 1px;}
-a, a:hover, a:active, a:visited{ color: #363537; text-decoration: none; display: block; transition: all .3s; outline: 0;}
+a, a:hover, a:active, a:visited{ color: #363537; text-decoration: none; transition: all .3s; outline: 0; display: block;}
+// a{ display: block;}
 img{ width: 100%; display: block;}
 
 h1, h2, h3, h4, h5, h6{
