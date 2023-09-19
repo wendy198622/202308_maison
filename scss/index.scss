@@ -5,6 +5,14 @@
 
 
 .theme{
+
+    &:first-child{
+        margin-top: 100px;
+        @media (max-width:800px){
+            margin-top: 80px;
+        }
+    }
+
     h3{
         // font-size: 32px;
         font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
@@ -125,7 +133,7 @@
     }
 
     .theme_image{
-        margin-top: 100px;
+        // margin-top: 100px;
         
         img{
             &.pc{ display: block;}
@@ -662,6 +670,9 @@
         .theme_newspage_item{
             padding: 40px;
             background: #fff;
+            @media (max-width:800px){
+                padding: 20px;
+            }
 
             .newspage_text{
                 margin-top: 10px;
