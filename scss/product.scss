@@ -995,12 +995,37 @@
 
                             i{
                                 position: absolute;
-                                right: 20px;
-                                bottom: 20px;
-                                font-size: 36px;
+                                z-index: 10;
+                                right: 10px;
+                                bottom: 10px;
+                                font-size: 24px;
 
                                 &:hover{
                                     cursor: pointer;
+                                }
+                            }
+
+                            figure.zoom {
+                                background-position: 50% 50%;
+                                position: relative;
+                                margin: 0 auto;
+                                // border: 5px solid white;
+                                // box-shadow: -1px 5px 15px black;
+                                // height: 300px;
+                                width: 100%;
+                                overflow: hidden;
+                                cursor: zoom-in;
+
+                                img {
+                                    transition: opacity 0.5s;
+                                    display: block;
+                                    width: 100%;
+                                    position: relative;
+                                    z-index: 9;
+
+                                    &:hover {
+                                        opacity: 0;
+                                    }
                                 }
                             }
                         }
@@ -1276,6 +1301,9 @@
                                         height: 24px;
                                         background: #e7e5dc;
                                         border-radius: 20px;
+                                        user-select:none; /* standard syntax */
+                                        -webkit-user-select:none; /* for Chrome、Safari */
+                                        -moz-user-select:none; /* for Mozilla、Firefox */
                                         
                                         i{
                                             font-size: 18px;

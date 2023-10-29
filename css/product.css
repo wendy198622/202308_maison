@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Noto+Serif+Display:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @font-face {
@@ -2358,13 +2359,37 @@ footer #goTop:hover {
 
 .theme .theme_product .theme_product_box .theme_product_content .theme_productpage_inner .productpage_intro .photo i {
   position: absolute;
-  right: 20px;
-  bottom: 20px;
-  font-size: 36px;
+  z-index: 10;
+  right: 10px;
+  bottom: 10px;
+  font-size: 24px;
 }
 
 .theme .theme_product .theme_product_box .theme_product_content .theme_productpage_inner .productpage_intro .photo i:hover {
   cursor: pointer;
+}
+
+.theme .theme_product .theme_product_box .theme_product_content .theme_productpage_inner .productpage_intro .photo figure.zoom {
+  background-position: 50% 50%;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.theme .theme_product .theme_product_box .theme_product_content .theme_productpage_inner .productpage_intro .photo figure.zoom img {
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+}
+
+.theme .theme_product .theme_product_box .theme_product_content .theme_productpage_inner .productpage_intro .photo figure.zoom img:hover {
+  opacity: 0;
 }
 
 .theme .theme_product .theme_product_box .theme_product_content .theme_productpage_inner .productpage_intro .product_info {
@@ -2650,6 +2675,13 @@ footer #goTop:hover {
   height: 24px;
   background: #e7e5dc;
   border-radius: 20px;
+  -ms-user-select: none;
+      user-select: none;
+  /* standard syntax */
+  -webkit-user-select: none;
+  /* for Chrome、Safari */
+  -moz-user-select: none;
+  /* for Mozilla、Firefox */
 }
 
 .theme .theme_product .theme_product_box .theme_product_content .theme_productpage_inner .productpage_intro .product_info .cart-item .quantity .decrease i, .theme .theme_product .theme_product_box .theme_product_content .theme_productpage_inner .productpage_intro .product_info .cart-item .quantity .increase i {

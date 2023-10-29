@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Noto+Serif+Display:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @font-face {
@@ -1849,6 +1850,13 @@ footer #goTop:hover {
   height: 24px;
   background: #f3f4f5;
   border-radius: 20px;
+  -ms-user-select: none;
+      user-select: none;
+  /* standard syntax */
+  -webkit-user-select: none;
+  /* for Chrome、Safari */
+  -moz-user-select: none;
+  /* for Mozilla、Firefox */
 }
 
 .theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr td .item.count .quantity .decrease i, .theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr td .item.count .quantity .increase i {
