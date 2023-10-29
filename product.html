@@ -218,10 +218,26 @@
                                         </ul>
                                         <div class="product_info_number">產品編號：A348797</div>
                                         <div class="product_info_inventory">庫存量：999</div>
-                                        <div class="clear"></div>
+                                        
                                         <div class="product_info_price">
-                                            <span>會員價 NT$</span>890
+                                            <span class="unit">會員價 NT$</span><span>890</span>
                                         </div>
+                                        <div class="cart-item">
+                                            <div class="quantity">
+                                                <span class="decrease">
+                                                    <i class="material-icons">
+                                                        remove
+                                                    </i>
+                                                </span>
+                                                <input type="text" class="quantity-input" value="1">
+                                                <span class="increase">
+                                                    <i class="material-icons">
+                                                        add
+                                                    </i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
                                         <div class="product_info_btn">
                                             <div class="product_info_addcar">
                                                 <i class="material-icons">
@@ -348,6 +364,26 @@
         $(".close_click").click(function() {
 			$(".popup").removeClass("is_acted");
         });
+
+        // 增加數量
+        $('.increase').on('click', function() {
+            var input = $(this).siblings('.quantity-input');
+            var currentValue = parseInt(input.val());
+            input.val(currentValue + 1);
+            // 更新總價格或其他相關功能
+            updateTotal(); // 可能的更新總價格函數
+        });
+
+        // 減少數量
+        $('.decrease').on('click', function() {
+            var input = $(this).siblings('.quantity-input');
+            var currentValue = parseInt(input.val());
+            if (currentValue > 1) {
+                input.val(currentValue - 1);
+                // 更新總價格或其他相關功能
+                updateTotal(); // 可能的更新總價格函數
+            }
+
 	})
 
 </script>

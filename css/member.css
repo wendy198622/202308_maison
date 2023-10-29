@@ -1827,7 +1827,7 @@ footer #goTop:hover {
 }
 
 .theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr td .item.count .quantity .quantity-input {
-  width: 80px;
+  width: 64px;
   display: inline-block;
   vertical-align: middle;
   text-align: center;

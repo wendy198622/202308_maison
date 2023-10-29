@@ -57,7 +57,7 @@
                                         <h5>商品專區</h5>
                                     </div>
                                     <div class="theme_members_table theme_members_recordpage theme_members_recordpage1">
-                                        <table>
+                                        <table class="cart-item">
                                             <tr>
                                                 <th>商品編號</th>
                                                 <th>圖片</th>
@@ -104,12 +104,12 @@
                                                 </td>
                                                 <td>
                                                     <div class="item price">
-                                                        <span>NT$</span>2,670
+                                                        <span>NT$</span><div class="item-price">2,670</div>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="item price">
-                                                        <span>NT$</span>2,670
+                                                        <span>NT$</span><div class="total-price">2,670</div>
                                                     </div>
                                                 </td>
                                                 <td>
@@ -676,7 +676,7 @@
         // 更新總價格的示例函數
         function updateTotal() {
             var total = 0;
-            $('.cart-item').each(function() {
+            $('.cart-item tr').each(function() {
                 var price = parseFloat($(this).find('.item-price').text());
                 var quantity = parseInt($(this).find('.quantity-input').val());
                 total += price * quantity;
