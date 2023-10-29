@@ -173,7 +173,7 @@ label span.nowidth {
   }
 }
 
-input[type="text"] {
+input[type="text"], input[type="password"] {
   width: 100%;
   font-size: 14px;
   line-height: 2;
@@ -187,7 +187,7 @@ input[type="text"] {
   letter-spacing: 2px;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="password"]:focus {
   outline: 0;
 }
 
@@ -396,16 +396,19 @@ button.outline:hover a {
 }
 
 .popup .popup_content.popup_img {
-  width: 600px;
   height: 600px;
   padding: 50px;
 }
 
-@media (max-width: 600px) {
+.popup .popup_content.popup_img:before {
+  display: none;
+}
+
+@media (max-width: 800px) {
   .popup .popup_content.popup_img {
-    width: 100vw;
-    height: 100vw;
-    padding: 10vw;
+    width: 90%;
+    height: 0;
+    padding-bottom: calc(90% - 50px);
   }
 }
 
@@ -1093,19 +1096,9 @@ footer .warningBox {
   }
 }
 
-footer .warningBox:before {
-  content: "";
-  width: 0;
-  height: 100%;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 footer .warningBox img {
   width: calc(100% - 5px);
   max-width: 800px;
-  display: inline-block;
-  vertical-align: middle;
   margin: 0 auto;
 }
 
@@ -1766,7 +1759,7 @@ footer #goTop:hover {
       -ms-flex: auto;
           flex: auto;
   padding: 20px 10px;
-  font-family: 'Roboto', 'Noto Serif TC', serif;
+  font-family: 'Roboto', 'Noto Sans TC', sans-serif;
   font-size: 16px;
 }
 
@@ -1831,6 +1824,36 @@ footer #goTop:hover {
 .theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr td .item.detail a:hover {
   background: #363537;
   color: #fff;
+}
+
+.theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr td .item.count .quantity .quantity-input {
+  width: 80px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  background: transparent;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+}
+
+.theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr td .item.count .quantity .decrease, .theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr td .item.count .quantity .increase {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  background: #f3f4f5;
+  border-radius: 20px;
+}
+
+.theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr td .item.count .quantity .decrease i, .theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr td .item.count .quantity .increase i {
+  font-size: 18px;
+  padding: 3px;
+}
+
+.theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr td .item.count .quantity .decrease:hover, .theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr td .item.count .quantity .increase:hover {
+  cursor: pointer;
 }
 
 .theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr:last-child th, .theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr:last-child td {

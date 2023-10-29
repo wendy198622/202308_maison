@@ -107,7 +107,7 @@ label{
     }
 }
 
-input[type="text"]{
+input[type="text"], input[type="password"]{
     width: 100%;
     font-size: 14px;
     line-height: 2;
@@ -284,13 +284,15 @@ button{
         vertical-align: middle;
     }
       &.popup_img{
-          width: 600px;
           height: 600px;
           padding: 50px;
-          @media (max-width:600px){
-              width: 100vw;
-              height: 100vw;
-              padding: 10vw;
+          &:before{
+              display: none;
+          }
+          @media (max-width:800px){
+              width: 90%;
+              height: 0;
+              padding-bottom: calc(90% - 50px);
           }
       }
 

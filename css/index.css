@@ -173,7 +173,7 @@ label span.nowidth {
   }
 }
 
-input[type="text"] {
+input[type="text"], input[type="password"] {
   width: 100%;
   font-size: 14px;
   line-height: 2;
@@ -187,7 +187,7 @@ input[type="text"] {
   letter-spacing: 2px;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="password"]:focus {
   outline: 0;
 }
 
@@ -396,16 +396,19 @@ button.outline:hover a {
 }
 
 .popup .popup_content.popup_img {
-  width: 600px;
   height: 600px;
   padding: 50px;
 }
 
-@media (max-width: 600px) {
+.popup .popup_content.popup_img:before {
+  display: none;
+}
+
+@media (max-width: 800px) {
   .popup .popup_content.popup_img {
-    width: 100vw;
-    height: 100vw;
-    padding: 10vw;
+    width: 90%;
+    height: 0;
+    padding-bottom: calc(90% - 50px);
   }
 }
 
@@ -1093,19 +1096,9 @@ footer .warningBox {
   }
 }
 
-footer .warningBox:before {
-  content: "";
-  width: 0;
-  height: 100%;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 footer .warningBox img {
   width: calc(100% - 5px);
   max-width: 800px;
-  display: inline-block;
-  vertical-align: middle;
   margin: 0 auto;
 }
 

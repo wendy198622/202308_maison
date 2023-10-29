@@ -196,7 +196,7 @@
                             <div class="theme_productpage_inner">
                                 <div class="productpage_intro">
                                     <div class="photo">
-                                        <i class="material-icons">
+                                        <i class="material-icons zoom_click">
                                             zoom_in
                                         </i>
                                         <img src="img/product.jpg" alt="">
@@ -259,6 +259,17 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="popup">
+			<div class="popup_content popup_img">
+                <img src="./img/product.jpg" alt="">
+                <div class="close">
+                    <i class="material-icons close_click">
+                        close
+                    </i>
+
+                </div>
 			</div>
 		</div>
 	</section>
@@ -329,8 +340,14 @@
             $('.mask').toggleClass("active");
         });
 
-        
 
+        $(".zoom_click").click(function() {
+			$(".popup").addClass("is_acted");
+        });
+
+        $(".close_click").click(function() {
+			$(".popup").removeClass("is_acted");
+        });
 	})
 
 </script>
