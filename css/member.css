@@ -1793,6 +1793,10 @@ footer #goTop:hover {
   margin-right: 5px;
 }
 
+.theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr td .item.price .item-price, .theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr td .item.price .total-price {
+  display: inline-block;
+}
+
 .theme .theme_members .theme_members_box .theme_members_content .theme_members_table table tr td .item.brand {
   text-align: left;
   font-weight: 600;

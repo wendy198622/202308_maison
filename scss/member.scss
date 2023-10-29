@@ -429,6 +429,9 @@
                                             font-size: 16px;
                                             margin-right: 5px;
                                         }
+                                        .item-price, .total-price{
+                                            display: inline-block;
+                                        }
                                     }
         
                                     &.brand{
