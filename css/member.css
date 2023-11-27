@@ -633,11 +633,41 @@ header .topbar .topbar_innerbox .menuBox .menu_item {
   }
 }
 
+header .topbar .topbar_innerbox .menuBox .menu_item:after {
+  display: none;
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (max-width: 1200px) {
+  header .topbar .topbar_innerbox .menuBox .menu_item:after {
+    display: block;
+  }
+}
+
 header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title {
   position: relative;
 }
 
-header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title:before {
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title > a {
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 2;
+  position: relative;
+  z-index: 2;
+  font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
+  font-weight: 600;
+}
+
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title > a:before {
   content: "";
   width: 0%;
   height: 1px;
@@ -650,18 +680,13 @@ header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title:before {
   transition: all .3s;
 }
 
-header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title a {
-  color: #fff;
-  padding: 6px 12px;
-  font-size: 18px;
-  line-height: 2;
-  position: relative;
-  z-index: 2;
-  font-family: 'Noto Serif Display', 'Noto Serif TC', serif;
-  font-weight: 600;
+@media (max-width: 1200px) {
+  header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title > a:before {
+    display: none;
+  }
 }
 
-header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title a span {
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title > a span {
   margin-right: 6px;
   color: #fff;
   vertical-align: middle;
@@ -669,9 +694,52 @@ header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title a span {
   transition: all .3s;
 }
 
-header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title a .number {
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title > a .number {
   color: #FFC908;
   display: inline-block;
+}
+
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title .menu_subitem {
+  display: none;
+  background-color: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+@media (max-width: 1200px) {
+  header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title .menu_subitem {
+    display: block;
+    background-color: transparent;
+  }
+}
+
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title .menu_subitem a {
+  display: block;
+  line-height: 1.2;
+  padding: 14px 20px;
+  white-space: nowrap;
+  color: #363537;
+}
+
+@media (max-width: 1200px) {
+  header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title .menu_subitem a {
+    color: #fff;
+  }
+}
+
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title .menu_subitem a:hover {
+  background-color: #FFC908;
+}
+
+@media (max-width: 1200px) {
+  header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title .menu_subitem a:hover {
+    background-color: transparent;
+    color: #FFC908;
+  }
+}
+
+header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_title:hover .menu_subitem {
+  display: block;
 }
 
 header .topbar .topbar_innerbox .menuBox .menu_item .menu_item_content {
@@ -725,19 +793,19 @@ header .topbar .topbar_innerbox .menuBox .menu_item.signup .menu_item_title a sp
   transition: all .3s;
 }
 
-header .topbar .topbar_innerbox .menuBox .menu_item:hover .menu_item_title:before {
+header .topbar .topbar_innerbox .menuBox .menu_item:hover .menu_item_title > a {
+  color: #fff;
+}
+
+header .topbar .topbar_innerbox .menuBox .menu_item:hover .menu_item_title > a:before {
   width: 100%;
 }
 
-header .topbar .topbar_innerbox .menuBox .menu_item:hover .menu_item_title a {
+header .topbar .topbar_innerbox .menuBox .menu_item:hover .menu_item_title > a span {
   color: #fff;
 }
 
-header .topbar .topbar_innerbox .menuBox .menu_item:hover .menu_item_title a span {
-  color: #fff;
-}
-
-header .topbar .topbar_innerbox .menuBox .menu_item:hover .menu_item_title a span.icon_more {
+header .topbar .topbar_innerbox .menuBox .menu_item:hover .menu_item_title > a span.icon_more {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }

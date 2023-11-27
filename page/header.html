@@ -14,6 +14,10 @@
             <div class="menu_item">
                 <div class="menu_item_title">
                     <a href="./wine.html">酒類專區</a>
+                    <div class="menu_subitem">
+                        <a href="./wine.php">葡萄酒</a>
+                        <a href="./wiskey.php">威士忌</a>
+                    </div>
                 </div>
             </div>
             <div class="menu_item">
@@ -93,7 +97,7 @@
 
         $('header .menu_item').hover(function () {
             if ($(window).width() > 1199) {
-                $(this).find('.menu_item_content').delay(300).slideToggle();
+                $(this).find('.menu_item_content').slideToggle();
             } else {
                 // $(this).find('.menu_item_content').css('display','none');
             }
