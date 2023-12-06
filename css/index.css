@@ -191,14 +191,6 @@ input[type="text"]:focus, input[type="password"]:focus {
   outline: 0;
 }
 
-input[type="file"] {
-  width: 100%;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 ::-webkit-input-placeholder {
   color: #999;
   letter-spacing: 2px;
@@ -2743,9 +2735,10 @@ footer #goTop:hover {
   width: 50%;
   position: relative;
   z-index: 2;
-  float: left;
+  display: inline-block;
   height: 80vh;
   overflow-y: scroll;
+  margin-right: -4px;
 }
 
 @media (max-width: 960px) {
@@ -3096,7 +3089,10 @@ footer #goTop:hover {
 
 .theme .theme_register .theme_register_feature {
   width: 46%;
-  float: right;
+  display: inline-block;
+  height: 80vh;
+  margin-right: -4px;
+  position: relative;
 }
 
 @media (max-width: 960px) {
@@ -3114,9 +3110,14 @@ footer #goTop:hover {
 }
 
 .theme .theme_register .theme_register_feature ul {
+  width: 80%;
   list-style: disc;
-  margin-top: 35%;
   padding-left: 32px;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 @media (max-width: 960px) {

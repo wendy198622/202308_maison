@@ -1288,9 +1288,11 @@
             width: 50%;
             position: relative;
             z-index: 2;
-            float: left;
+            // float: left;
+            display: inline-block;
             height: 80vh;
             overflow-y: scroll;
+            margin-right: -4px;
 
             @media (max-width:960px){
                 width: 640px;
@@ -1581,7 +1583,11 @@
 
         .theme_register_feature{
             width: 46%;
-            float: right;
+            // float: right;
+            display: inline-block;
+            height: 80vh;
+            margin-right: -4px;
+            position: relative;
 
             @media (max-width:960px){
                 width: 640px;
@@ -1594,12 +1600,16 @@
             }
         
             ul{
+                width: 80%;
                 list-style: disc;
-                margin-top: 35%;
                 padding-left: 32px;
-            @media (max-width:960px){
-                margin-top: 0;
-            }
+                position: absolute;
+                top: 50%;
+                left: 10%;
+                transform: translateY(-50%);
+                @media (max-width:960px){
+                    margin-top: 0;
+                }
 
                 li{
                     color: #fff;

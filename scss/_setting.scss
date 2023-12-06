@@ -126,13 +126,13 @@ input[type="text"], input[type="password"]{
     }
 }
 
-input[type="file"]{
-    width: 100%;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+// input[type="file"]{
+//     width: 100%;
+//     opacity: 0;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+// }
 ::placeholder {
     color: #999;
     letter-spacing: 2px;

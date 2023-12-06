@@ -427,6 +427,7 @@
                                         <div class="product_info">
                                             <h5>2015波爾多拉雅酒莊 皇家葡萄酒</h5>
                                             <h6>CHATEAU LA HAYE 2015</h6>
+                                            <hr>
                                             <ul class="product_info_detail">
                                                 <li>酒精濃度：13.5%</li>
                                                 <li>年份：2015</li>
@@ -458,6 +459,7 @@
                                         <div class="product_info">
                                             <h5>2015波爾多拉雅酒莊 皇家葡萄酒 2015波爾多拉雅酒莊 皇家葡萄酒</h5>
                                             <h6>CHATEAU LA HAYE 2015 CHATEAU LA HAYE 2015</h6>
+                                            <hr>
                                             <ul class="product_info_detail">
                                                 <li>酒精濃度：13.5%</li>
                                                 <li>年份：2015</li>
@@ -489,6 +491,7 @@
                                         <div class="product_info">
                                             <h5>2015波爾多拉雅酒莊 皇家葡萄酒</h5>
                                             <h6>CHATEAU LA HAYE 2015</h6>
+                                            <hr>
                                             <ul class="product_info_detail">
                                                 <li>酒精濃度：13.5%</li>
                                                 <li>年份：2015</li>
@@ -520,6 +523,7 @@
                                         <div class="product_info">
                                             <h5>2015波爾多拉雅酒莊 皇家葡萄酒</h5>
                                             <h6>CHATEAU LA HAYE 2015</h6>
+                                            <hr>
                                             <ul class="product_info_detail">
                                                 <li>酒精濃度：13.5%</li>
                                                 <li>年份：2015</li>
@@ -551,6 +555,7 @@
                                         <div class="product_info">
                                             <h5>2015波爾多拉雅酒莊 皇家葡萄酒</h5>
                                             <h6>CHATEAU LA HAYE 2015</h6>
+                                            <hr>
                                             <ul class="product_info_detail">
                                                 <li>酒精濃度：13.5%</li>
                                                 <li>年份：2015</li>
@@ -582,6 +587,7 @@
                                         <div class="product_info">
                                             <h5>2015波爾多拉雅酒莊 皇家葡萄酒</h5>
                                             <h6>CHATEAU LA HAYE 2015</h6>
+                                            <hr>
                                             <ul class="product_info_detail">
                                                 <li>酒精濃度：13.5%</li>
                                                 <li>年份：2015</li>
@@ -613,6 +619,7 @@
                                         <div class="product_info">
                                             <h5>2015波爾多拉雅酒莊 皇家葡萄酒</h5>
                                             <h6>CHATEAU LA HAYE 2015</h6>
+                                            <hr>
                                             <ul class="product_info_detail">
                                                 <li>酒精濃度：13.5%</li>
                                                 <li>年份：2015</li>
@@ -644,6 +651,7 @@
                                         <div class="product_info">
                                             <h5>2015波爾多拉雅酒莊 皇家葡萄酒</h5>
                                             <h6>CHATEAU LA HAYE 2015</h6>
+                                            <hr>
                                             <ul class="product_info_detail">
                                                 <li>酒精濃度：13.5%</li>
                                                 <li>年份：2015</li>
@@ -675,6 +683,7 @@
                                         <div class="product_info">
                                             <h5>2015波爾多拉雅酒莊 皇家葡萄酒</h5>
                                             <h6>CHATEAU LA HAYE 2015</h6>
+                                            <hr>
                                             <ul class="product_info_detail">
                                                 <li>酒精濃度：13.5%</li>
                                                 <li>年份：2015</li>
@@ -706,6 +715,7 @@
                                         <div class="product_info">
                                             <h5>2015波爾多拉雅酒莊 皇家葡萄酒</h5>
                                             <h6>CHATEAU LA HAYE 2015</h6>
+                                            <hr>
                                             <ul class="product_info_detail">
                                                 <li>酒精濃度：13.5%</li>
                                                 <li>年份：2015</li>
@@ -737,6 +747,7 @@
                                         <div class="product_info">
                                             <h5>2015波爾多拉雅酒莊 皇家葡萄酒</h5>
                                             <h6>CHATEAU LA HAYE 2015</h6>
+                                            <hr>
                                             <ul class="product_info_detail">
                                                 <li>酒精濃度：13.5%</li>
                                                 <li>年份：2015</li>
@@ -768,6 +779,7 @@
                                         <div class="product_info">
                                             <h5>2015波爾多拉雅酒莊 皇家葡萄酒</h5>
                                             <h6>CHATEAU LA HAYE 2015</h6>
+                                            <hr>
                                             <ul class="product_info_detail">
                                                 <li>酒精濃度：13.5%</li>
                                                 <li>年份：2015</li>
@@ -911,6 +923,11 @@
                 $('.theme_product_filter_result').toggleClass("active");
             }
         });
+
+        var max = 0;
+        $('.product_info').each(function (T) {
+            T = $(this).outerHeight(), T > max && (max = T);
+        }).outerHeight(max);
 
 	})
 
